@@ -5,5 +5,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   homepage: "/testing/#",
+  base: "./",
   version: "1.0.0",
 })
