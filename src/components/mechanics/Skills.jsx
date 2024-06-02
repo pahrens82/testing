@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+
+
 export const Skills = () => {
     const NON_COMBAT_SKILLS = [
         {
@@ -63,7 +66,7 @@ export const Skills = () => {
         {
             name: "Medicine",
             attribute: "INT",
-            description: "There is significant risk when adventuring. This skill can be used to Administer Care (adds a die to natural healing rolls), Save A Life (stabilize a character at 0 HP), or Treat A Disease (use your Medicine skill in place of the infected character's CON).",
+            description: "There is significant risk when adventuring. This skill can be used to Administer Care (adds a die to natural healing rolls), Save A Life (stabilize a character at 0 HP), or Treat Disease (use your Medicine skill in place of the infected character's CON).",
         },
         {
             name: "Myths And Legends",

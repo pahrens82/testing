@@ -5,9 +5,8 @@ import './App.css'
 
 export const App = () => {
     return (
-        <main className={"container"}>
-            <NavigationBar />
-            <Outlet />
-        </main>
+        <>
+            <h1>App</h1>
+        </>
     )
 }

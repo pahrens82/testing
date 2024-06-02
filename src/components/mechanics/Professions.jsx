@@ -5,16 +5,13 @@ export const Professions = () => {
     return (
         <section className={"contents mb-5"}>
             <h1>Professions</h1>
-            <ol>
-                <li><a href={"#bard"}>Bard</a></li>
-                <li><a href={"#jester"}>Jester</a></li>
-                <li><a href={"#cleric"}>Cleric</a></li>
-                <li><a href={"#fighter"}>Fighter</a></li>
-                <li><a href={"#berserker"}>Berserker</a></li>
-                <li><a href={"#hunter"}>Hunter</a></li>
-                <li><a href={"#pathfinder"}>Pathfinder</a></li>
-                <li><a href={"#mage"}>Mage</a></li>
-            </ol>
+            <section>
+                <p>Professions provide an ability and a set of key skills.
+                    When making a character, 5 of your class skills must
+                    be selected from your profession's key skills. The other
+                    three skills are your choice.
+                </p>
+            </section>
             <div id={"bard"} className={"card p-3 mb-3"}>
                 <strong>Bard</strong>
                 <p><i>Musician</i>: WP 3. Your beautiful voice instills courage in your friends. Activating this ability (an action in combat) grants a Boon to all allies within 30 feet; this Boon affects all rolls. This effect lasts until the start of your next turn.</p>

@@ -26,7 +26,7 @@ export const Mechanics = () => {
 				data-bs-toggle={"dropdown"}
 				aria-expanded={"false"}
 			>
-				Mechanics
+				Game Mechanics
 			</a>
 			<ul className={"dropdown-menu"}>
 				{MECHANICS.map((mechanic, index) => {

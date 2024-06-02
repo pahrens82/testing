@@ -1,6 +1,6 @@
 export const Species = () => {
     return (
-        <section className={"contents mb-5"}>
+        <section className={"contents mb-5 lh-lg"}>
             <section>
                 <h1>Species</h1>
                 <p>The races of Ansalon are generally isolated during the Age
@@ -23,13 +23,6 @@ export const Species = () => {
                     strength the people will need to survive the War of the
                     Lance and beyond.
                 </p>
-                <ul>
-                    <li><a href={"#human"}>Humans</a></li>
-                    <li><a href={"#dwarf"}>Dwarves</a></li>
-                    <li><a href={"#kender"}>Kender</a></li>
-                    <li><a href={"#half-elf"}>Half-Elf</a></li>
-                    <li><a href={"#elf"}>Elf</a></li>
-                </ul>
             </section>
             <hr />
             <section id={"human"}>
@@ -87,7 +80,7 @@ export const Species = () => {
                     the landscape, as bandits and other creatures even more
                     evil.
                 </p>
-                <section>
+                <section className={"card p-3"}>
                     <h5>Nomads</h5>
                     <p>The nomadic people of Ansalon have always felt a deep
                         connection with nature. The destruction wrought by the
@@ -98,7 +91,8 @@ export const Species = () => {
                         communities saw their nomadic neighbors as easy prey and
                         attacked them. Such actions served to heighten the
                         suspicion and distrust between nomads and city dwellers.
-                        Over the generations, the nomads were able to
+                    </p>
+                    <p>Over the generations, the nomads were able to
                         establish fresh hunting grounds and track the new
                         migrations of animals, their lives improved. Lacking the
                         uniting force of the gods, however, many tribes splintered,
@@ -116,7 +110,7 @@ export const Species = () => {
                         to accept, as many tribes had always maintained religious
                         rituals and ceremonies that honored all the spirits.
                     </p>
-                    <div className={"card p-2"}>
+                    <div>
                         <strong>Plainsfolk</strong>
                         <ul>
                             <li>Speed: 6</li>
@@ -128,7 +122,7 @@ export const Species = () => {
                         </ul>
                     </div>
                 </section>
-                <section>
+                <section className={"card mt-3 p-3"}>
                     <h5>Townsfolk</h5>
                     <p>City life during the Age of Despair was chaotic. The
                         Cataclysm flooded entire nations and landlocked others,
@@ -139,7 +133,8 @@ export const Species = () => {
                         delivered to the cities was bought up by wealthy clientele
                         for outrageous prices, leaving the poor to beg or filch
                         whatever they could find.
-                        Without healers, disease ran rampant and plague
+                    </p>
+                    <p>Without healers, disease ran rampant and plague
                         spread like wildfire. Most citizens lived in squalor,
                         cowering amidst the ruins of buildings or hunkered
                         down in wooden shacks. Over the course of centuries, the
@@ -147,7 +142,7 @@ export const Species = () => {
                         have prospered, others remain locked in despair, filth, and
                         poverty.
                     </p>
-                    <div className={"card p-2"}>
+                    <div>
                         <strong>Townsfolk</strong>
                         <ul>
                             <li>Speed: 6</li>
@@ -197,7 +192,7 @@ export const Species = () => {
                     dwarves looked unlike any known to Ansalon. Insatiably
                     evil, this race survived and crawled from the ashes.
                 </p>
-                <section>
+                <section className={"card p-3"}>
                     <h5>Hill Dwarves (The Neidar)</h5>
                     <p>The Neidar lost much more than the mountain dwarves
                         in the aftermath of the Cataclysm. Their population went
@@ -239,7 +234,7 @@ export const Species = () => {
                         - both religious and secular. Currently, traditions are
                         upheld, but the heart of the hill dwarf religion is hollow.
                     </p>
-                    <div className={"card p-2"}>
+                    <div>
                         <strong>Hill Dwarf</strong>
                         <ul>
                             <li>Speed: 4</li>
@@ -313,7 +308,7 @@ export const Species = () => {
                     have taken to the road to investigate rumors and see if
                     there is anything interesting to be found.
                 </p>
-                <div className={"card p-2"}>
+                <div className={"card p-3"}>
                     <strong>Kender</strong>
                     <ul>
                         <li>Speed: 4</li>
@@ -325,7 +320,7 @@ export const Species = () => {
                 </div>
             </section>
             <hr />
-            <section id={"half-elf"}>
+            <section id={"half-elf"} className={"card p-3"}>
                 <h3>Half-Elf</h3>
                 <p>Half-elves have always been regarded with prejudice and
                     distrust by both parent races. The Age of Despair has only
@@ -352,7 +347,7 @@ export const Species = () => {
                     followers but the humans and elves who had previously
                     misjudged them.
                 </p>
-                <div className={"card p-2"}>
+                <div>
                     <strong>Half-Elf</strong>
                     <ul>
                         <li>Speed: 6</li>
@@ -367,6 +362,7 @@ export const Species = () => {
                     </ul>
                 </div>
             </section>
+            <hr/>
             <section id={"elf"}>
                 <h3>Elves</h3>
                 <p>The elves of Ansalon, with lifetimes measured in centuries,
@@ -389,7 +385,7 @@ export const Species = () => {
                     longer worship them, angered that the divine forces of
                     good would abandon their chosen people.
                 </p>
-                <section>
+                <section className={"card p-3"}>
                     <h5>Qualinesti</h5>
                     <p>The elves of Qualinesti struggled to survive during the
                         tumultuous first years after the Cataclysm, battling hordes
@@ -412,7 +408,7 @@ export const Species = () => {
                         over the centuries until an elf was rarely seen outside their
                         own lands.
                     </p>
-                    <div className={"card p-2"}>
+                    <div>
                         <strong>Elf</strong>
                         <ul>
                             <li>Speed: 6</li>

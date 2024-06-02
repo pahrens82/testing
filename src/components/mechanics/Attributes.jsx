@@ -6,12 +6,12 @@ export const Attributes = () => {
 			<h1>Attributes</h1>
 			<p>Attribute represent the general physical and mental qualities of your character.</p>
 			<ol className={"list-unstyled"}>
-				<li>Strength (STR): Raw muscle power. Determines carrying capacity and boosts damage with STR-based weapons.</li>
-				<li>Dexterity (DEX): Body control, speed, and fine motor skills. Useful for thief-type skills and boosts damage with DEX-based weapons.</li>
-				<li>Constitution (CON): Physical fitness and resilience. Determines starting HP, and is used for resisting poison, disease, and dying.</li>
-				<li>Intelligence (INT): Mental acuity, intellect, and reasoning skills. Related to many skills.</li>
-				<li>Willpower (WIL): Self-discipline and focus. Determines starting WP, and is used for resisting Fear and certain magicks.</li>
-				<li>Charisma (CHA): Force of personality and empathy. Used for social skills.</li>
+                <li><strong>Strength (STR)</strong>: Raw muscle power. Determines carrying capacity and boosts damage with STR-based weapons.</li>
+                <li><strong>Dexterity (DEX)</strong>: Body control, speed, and fine motor skills. Related to several skills and boosts damage with DEX-based weapons.</li>
+                <li><strong>Constitution (CON)</strong>: Physical fitness and resilience. Determines starting HP, and is used for resisting poison, disease, and dying.</li>
+                <li><strong>Intelligence (INT)</strong>: Mental acuity, intellect, and reasoning skills. Related to many skills.</li>
+                <li><strong>Willpower (WIL)</strong>: Self-discipline and focus. Determines starting WP, and is used for resisting Fear and certain magicks.</li>
+                <li><strong>Charisma (CHA)</strong>: Force of personality and empathy. Used for social skills.</li>
 			</ol>
 			<p>Attributes are generated as follows:</p>
 			<ul>
