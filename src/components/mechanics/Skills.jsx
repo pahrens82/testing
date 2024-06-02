@@ -41,7 +41,7 @@ export const Skills = () => {
         {
             name: "Cooking",
             attribute: "INT",
-            description: "Cooking is used to make food safe for consumption. Success yield an adequate meal. Failure ruins the ingredients. Critical success increases your healing dice from 1d6 to 1d8. Critical failure turns the food into an Emetic Poison.",
+            description: "Cooking is used to make food safe for consumption. Critical failure yields food that looks safe but is an Emetic Poison. Failure ruins the ingredients. Success yield a regular meal. Critical success creates an excellent meal that adds 1d6 to your healing during your next Long Rest.",
         },
         {
             name: "Crafting",

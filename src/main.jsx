@@ -57,6 +57,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                         element={<Mechanic.General />}
                     />
                     <Route
+                        path={"/mechanics/resting"}
+                        element={<Mechanic.Resting />}
+                    />
+                    <Route
                         path={"/mechanics/character_creation"}
                         element={<Mechanic.CharacterCreation />}
                     />

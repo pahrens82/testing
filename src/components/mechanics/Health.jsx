@@ -1,76 +1,47 @@
 import { Link } from "react-router-dom";
-import { LINKS } from "../../constants";
 
 
 export const Health = () => {
     return (
         <section className={"contents"}>
-            <h1>Health, Healing, Resting, and Dying</h1>
+            <h1>Health, Healing, and Dying</h1>
             <section>
                 <h3>Measuring Health</h3>
                 <h5>Hit Points (HP)</h5>
                 <ul>
-                    <li>Hit points represent your health and wellbeing. They can be lost due to injury, starvation,
-                        poison,
+                    <li>Hit points represent your health and wellbeing.
+                        They can be lost due to injury, starvation, poison,
                         disease, etc.
                     </li>
-                    <li>You begin play with a number of HP equal to your Constitution score.</li>
+                    <li>You begin play with a number of HP equal to your
+                        Constitution score. Additional HP can be gained
+                        upon levelling up and via a certain Ability.
+                    </li>
                 </ul>
                 <h5>Willpower Points (WP)</h5>
                 <ul>
-                    <li>Willpower points represent the mental and spiritual energy that you expend to activate your
-                        abilities and cast spells.
+                    <li>Willpower points represent the mental and spiritual
+                        energy that you expend to activate your abilities
+                        and cast spells.
                     </li>
-                    <li>You begin play with a number of WP equal to your Willpower score.</li>
+                    <li>You begin play with a number of WP equal to your
+                        Willpower score. Additional WP can be gained
+                        by levelling up and via a certain Ability.
+                    </li>
                 </ul>
             </section>
             <section>
                 <h3>Natural Healing</h3>
-                <p>Natural healing includes the recovery of HP and WP from resting and from herbal concoctions.</p>
-                <section>
-                    <h5>Resting</h5>
-                    <p>There are three types of resting:</p>
-                    <ul>
-                        <li>Round Rest: You may spend one round during combat catching your breath; you regain 1d6 WP. This
-                            can be done once per Shift.
-                        </li>
-                        <li>Short Rest: You spend 15 minutes resting, allowing you to regain 1d6 HP and WP (roll for each).
-                            This can be done once per Day.
-                        </li>
-                        <li>Long Rest: You spend 2 consecutive Shifts resting (a total of 8 hours). The number of the HP and
-                            WP recovered depends on where you are resting:
-                            <ul>
-                                <li>Exposed: You are resting somewhere completely exposed to the elements. No shelter, no
-                                    bedroll, etc. You regain no HP or WP. The counter on Short Rests is not reset.
-                                </li>
-                                <li>Uncomfortable: You are either resting outside with minimal shelter (IE, a bedroll or
-                                    hammock), or inside somewhere unpleasant (IE, a stable floor). You recover 1d6 HP and
-                                    WP. The counter on Round and Short Rests is reset.
-                                </li>
-                                <li>Comfortable: You are either resting outside in a tent or similar shelter, or in a
-                                    pleasant room in a house or inn. You recover 2d6 HP and WP. The counter on Round and
-                                    Short Rests is reset.
-                                </li>
-                                <li>Luxurious: You are either resting outside in a pavilion, or in a luxurious room in a
-                                    manor or inn. You recover 3d6 HP and WP. The counter on Round and Short Rests is reset.
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <p>The number of dice recovered while resting can be increased by one via a successful {LINKS.skill.medicine} check.</p>
-                    <p>The size of the dice rolled for recoving HP and WP can be increased via a successful {LINKS.skill.cooking} check.</p>
-                </section>
-                <section>
-                    <h5>Potions</h5>
-                    <p>Healing potions made from herbs are available for purchase in most settlements, or, if you have the {LINKS.ability.herbalism} ability, crafted.</p>
-                    <p>In general, healing potions restore Xd6 HP, with X depending on the strength of the potion.</p>
-                </section>
+                <p>Natural healing includes the recovery of HP and WP
+                    from <Link to={"/mechanics/resting"}>Resting</Link> and
+                    from herbal potions.
+                </p>
             </section>
             <section>
                 <h3>Magical Healing</h3>
                 <p>There have been no genuine clerics on <Link to={"/locations/ansalon"}>Ansalon</Link> since
                     the Cataclysm, and magical healing seems to have disappeared with them. This doesn't mean
-                    people don't claim to have such powers, though. Perhaps one of them will prove to be true.
+                    people don't claim to have such powers, though. Perhaps such a rumor will prove to be true.
                 </p>
             </section>
             <section id={"dying"}>
@@ -84,8 +55,13 @@ export const Health = () => {
                     <li><strong>Instant Death:</strong>: If you are dealt damage equal to twice your maximum HP, your character dies instantly.</li>
                 </ul>
                 <h5>Injuries</h5>
-                <p>If you recover from Dying, make a CON check. If you fail, roll on the table below.</p>
-                <table className={"table"}>
+                <p className={"d-none d-md-block"}>
+                    If you recover from Dying, make a CON check. If you fail, roll on the table below.
+                </p>
+                <p className={"d-block d-md-none"}>
+                    If you recover from Dying, make a CON check. If you fail, roll and consult below.
+                </p>
+                <table className={"table d-none d-md-block"}>
                     <thead>
                         <tr>
                             <th>d20</th>
@@ -181,6 +157,92 @@ export const Health = () => {
                         </tr>
                     </tbody>
                 </table>
+                <div className={"d-block d-md-none"}>
+                    <div className={"card p-3 mb-3"}>
+                        <p className={"m-0"}>1-2</p>
+                        <p className={"m-0"}>Broken Nose</p>
+                        <p className={"m-0"}>You get a Bane on all Perception checks.</p>
+                        <p className={"m-0"}>1d6 days</p>
+                    </div>
+                    <div className={"card p-3 mb-3"}>
+                        <p className={"m-0"}>3-4</p>
+                        <p className={"m-0"}>Slashed Face</p>
+                        <p className={"m-0"}>Bane on all Performance and Persuasion rolls.</p>
+                        <p className={"m-0"}>2d6 days</p>
+                    </div>
+                    <div className={"card p-3 mb-3"}>
+                        <p className={"m-0"}>5-6</p>
+                        <p className={"m-0"}>Teeth Knocked Out</p>
+                        <p className={"m-0"}>Your Performance and Persuasion skills are permanently reduced by 2 (to a minimum of 3).</p>
+                        <p className={"m-0"}>Permanent</p>
+                    </div>
+                    <div className={"card p-3 mb-3"}>
+                        <p className={"m-0"}>7-8</p>
+                        <p className={"m-0"}>Broken Ribs</p>
+                        <p className={"m-0"}>Bane on all STR- and DEX-related skills.</p>
+                        <p className={"m-0"}>1d6 days</p>
+                    </div>
+                    <div className={"card p-3 mb-3"}>
+                        <p className={"m-0"}>9-10</p>
+                        <p className={"m-0"}>Concussion</p>
+                        <p className={"m-0"}>Bane on all INT-related skills.</p>
+                        <p className={"m-0"}>1d6 days</p>
+                    </div>
+                    <div className={"card p-3 mb-3"}>
+                        <p className={"m-0"}>11-12</p>
+                        <p className={"m-0"}>Deep Wounds</p>
+                        <p className={"m-0"}>Bane on all STR- and DEX-related skills. Every STR- and DEX-related skill check inflicts 1d6 damage (armor doesn't apply).</p>
+                        <p className={"m-0"}>2d6 days</p>
+                    </div>
+                    <div className={"card p-3 mb-3"}>
+                        <p className={"m-0"}>13</p>
+                        <p className={"m-0"}>Broken Leg</p>
+                        <p className={"m-0"}>Your Speed is halved.</p>
+                        <p className={"m-0"}>3d6 days</p>
+                    </div>
+                    <div className={"card p-3 mb-3"}>
+                        <p className={"m-0"}>14</p>
+                        <p className={"m-0"}>Broken Arm</p>
+                        <p className={"m-0"}>You cannot use two-handed weapons, nor dual-wield, and get a Bane on all other actions normally using both arms.</p>
+                        <p className={"m-0"}>3d6 days</p>
+                    </div>
+                    <div className={"card p-3 mb-3"}>
+                        <p className={"m-0"}>15</p>
+                        <p className={"m-0"}>Severed Toes</p>
+                        <p className={"m-0"}>Your Speed is permanently reduced by 1.</p>
+                        <p className={"m-0"}>Permanent</p>
+                    </div>
+                    <div className={"card p-3 mb-3"}>
+                        <p className={"m-0"}>16</p>
+                        <p className={"m-0"}>Severed Finger</p>
+                        <p className={"m-0"}>Your Weapon Skills are all permanently reduced by 1.</p>
+                        <p className={"m-0"}>Permanent</p>
+                    </div>
+                    <div className={"card p-3 mb-3"}>
+                        <p className={"m-0"}>17</p>
+                        <p className={"m-0"}>Gouged Eye</p>
+                        <p className={"m-0"}>Your Perception skill is permanently reduced by 2.</p>
+                        <p className={"m-0"}>Permanent</p>
+                    </div>
+                    <div className={"card p-3 mb-3"}>
+                        <p className={"m-0"}>18</p>
+                        <p className={"m-0"}>Nightmares</p>
+                        <p className={"m-0"}>Make a Fear check each time your take a Long Rest. If you fail, in addition to the normal effects, you don't count has having slept.</p>
+                        <p className={"m-0"}>2d6 days</p>
+                    </div>
+                    <div className={"card p-3 mb-3"}>
+                        <p className={"m-0"}>19</p>
+                        <p className={"m-0"}>Changed Personality</p>
+                        <p className={"m-0"}>Randomly generate a new weakness for your character.</p>
+                        <p className={"m-0"}>Permanent</p>
+                    </div>
+                    <div className={"card p-3 mb-3"}>
+                        <p className={"m-0"}>20</p>
+                        <p className={"m-0"}>Amnesia</p>
+                        <p className={"m-0"}>You cannot remember who you or the other characters are. This effect must be roleplayed.</p>
+                        <p className={"m-0"}>1d6 days</p>
+                    </div>
+                </div>
             </section>
         </section>
     )

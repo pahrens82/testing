@@ -45,15 +45,14 @@ export const Combat = () => {
             <ul>
                 <li><strong>Dash</strong>: Move up to your speed (essentially doubling your movement).</li>
                 <li><strong>Attack</strong>: Attack an enemy within reach of your weapon.</li>
-                <li><strong>Parry</strong>: Both melee and ranged attacks can be Parried, but Parrying a ranged attack requires the use of a shield. Parrying is a <i>reaction</i> that takes place outside your turn and replaces your normal turn in the round.</li>
-                <li><strong>Dodge</strong>: Doding a melee or ranged attack is also a <i>reaction</i> that takes place outside your turn and replaces your normal turn this round.</li>
-                <li><strong>Retrieve Item</strong>: This includes picking up an item in your, or an adjacent, space. It also covers retrieving an item from your inventory.</li>
-                <li><strong>First Aid</strong>: Use the Medicine skill to save the life of someone who has had their HP reduced to 0 and is at risk of dying.</li>
-                <li><strong>Rally</strong>: You Persuasion to let another character at 0 HP take an Action.</li>
+                <li><strong>Parry</strong>: Parrying is a <i>reaction</i> that takes place outside your turn and uses your action for the round.</li>
+                <li><strong>Dodge</strong>: Doding is a <i>reaction</i> that takes place outside your turn and uses your action for the round.</li>
+                <li><strong>Retrieve Item</strong>: Retrieving an item from your space, an adjacent space, or from your backpack.</li>
+                <li><strong>Rally</strong>: Use Persuasion to enable a character at 0 HP continue taking actions, or a WIL check for your own character.</li>
                 <li><strong>Use A Skill</strong>: Basically any use of a Skill is an Action.</li>
                 <li><strong>Use An Item</strong>: Using an item is an Action.</li>
-                <li><strong>Casting A Spell</strong>: Using an item is an Action.</li>
-                <li><strong>Round Rest</strong>: Do nothing (no other actions or movement) and recover 1d6 WP. This can only be done once per Shift.</li>
+                <li><strong>Casting A Spell</strong>: Casting a spell is an Action.</li>
+                <li><strong>Round Rest</strong>: Once per combat per Shift you can spend a round doing nothing in order to regain 1d6 WP.</li>
             </ul>
             <h5>Free Actions</h5>
             <ul>
@@ -106,7 +105,7 @@ export const Combat = () => {
                 <li>You cannot attempt to Dodge and Parry against the same attack.</li>
             </ol>
             <h3>Critical Hits and Misses</h3>
-            <p>If you roll a 1 on your attack roll, you may:</p>
+            <p>If you roll a 1 on your attack roll, you may select one of the following effects:</p>
             <ul>
                 <li>Double your weapon's dice for damage on this attack.</li>
                 <li>Immediately perform an attack against another enemy.</li>

@@ -36,8 +36,9 @@ export const General = () => {
             <section>
                 <h3>Pushing Your Luck</h3>
                 <ul>
-                    <li>If you non-critically fail a check, you have the option to push your luck and roll again.
-                        However, you must immediately gain an attribute {LINKS.condition} before re-rolling.
+                    <li>If you fail a check but don't roll a 20, you have the option to push your luck and
+                        roll again. However, you must immediately gain an attribute {LINKS.condition} before
+                        re-rolling.
                     </li>
                 </ul>
             </section>
@@ -52,12 +53,12 @@ export const General = () => {
                     </li>
                     <li>When rolling with Boons, you use the highest of your rolls.</li>
                     <li>When rolling with Banes, you use the lowest of your rolls.</li>
-                    <li>If you are in such an advantageous position that you would have 3 or more Boons on a check,
+                    {/* <li>If you are in such an advantageous position that you would have 3 or more Boons on a check,
                         you automatically succeed.
                     </li>
                     <li>If you are in such a disadvantageous position that you would have 3 or more Banes on a
                         check, you automatically fail.
-                    </li>
+                    </li> */}
                 </ul>
             </section>
             <section>
