@@ -38,10 +38,6 @@ const router = createBrowserRouter(
             errorElement={<Error />}
         >
             <Route
-                path={"/"}
-                element={<Welcome />}
-            />
-            <Route
                 path={"/welcome"}
                 element={<Welcome />}
             />
