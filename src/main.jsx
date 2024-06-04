@@ -3,30 +3,42 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import {
-    createRoutesFromElements,
     HashRouter,
-    createBrowserRouter,
     Route,
     Routes,
-    RouterProvider,
 } from "react-router-dom";
 
 import { App } from './App.jsx'
-import { Welcome } from "./components/Welcome.jsx";
 import { Schedule } from "./components/Schedule.jsx";
 import { Glossary } from "./components/Glossary.jsx";
 
-import { Mechanics } from "./components/mechanics/Mechanics.jsx";
-import { Locations } from "./components/locations/Locations.jsx";
-import { Characters } from "./components/characters/Characters.jsx";
 import { Character } from "./components/characters/Character.jsx";
 
 import {
+    ALCHEMICAL,
+    ARMOR,
     CHARACTERS,
+    CLOTHES,
+    CONTAINERS,
+    HERBAL,
+    HUNTING_AND_FISHING,
+    INSTRUMENTS,
+    LIGHT_SOURCES,
     LOCATIONS,
+    LODGING,
+    MEDICINAL,
+    MELEE_WEAPONS,
+    MISCELLANEOUS,
+    RANGED_WEAPONS,
+    SCHOLARLY_ITEMS,
+    SERVICES,
+    SHIELDS,
+    TOOLS,
+    TRANSPORTATION,
 } from "./constants.jsx";
 
 import * as Mechanic from "./components/mechanics";
+import * as Equipment from "./components/equipment";
 
 import { Error } from "./components/Error.jsx";
 import { Location } from "./components/locations/Location.jsx";
@@ -59,10 +71,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                     <Route
                         path={"/mechanics/resting"}
                         element={<Mechanic.Resting />}
-                    />
-                    <Route
-                        path={"/mechanics/character_creation"}
-                        element={<Mechanic.CharacterCreation />}
                     />
                     <Route
                         path={"/mechanics/attributes"}
@@ -108,6 +116,83 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                         path={"/mechanics/travel"}
                         element={<Mechanic.Travel />}
                     />
+                    <Route
+                        path={"/equipment/melee_weapons"}
+                        element={<Equipment.Weapons equipment={MELEE_WEAPONS} label={"Melee Weapons"} />}
+                    />
+                    <Route
+                        path={"/equipment/ranged_weapons"}
+                        element={<Equipment.Weapons equipment={RANGED_WEAPONS} label={"Ranged Weapons"} />}
+                    />
+                    <Route
+                        path={"/equipment/shields"}
+                        element={<Equipment.Weapons equipment={SHIELDS} label={"Shields"} />}
+                    />
+                    <Route
+                        path={"/equipment/armor"}
+                        element={<Equipment.Armor equipment={ARMOR} label={"Armor"} />}
+                    />
+                    <Route
+                        path={"/equipment/clothes"}
+                        element={<Equipment.General equipment={CLOTHES} label={"Clothes"} />}
+                    />
+                    <Route
+                        path={"/equipment/miscellaneous"}
+                        element={<Equipment.General equipment={MISCELLANEOUS} label={"Miscellaneous"} />}
+                    />
+                    <Route
+                        path={"/equipment/hunting_and_fishing"}
+                        element={<Equipment.General equipment={HUNTING_AND_FISHING} label={"Hunting and Fishing"} />}
+                    />
+                    <Route
+                        path={"/equipment/light_sources"}
+                        element={<Equipment.General equipment={LIGHT_SOURCES} label={"Light Sources"} />}
+                    />
+                    <Route
+                        path={"/equipment/tools"}
+                        element={<Equipment.General equipment={TOOLS} label={"Tools"} />}
+                    />
+                    <Route
+                        path={"/equipment/lodging"}
+                        element={<Equipment.General equipment={LODGING} label={"Label"} />}
+                    />
+                    <Route
+                        path={"/equipment/scholarly_items"}
+                        element={<Equipment.General equipment={SCHOLARLY_ITEMS} label={"Scholarly Items"} />}
+                    />
+                    <Route
+                        path={"/equipment/musical_instruments"}
+                        element={<Equipment.General equipment={INSTRUMENTS} label={"Musical Instruments"} />}
+                    />
+                    <Route
+                        path={"/equipment/transportation"}
+                        element={<Equipment.General equipment={TRANSPORTATION} label={"Vehicles"} />}
+                    />
+                    <Route
+                        path={"/equipment/containers"}
+                        element={<Equipment.General equipment={CONTAINERS} label={"Containers"} />}
+                    />
+                    <Route
+                        path={"/equipment/services"}
+                        element={<Equipment.General equipment={SERVICES} label={"Services"} />}
+                    />
+                    <Route
+                        path={"/equipment/medicinal_products"}
+                        element={<Equipment.General equipment={MEDICINAL} label={"Medical Supplies"} />}
+                    />
+
+                    <Route
+                        path={"/equipment/herbal_products"}
+                        element={<Equipment.General equipment={HERBAL} label={"Herbal Products"} />}
+                    />
+                    <Route
+                        path={"/equipment/alchemical_products"}
+                        element={<Equipment.General equipment={ALCHEMICAL} label={"Alchemical Products"} />}
+                    />
+                    {/* <Route
+                        path={"/equipment/animals"}
+                        element={<Equipment.MeleeWeapons />}
+                    /> */}
                     {LOCATIONS.map((location, index) => {
                         return (
                             <Route

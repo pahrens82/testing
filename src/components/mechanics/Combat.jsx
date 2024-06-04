@@ -67,11 +67,12 @@ export const Combat = () => {
                 <li>Roll against the Skill corresponding to the weapon your wielding.
                     <ul>
                         <li>While making a ranged attack, you receive a Bane on your roll if your target is obscured by an object, person, or substance.</li>
+                        <li>Ranged weapons have a specified range within whih they can be used effectively. Beyond this range, attack rolls receive a Bane. Attacks beyond twice the listed range are not possible.</li>
                     </ul>
                 </li>
                 <li>If you succeed, you've hit your target. If you fail, the attack misses.
                     <ul>
-                        <li>Your target might have the option of Parrying or Dodging your attack. That is resolved now.</li>
+                        <li>Your target might have the option of Parrying or Dodging your attack. If they are able and choose to do so, that is resolved now.</li>
                     </ul>
                 </li>
                 <li>Roll damage. Damage is determined by the weapon you are wielding, and possibly either your STR or DEX.</li>
@@ -124,6 +125,7 @@ export const Combat = () => {
             <h3>Combat Maneuvers</h3>
             <ul>
                 <li><strong>Grapple</strong>: You can try to grapple foes. This is handled via opposed Brawling checks. The attack uses your action in combat, and cannot be Parried or Dodged. You receive a Bane on your roll for each size category larger the target is than yourself. If you fail, you fall to the ground. If you succeed, both you and your foe fall to the ground. As long as you maintain the grapple (via additional opposed Brawling checks) the enemy can neither move nor perform any action that requires body movement except trying to break free. The enemy attempts to break free via opposed Brawling checks on their turn.</li>
+                <li><strong>Charging</strong>: You can charge on foot or on a mount. You must spend at least half your maximum speed moving directly toward your target and then attack when able. You gain a Boon on this attack roll. If you hit, you roll an additional die of weapon damage, or two additional dice of weapon damage if you are wielding a lance.</li>
             </ul>
         </section>
     );

@@ -21,7 +21,7 @@ export const Skills = () => {
         {
             name: "Bartering",
             attribute: "CHA",
-            description: "You may use this skill when haggling over an item to adjust the price by 20% in your favor. If critically succeed, the adjustment is 50%. if you critically fail, you and your companions are banned from the shop.",
+            description: "You may use this skill when haggling over an item to adjust the price by 20% in your favor. If critically succeed, the adjustment is 50%. If you critically fail, you and your companions are banned from the shop. Some prices may be non-negotiable.",
         },
         {
             name: "Beast Lore",
@@ -66,7 +66,7 @@ export const Skills = () => {
         {
             name: "Medicine",
             attribute: "INT",
-            description: "There is significant risk when adventuring. This skill can be used to Administer Care (adds a die to natural healing rolls), Save A Life (stabilize a character at 0 HP), or Treat Disease (use your Medicine skill in place of the infected character's CON).",
+            description: <span>There is significant risk when adventuring. This skill can be used to: <ul><li>Administer Care during a Short Rest (Requires a Healer's Kit. Adds an additional die to HP recovered)</li><li>Save The Life of a character at 0 HP (this check receives a Bane if you don't have bandages)</li><li>Treat A Disease (Requires a Healer's Kit. On success, your Medicine skill is used in place of the infected character's CON on their next disease check.)</li><li>Treat An Injury (reduces injury healing time by 1 day per treatment. Requires Surgical Tools and one Shift.)</li></ul></span>,
         },
         {
             name: "Myths And Legends",
@@ -86,7 +86,7 @@ export const Skills = () => {
         {
             name: "Persuasion",
             attribute: "CHA",
-            description: "Persuasion is used when you try to charm, threaten, or reason with an NPC in order to get them to do something, or change their mind about something. If you succeed, the NPC does what you ask, but probably at some cost to you. A critical success means there is no cost. Failure means the NPC doesn't cooperate, and a critical failure means the NPC becomes unfriendly, or even hostile.",
+            description: "Persuasion is used when you try to charm, threaten, or reason with an NPC in order to get them to do something, or change their mind about something. If you succeed, the NPC does what you ask, but probably at some cost to you. A critical success means there is no cost. Failure means the NPC doesn't cooperate, and a critical failure means the NPC becomes unfriendly, or even hostile. Persuasion may also be used to Rally a character at 0 HP. A Rallied character must continue making Death Rolls, but may continue acting.",
         },
         {
             name: "Riding",

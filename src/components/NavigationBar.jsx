@@ -38,16 +38,17 @@ export const NavigationBar = () => {
                         </Link>
                     </li>
                     <Dropdowns.Mechanics />
+                    <Dropdowns.Equipment />
                     <Dropdowns.Locations />
                     <Dropdowns.Characters />
-                    <li className={"nav-item"}>
+                    {/* <li className={"nav-item"}>
                         <Link
                             className={"nav-link"}
                             to={"/glossary"}
                         >
                             Glossary
                         </Link>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
         </nav>
