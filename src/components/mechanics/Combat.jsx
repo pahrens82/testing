@@ -44,7 +44,7 @@ export const Combat = () => {
             <h5>Actions</h5>
             <ul>
                 <li><strong>Dash</strong>: Move up to your speed (essentially doubling your movement).</li>
-                <li><strong>Attack</strong>: Attack an enemy within reach of your weapon.</li>
+                <li><strong>Attack</strong>: Attack an enemy within reach or range of your weapon.</li>
                 <li><strong>Parry</strong>: Parrying is a <i>reaction</i> that takes place outside your turn and uses your action for the round.</li>
                 <li><strong>Dodge</strong>: Doding is a <i>reaction</i> that takes place outside your turn and uses your action for the round.</li>
                 <li><strong>Retrieve Item</strong>: Retrieving an item from your space, an adjacent space, or from your backpack.</li>
@@ -67,7 +67,7 @@ export const Combat = () => {
                 <li>Roll against the Skill corresponding to the weapon your wielding.
                     <ul>
                         <li>While making a ranged attack, you receive a Bane on your roll if your target is obscured by an object, person, or substance.</li>
-                        <li>Ranged weapons have a specified range within whih they can be used effectively. Beyond this range, attack rolls receive a Bane. Attacks beyond twice the listed range are not possible.</li>
+                        <li>Ranged weapons have a specified range within which they can be used effectively. Beyond this range, ranged attack rolls receive a Bane. Attacks beyond twice the listed range are not possible.</li>
                     </ul>
                 </li>
                 <li>If you succeed, you've hit your target. If you fail, the attack misses.
@@ -75,7 +75,7 @@ export const Combat = () => {
                         <li>Your target might have the option of Parrying or Dodging your attack. If they are able and choose to do so, that is resolved now.</li>
                     </ul>
                 </li>
-                <li>Roll damage. Damage is determined by the weapon you are wielding, and possibly either your STR or DEX.</li>
+                <li>Roll damage. Damage is determined by the weapon you are wielding, and possibly increased by either your STR or DEX.</li>
                 <li>If the attack is Parried, damage is applied to the target's weapon or shield. If the attack is Dodged, the damage is ignored.</li>
                 <li>If the target takes damage from your attack, that damage is reduced by the target's Armor.</li>
                 <li>If a PC is reduced to 0 HP, they begin <Link to={"/mechanics/health#dying"}>Dying</Link>.</li>
