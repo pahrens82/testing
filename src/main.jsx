@@ -15,16 +15,20 @@ import { Glossary } from "./components/Glossary.jsx";
 import { Character } from "./components/characters/Character.jsx";
 
 import {
+    CHARACTERS,
+    LOCATIONS,
+    SPECIES,
+} from "./constants.jsx";
+
+import {
     ALCHEMICAL,
     ARMOR,
-    CHARACTERS,
     CLOTHES,
     CONTAINERS,
     HERBAL,
     HUNTING_AND_FISHING,
     INSTRUMENTS,
     LIGHT_SOURCES,
-    LOCATIONS,
     LODGING,
     MEDICINAL,
     MELEE_WEAPONS,
@@ -35,7 +39,7 @@ import {
     SHIELDS,
     TOOLS,
     TRANSPORTATION,
-} from "./constants.jsx";
+} from "./gear.jsx";
 
 import * as Mechanic from "./components/mechanics";
 import * as Equipment from "./components/equipment";
@@ -43,6 +47,7 @@ import * as Equipment from "./components/equipment";
 import { Error } from "./components/Error.jsx";
 import { Location } from "./components/locations/Location.jsx";
 import { NavigationBar } from './components/NavigationBar.jsx';
+import { Species } from './components/Species.jsx';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -76,10 +81,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                         path={"/mechanics/attributes"}
                         element={<Mechanic.Attributes />}
                     />
-                    <Route
+                    {/* <Route
                         path={"/mechanics/species"}
                         element={<Mechanic.Species />}
-                    />
+                    /> */}
                     <Route
                         path={"/mechanics/professions"}
                         element={<Mechanic.Professions />}
@@ -154,7 +159,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                     />
                     <Route
                         path={"/equipment/lodging"}
-                        element={<Equipment.General equipment={LODGING} label={"Label"} />}
+                        element={<Equipment.General equipment={LODGING} label={"Lodging"} />}
                     />
                     <Route
                         path={"/equipment/scholarly_items"}
@@ -166,7 +171,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                     />
                     <Route
                         path={"/equipment/transportation"}
-                        element={<Equipment.General equipment={TRANSPORTATION} label={"Vehicles"} />}
+                        element={<Equipment.General equipment={TRANSPORTATION} label={"Transportation"} />}
                     />
                     <Route
                         path={"/equipment/containers"}
@@ -180,7 +185,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                         path={"/equipment/medicinal_products"}
                         element={<Equipment.General equipment={MEDICINAL} label={"Medical Supplies"} />}
                     />
-
                     <Route
                         path={"/equipment/herbal_products"}
                         element={<Equipment.General equipment={HERBAL} label={"Herbal Products"} />}
@@ -193,6 +197,15 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                         path={"/equipment/animals"}
                         element={<Equipment.MeleeWeapons />}
                     /> */}
+                    {SPECIES.map((specie, index) => {
+                        return (
+                            <Route
+                                key={specie}
+                                path={`/species/${specie.toLowerCase()}`}
+                                element={<Species type={specie} />}
+                            />
+                        )
+                    })}
                     {LOCATIONS.map((location, index) => {
                         return (
                             <Route

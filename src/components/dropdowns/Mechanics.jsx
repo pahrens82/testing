@@ -4,14 +4,9 @@ import React from "react";
 export const Mechanics = () => {
 	const MECHANICS = [
 		"General",
-		// "Character Creation",
-		// "Attributes",
-		"Species",
 		"Professions",
 		"Skills",
-		// "Abilities",
-		// "Gear",
-		// "Magic",
+		"Abilities",
 		"Combat",
 		"Health",
         "Conditions",

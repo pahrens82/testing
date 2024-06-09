@@ -1,4 +1,5 @@
-import {SESSIONS} from "../constants.jsx";
+import { SESSIONS } from "../sessions";
+
 
 export const Schedule = () => {
 	return (

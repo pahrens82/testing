@@ -1,6 +1,7 @@
-import { GEAR_CATEGORIES } from "../../constants.jsx";
-import { Link } from "react-router-dom";
 import React from "react";
+import { GEAR_CATEGORIES } from "../../gear.jsx";
+import { Link } from "react-router-dom";
+
 
 export const Equipment = () => {
     return (

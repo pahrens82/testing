@@ -38,6 +38,7 @@ export const NavigationBar = () => {
                         </Link>
                     </li>
                     <Dropdowns.Mechanics />
+                    <Dropdowns.SpeciesDropdown />
                     <Dropdowns.Equipment />
                     <Dropdowns.Locations />
                     <Dropdowns.Characters />

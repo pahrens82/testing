@@ -9,7 +9,6 @@ import { Magic } from "./Magic.jsx";
 import { Professions } from "./Professions.jsx";
 import { Resting } from "./Resting.jsx";
 import { Skills } from "./Skills.jsx";
-import { Species } from "./Species.jsx";
 import { Travel } from "./Travel.jsx";
 
 export {
@@ -24,6 +23,5 @@ export {
     Professions,
     Resting,
     Skills,
-    Species,
     Travel,
 };
