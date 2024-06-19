@@ -24,12 +24,9 @@ export const Combat = () => {
             </p>
             <h3>Initiative</h3>
             <ol>
-                <li>Each player is dealt a card number from 1 to 10.</li>
-                <li>Some players may be dealt multiple cards, depending on their <Link
-                    to={"/mechanics/abilities/"}>abilities</Link>.
-                </li>
-                <li>The GM receives cards for NPCs and <Link to={"/mechanics/general#monsters"}>monsters</Link>.</li>
-                <li>Turn order proceeds from lowest to highest.</li>
+                <li>Each participant rolls 1d20.</li>
+                <li>Monsters roll 1d20 per Ferocity.</li>
+                <li>Turn order proceeds from highest to lowest.</li>
             </ol>
             <h3>The Combat Round</h3>
             <p>On your turn during a combat round you may move up to
@@ -57,7 +54,7 @@ export const Combat = () => {
             <h5>Free Actions</h5>
             <ul>
                 <li><strong>Draw Weapon</strong>: Self explanatory.</li>
-                <li><strong>Change Position</strong>: Kneeling, squatting, dropping prone, standing up, etc.</li>
+                <li><strong>Change Position</strong>: Kneeling, squatting, dropping prone, standing up, leaning around a corner, etc.</li>
                 <li><strong>Drop Item</strong>: Dropping a weapon, shield, or other item you are holding.</li>
                 <li><strong>Speak</strong>: Self explanatory.</li>
             </ul>
@@ -125,7 +122,7 @@ export const Combat = () => {
             <h3>Combat Maneuvers</h3>
             <ul>
                 <li><strong>Grapple</strong>: You can try to grapple foes. This is handled via opposed Brawling checks. The attack uses your action in combat, and cannot be Parried or Dodged. You receive a Bane on your roll for each size category larger the target is than yourself. If you fail, you fall to the ground. If you succeed, both you and your foe fall to the ground. As long as you maintain the grapple (via additional opposed Brawling checks) the enemy can neither move nor perform any action that requires body movement except trying to break free. The enemy attempts to break free via opposed Brawling checks on their turn.</li>
-                <li><strong>Charging</strong>: You can charge on foot or on a mount. You must spend at least half your maximum speed moving directly toward your target and then attack when able. You gain a Boon on this attack roll. If you hit, you roll an additional die of weapon damage, or two additional dice of weapon damage if you are wielding a lance.</li>
+                <li><strong>Charging</strong>: You can charge on foot or on a mount. You must spend at least half your maximum speed moving directly toward your target and then attack when able. You receive a Bane on this attack roll. If you hit, you roll an additional die of weapon damage, or two additional dice of weapon damage if you are wielding a lance.</li>
             </ul>
         </section>
     );

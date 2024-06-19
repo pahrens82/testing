@@ -16,7 +16,7 @@ export const Skills = () => {
         {
             name: "Arcane Casting",
             attribute: "INT",
-            description: "You must be a Mage to use this skill. This skill is used for casting Arcane spells, as well as identifying Arcane spells cast by others.",
+            description: "You must be a Mage to use this skill. This skill is used for casting Arcane spells, as well as identifying Arcane spells cast by others. You must be a Mage to have Arcane Casting as a class skill.",
         },
         {
             name: "Bartering",
@@ -36,7 +36,7 @@ export const Skills = () => {
         {
             name: "Climbing",
             attribute: "STR",
-            description: "The difficulty of climbing depends on the surface being scaled. Climbing a tree or ladder probably doesn’t require a roll, while climbing a stone wall without equipment might inflict a Bane, or not be possible at all.",
+            description: "The difficulty of climbing depends on the surface being scaled. Climbing a tree or ladder probably doesn't require a roll, while climbing a stone wall without equipment might inflict a Bane, or not be possible at all.",
         },
         {
             name: "Cooking",
@@ -51,7 +51,7 @@ export const Skills = () => {
         {
             name: "Divine Casting",
             attribute: "WIL",
-            description: "Divine Casting is used by clerics to wield their deity's power (that is, cast spells).",
+            description: "Divine Casting is used by clerics to wield their deity's power (that is, cast spells). You must be a cleric to have Divine Casting as a class skill.",
         },
         {
             name: "Dodge",
@@ -66,7 +66,7 @@ export const Skills = () => {
         {
             name: "Medicine",
             attribute: "INT",
-            description: <span>There is significant risk when adventuring. This skill can be used to: <ul><li>Administer Care during a Short Rest (Requires a Healer's Kit. Adds an additional die to HP recovered)</li><li>Save The Life of a character at 0 HP (this check receives a Bane if you don't have bandages)</li><li>Treat A Disease (Requires a Healer's Kit. On success, your Medicine skill is used in place of the infected character's CON on their next disease check.)</li><li>Treat An Injury (reduces injury healing time by 1 day per treatment. Requires Surgical Tools and one Shift.)</li></ul></span>,
+            description: <span>There is significant risk when adventuring. This skill can be used to:<br /><span className={"fst-italic"}>Administer Care</span> during a Short Rest (requires a Healer's Kit. Adds an additional die to HP recovered).<br /><span className={"fst-italic"}>Save The Life</span> of a character at 0 HP (this check receives a Bane if you don't have Bandages).<br /><span className={"fst-italic"}>Treat A Disease</span> (requires a Healer's Kit. On success, your Medicine skill is used in place of the infected character's CON on their next disease check.).<br /><span className={"fst-italic"}>Treat An Injury</span> (reduces injury healing time by 1 day per treatment. Requires Surgical Tools and one Shift.).</span>,
         },
         {
             name: "Myths And Legends",

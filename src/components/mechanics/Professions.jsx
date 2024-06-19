@@ -89,7 +89,7 @@ export const Professions = () => {
             </div>
             <div id={"hunter"} className={"card p-3 mb-3"}>
                 <strong>Hunter</strong>
-                <p><i>Companion</i>: WP 1. You can activate this ability to turn a non-Monstrous animal into your companion. The animals available depend on your environment. Using this ability takes a Short Rest, and you can only have one Companion at a time. Your companion follows you as long as you remain in its natural environment and will obey simple safe commands at no additional WP cost. As a free action you can command your companion to attack an enemy for an additional 3 WP.</p>
+                <p><i>Instincts</i>: WP 3. You can use this ability to designate a Creature, Character, or Monster as your prey. Use of this ability counts as an Action in combat. You can follow the trail of your prey for a full day without checks, and you can spend 1 further WP (not an action) to gain a Boon for attacks against your prey.</p>
                 <span>Key Skills:</span>
                 <ul>
                     <li>Beast Lore</li>

@@ -58,6 +58,22 @@ export const Gear = ({ category }) => {
     return (
         <>
             <section>
+                <h1>Gear</h1>
+                <h3>Carrying Capacity</h3>
+                <ul>
+                    <li>Characters can carry a number of items equal to half their Strength, rounded up.</li>
+                    <li>Backpacks increase the number of items a character can carry by 2</li>
+                    <li>Some large or voluminous items take up more than 1 space.</li>
+                    <li>Characters can carry any number of Tiny items, within reason.</li>
+                    <li>Characters can carry 3 hands worth of weapons. For example, you could carry 3 daggers, or a short spear, long sword, and shield.</li>
+                </ul>
+                <h3>Encumberance</h3>
+                <ul>
+                    <li>If you are carrying more than your normal encumerance limit, you must make a Strength roll whenever you want to move (per round in combat, or per Shift outside combat). If the Strength roll fails, you must either drop what you are carrying, or stay where you are.</li>
+                    <li>If you are carrying another character, you automatically count as encumbered and cannot fight in combat.</li>
+                </ul>
+            </section>
+            <section>
                 <div className="form-check form-check-inline">
                     <input
                         className="form-check-input"

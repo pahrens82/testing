@@ -117,7 +117,8 @@ export const Species = () => {
                             <li>Can be a mage</li>
                             <li>Ability: <i>Nomad</i>: WP -. You are used to sleeping
                                 under any circumstance. You are always Comfortable when
-                                taking a Long Rest.
+                                taking a Long Rest in the wilderness, and Uncomfortable
+                                when taking a Long Rest in a settlement.
                             </li>
                         </ul>
                     </div>
@@ -362,7 +363,7 @@ export const Species = () => {
                     </ul>
                 </div>
             </section>
-            <hr/>
+            <hr />
             <section id={"elf"}>
                 <h3>Elves</h3>
                 <p>The elves of Ansalon, with lifetimes measured in centuries,
@@ -413,10 +414,10 @@ export const Species = () => {
                         <ul>
                             <li>Speed: 6</li>
                             <li>Can be a mage</li>
-                            <li>Ability: <i>Inner Peace</i>: WP -. Elves meditate deeply
-                                when they rest. You gain the benefits of a Long Rest in one
-                                Shift instead of two. However, you cannot be woken during your
-                                meditation.
+                            <li>Ability: <i>Inner Peace</i>: WP -. Elves meditate
+                                deeply when they rest. You gain the benefits of a Long
+                                Rest in one Shift instead of two. However, you cannot
+                                be woken during your meditation.
                             </li>
                         </ul>
                     </div>

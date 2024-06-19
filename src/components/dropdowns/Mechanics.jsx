@@ -9,6 +9,7 @@ export const Mechanics = () => {
 		"Abilities",
 		"Combat",
 		"Health",
+        "Resting",
         "Conditions",
 	];
 	return (

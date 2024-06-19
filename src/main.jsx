@@ -48,6 +48,7 @@ import { Error } from "./components/Error.jsx";
 import { Location } from "./components/locations/Location.jsx";
 import { NavigationBar } from './components/NavigationBar.jsx';
 import { Species } from './components/Species.jsx';
+import { CharacterCreation } from './components/CharacterCreation.jsx';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -64,6 +65,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                     <Route
                         path={"/schedule"}
                         element={<Schedule />}
+                    />
+                    <Route
+                        path={"/characters"}
+                        element={<CharacterCreation />}
                     />
                     <Route
                         path={"/glossary"}
@@ -97,10 +102,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                         path={"/mechanics/abilities"}
                         element={<Mechanic.Abilities />}
                     />
-                    <Route
+                    {/* <Route
                         path={"/mechanics/gear"}
                         element={<Mechanic.Gear />}
-                    />
+                    /> */}
                     <Route
                         path={"/mechanics/magic"}
                         element={<Mechanic.Magic />}

@@ -37,6 +37,14 @@ export const NavigationBar = () => {
                             Schedule
                         </Link>
                     </li>
+                    <li className={"nav-item"}>
+                        <Link
+                            className={"nav-link"}
+                            to={"/characters"}
+                        >
+                            Character Creation
+                        </Link>
+                    </li>
                     <Dropdowns.Mechanics />
                     <Dropdowns.SpeciesDropdown />
                     <Dropdowns.Equipment />
