@@ -69,7 +69,7 @@ export const CharacterCreation = () => {
                     </span>
                     <ul>
                         <li>
-                            Each Profession provides a unique Ability and a list of skills at which members typically excel.
+                            Each Profession provides a unique Ability and a list of Key Skills at which members typically excel.
                         </li>
                     </ul>
                 </li>
@@ -84,6 +84,10 @@ export const CharacterCreation = () => {
                         <li>Assign the total to your selected Attribute.</li>
                         <li>Repeat from step 1 until all six Attributes have scores.</li>
                     </ol>
+                    <ul>
+                        <li>Each attribute has a value running from 3 to 18.</li>
+                        <li>Attributes most likely will not change after character creation.</li>
+                    </ul>
                 </li>
                 <li className={"mb-2"}>
                     <span className={"h4"}>
@@ -92,6 +96,66 @@ export const CharacterCreation = () => {
                     <ul>
                         <li>Six of your class skills must come from the list of Key Skills associated with your Professions.</li>
                         <li>Your other two class skills can be any of your choice (unless you don't meet the requirements).</li>
+                    </ul>
+                </li>
+                <li className={"mb-2"}>
+                    <span className={"h4"}>
+                        Write down your starting skill scores.
+                    </span>
+                    <ul>
+                        <li>Each skill has a score running from 3 to 18.</li>
+                        <li>Use the table below to determine what values your skills begin at:</li>
+                    </ul>
+                    <table className={"table table-sm small ms-3"}>
+                        <thead>
+                            <tr>
+                                <th>Attribute Score</th>
+                                <th>Base Skill Score</th>
+                                <th>Class Skill Score</th>
+                                <th>Bonus Damage (for DEX and STR)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>3-8</td>
+                                <td>3</td>
+                                <td>6</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>9-12</td>
+                                <td>4</td>
+                                <td>8</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>13-15</td>
+                                <td>5</td>
+                                <td>10</td>
+                                <td>1d4</td>
+                            </tr>
+                            <tr>
+                                <td>16-17</td>
+                                <td>6</td>
+                                <td>12</td>
+                                <td>1d6</td>
+                            </tr>
+                            <tr>
+                                <td>18</td>
+                                <td>7</td>
+                                <td>14</td>
+                                <td>1d8</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <li className={"mb-2"}>
+                    <span className={"h4"}>
+                        Note your starting Hit Points (HP) and Willpower Points (WP).
+                    </span>
+                    <ul>
+                        <li>Your character begins play with a number of HP equal to their Constitution.</li>
+                        <li>Your character begins play with a number of WP equal to their Willpower.</li>
                     </ul>
                 </li>
                 <li className={"mb-2"}>
@@ -112,6 +176,7 @@ export const CharacterCreation = () => {
                     <span className={"h4"}>
                         Details: name, appearance, background, etc.
                     </span>
+                    <p>Filling out this detail information can be done over time. Your character's backstory will probably take a session or two to figure out, as you figure out how your character fits into the world.</p>
                 </li>
             </ol>
         </section>
