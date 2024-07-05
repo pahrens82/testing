@@ -7,9 +7,9 @@ export const Professions = () => {
             <h1>Professions</h1>
             <section>
                 <p>Professions provide an ability and a set of key skills.
-                    When making a character, 5 of your class skills must
+                    When making a character, 6 of your class skills must
                     be selected from your profession's key skills. The other
-                    three skills are your choice.
+                    two skills are your choice.
                 </p>
             </section>
             <div id={"bard"} className={"card p-3 mb-3"}>
