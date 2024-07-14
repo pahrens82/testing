@@ -15,7 +15,6 @@ import { Glossary } from "./components/Glossary.jsx";
 import { Character } from "./components/characters/Character.jsx";
 
 import {
-    CHARACTERS,
     LOCATIONS,
     SPECIES,
 } from "./constants.jsx";
@@ -49,13 +48,15 @@ import { Location } from "./components/locations/Location.jsx";
 import { NavigationBar } from './components/NavigationBar.jsx';
 import { Species } from './components/Species.jsx';
 import { CharacterCreation } from './components/CharacterCreation.jsx';
+import { Characters } from './components/dropdowns/Characters.jsx';
+import { PlayerCharacters } from './components/PlayerCharacters.jsx';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         <HashRouter>
             <NavigationBar />
-            <main className={"container"}>
+            <main>
                 <Routes>
                     <Route
                         path={"/"}
@@ -67,7 +68,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                         element={<Schedule />}
                     />
                     <Route
-                        path={"/characters"}
+                        path={"/creation"}
                         element={<CharacterCreation />}
                     />
                     <Route
@@ -125,6 +126,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                     <Route
                         path={"/mechanics/travel"}
                         element={<Mechanic.Travel />}
+                    />
+                    <Route
+                        path={"/characters"}
+                        element={<Characters />}
+                    />
+                    <Route
+                        path={"/pcs"}
+                        element={<PlayerCharacters />}
                     />
                     <Route
                         path={"/equipment/melee_weapons"}
@@ -217,15 +226,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                                 key={location.name}
                                 path={location.path()}
                                 element={<Location location={location} />}
-                            />
-                        )
-                    })}
-                    {CHARACTERS.map((character, index) => {
-                        return (
-                            <Route
-                                key={character.name}
-                                path={character.path()}
-                                element={<Character character={character} />}
                             />
                         )
                     })}

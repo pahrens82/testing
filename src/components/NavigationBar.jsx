@@ -40,7 +40,7 @@ export const NavigationBar = () => {
                     <li className={"nav-item"}>
                         <Link
                             className={"nav-link"}
-                            to={"/characters"}
+                            to={"/creation"}
                         >
                             Character Creation
                         </Link>
@@ -49,7 +49,7 @@ export const NavigationBar = () => {
                     <Dropdowns.SpeciesDropdown />
                     <Dropdowns.Equipment />
                     <Dropdowns.Locations />
-                    <Dropdowns.Characters />
+                    {/* <Dropdowns.Characters /> */}
                     {/* <li className={"nav-item"}>
                         <Link
                             className={"nav-link"}

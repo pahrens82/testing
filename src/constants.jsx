@@ -1,5 +1,3 @@
-import { Character } from "./classes/character.jsx";
-import { Session } from "./classes/session.jsx";
 import { Location } from "./classes/location.jsx";
 import { Link } from "react-router-dom";
 
@@ -21,7 +19,7 @@ export const LINKS = {
         acrobatics: <Link to={"/mechanics/skills#acrobatics"}>Acrobatics</Link>,
         alchemy: <Link to={"/mechanics/skills#alchemy"}>Alchemy</Link>,
         arcane: <Link to={"/mechanics/skills#arcane-casting"}>Arcane Casting</Link>,
-        bartering: <Link to={"/mechanics/skills#bartering"}>Bartering</Link>,
+        // bartering: <Link to={"/mechanics/skills#bartering"}>Bartering</Link>,
         beast: <Link to={"/mechanics/skills#beast-lore"}>Beast Lore</Link>,
         bluff: <Link to={"/mechanics/skills#bluff"}>Bluff</Link>,
         climbing: <Link to={"/mechanics/skills#climbing"}>Climbing</Link>,
@@ -58,16 +56,6 @@ export const SPECIES = [
     "Kender",
     "Dwarves",
     // "Elves",
-];
-
-export const CHARACTERS = [
-    new Character(
-        {
-            age: 100,
-            name: "Tika Waylan",
-            description: "Bar maid",
-        }
-    ),
 ];
 
 export const LOCATIONS = [

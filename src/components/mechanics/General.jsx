@@ -19,11 +19,11 @@ export const General = () => {
             <section>
                 <h3>Opposed Rolls</h3>
                 <ul>
-                    <li>Both the GM and player roll their respective skills.</li>
-                    <li>If the GM succeeds and the player does not, the GM wins.</li>
-                    <li>If the player succeeds and the GM does not, the player wins.</li>
-                    <li>If neither the GM nor the player succeed, I am not sure what happens?</li>
-                    <li>If both the GM and player succeed, whomever rolled lowest (closest to 1) wins.</li>
+                    <li>Both participants roll for their respective skills.</li>
+                    <li>If your roll fails, your action fails, regardless of your opponent's roll.</li>
+                    <li>If your roll succeeds while your opponent fails, your action succeeds.</li>
+                    <li>If both participants succeed, whomever rolled lowest (closest to 1) wins.</li>
+                    <li>Opposed rolls can be pushed.</li>
                 </ul>
             </section>
             <section>

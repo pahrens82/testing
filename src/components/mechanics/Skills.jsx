@@ -18,11 +18,11 @@ export const Skills = () => {
             attribute: "INT",
             description: "You must be a Mage to use this skill. This skill is used for casting Arcane spells, as well as identifying Arcane spells cast by others. You must be a Mage to have Arcane Casting as a class skill.",
         },
-        {
-            name: "Bartering",
-            attribute: "CHA",
-            description: "You may use this skill when haggling over an item to adjust the price by 20% in your favor. If critically succeed, the adjustment is 50%. If you critically fail, you and your companions are banned from the shop. Some prices may be non-negotiable.",
-        },
+        // {
+        //     name: "Bartering",
+        //     attribute: "CHA",
+        //     description: "You may use this skill when haggling over an item to adjust the price by 20% in your favor. If critically succeed, the adjustment is 50%. If you critically fail, you and your companions are banned from the shop. Some prices may be non-negotiable.",
+        // },
         {
             name: "Beast Lore",
             attribute: "INT",
@@ -66,7 +66,7 @@ export const Skills = () => {
         {
             name: "Medicine",
             attribute: "INT",
-            description: <span>There is significant risk when adventuring. This skill can be used to:<br /><span className={"fst-italic"}>Administer Care</span> during a Short Rest (requires a Healer's Kit. Adds an additional die to HP recovered).<br /><span className={"fst-italic"}>Save The Life</span> of a character at 0 HP (this check receives a Bane if you don't have Bandages).<br /><span className={"fst-italic"}>Treat A Disease</span> (requires a Healer's Kit. On success, your Medicine skill is used in place of the infected character's CON on their next disease check.).<br /><span className={"fst-italic"}>Treat An Injury</span> (reduces injury healing time by 1 day per treatment. Requires Surgical Tools and one Shift.).</span>,
+            description: <span>There is significant risk when adventuring. This skill can be used to:<br /><span className={"fst-italic"}>Administer Care</span> to another character during a Short Rest (requires a Healer's Kit. Adds an additional die to HP recovered).<br />Apply <span className={"fst-italic"}>First Aid</span> to another character at 0 HP (this check receives a Bane if you don't have Bandages).<br /><span className={"fst-italic"}>Treat A Disease</span> (requires a Healer's Kit. On success, your Medicine skill is used in place of the infected character's CON on their next disease check.).<br /><span className={"fst-italic"}>Treat An Injury</span> (reduces injury healing time by 1 day per treatment. Requires Surgical Tools and one Shift.).</span>,
         },
         {
             name: "Myths And Legends",
