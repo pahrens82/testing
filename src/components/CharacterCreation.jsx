@@ -177,6 +177,19 @@ export const CharacterCreation = () => {
                         Details: name, appearance, background, etc.
                     </span>
                     <p>Filling out this detail information can be done over time. Your character's backstory will probably take a session or two to figure out, as you figure out how your character fits into the world.</p>
+                    <strong>Backstory Questions:</strong>
+                    <p>These questions are intended to give you an idea of details to include in your backstory.</p>
+                    <ul>
+                        <li>Where is your character from? What village, town or tribe? What is/was their home like?</li>
+                        <li>Does your character have a family? Who are they? Did they raise you? Do you have siblings?</li>
+                        <li>What does your character look like?</li>
+                        <li>You character has simple garments and shoes. What else does your character wear? For example, does your character have piercings? Does your character decorate their clothing?</li>
+                        <li>What is your character's quirk? For example, does your character bite their nails? Bounce from foot to foot? Grind their teeth?</li>
+                        <li>What does your character do within their community? Keep in mind your characters are in their late teens, in human terms. Basically, how do you explain your character's skills?</li>
+                        <li>Mages are at best disliked and at worst hated because they are perceived as having caused, or at least failed to stop, the Cataclysm.</li>
+                        <li>What are your characters likes and dislikes?</li>
+                        <li>Does your character have a moral code? If not, why not? If so, what is their moral code, and is the code an ideal or something that actually influences your character's behavior?</li>                        
+                    </ul>
                 </li>
             </ol>
         </section>

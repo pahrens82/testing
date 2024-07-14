@@ -18,8 +18,10 @@ export const App = () => {
         {
             date: "7/14/2024",
             changes: [
-                "Added PCs page for GM use",
-                "Clarified tasks of the Medicine skill",                
+                "Added PCs page for GM use.",
+                "Clarified tasks of the Medicine skill.",
+                "Updates styling of the Schedule component.",
+                "Added backstory questions.",
             ]
         }
     ];
