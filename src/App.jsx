@@ -22,6 +22,7 @@ export const App = () => {
                 "Clarified tasks of the Medicine skill.",
                 "Updates styling of the Schedule component.",
                 "Added backstory questions.",
+                "Added a link to the Discord channel to the Navbar component.",
             ]
         }
     ];

@@ -49,15 +49,15 @@ export const NavigationBar = () => {
                     <Dropdowns.SpeciesDropdown />
                     <Dropdowns.Equipment />
                     <Dropdowns.Locations />
-                    {/* <Dropdowns.Characters /> */}
-                    {/* <li className={"nav-item"}>
-                        <Link
+                    <li className={"nav-item"}>
+                        <a
                             className={"nav-link"}
-                            to={"/glossary"}
+                            href={"https://discord.com/channels/764997853608673310/1259720076811309147"}
+                            target={"_blank"}
                         >
-                            Glossary
-                        </Link>
-                    </li> */}
+                            Patlance Discord
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
