@@ -23,6 +23,7 @@ export const App = () => {
                 "Updates styling of the Schedule component.",
                 "Added backstory questions.",
                 "Added a link to the Discord channel to the Navbar component.",
+                "Clarifies some language for spells.",
             ]
         }
     ];

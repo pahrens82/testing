@@ -182,7 +182,7 @@ export const Magic = () => {
             target: "Special",
             opposedBy: "Special",
             type: "Arcane",
-            description: "This spell grants basic control over the four traditional elements: air, earth, fire, and water. Upon casting, select the element you want to manipulate; you must have immediate access to the chosen element, since the spell does not conjure the element for you. For the duration of the spell you can take the following actions: Attack: You bombard a target with the element you are manipulating. You use your casting skill for the attack roll, and successful attacks deal 2d4 damage to a target within Range. Move: You move a cubic foot of the chosen element up to Range in any direction. Special: You may use the elements to create an additional effect with the GM's approval. Some examples are using air to blow out a torch, fill holes in a stone wall, conjure flame the size of a torch, or purify a gallon of water.",
+            description: "This spell grants basic control over the four traditional elements: air, earth, fire, and water. Upon casting, select the element you want to manipulate; you must have immediate access to the chosen element, since the spell does not conjure the element for you. For the duration of the spell you can take the following actions: Attack: You bombard a target with the element you are manipulating. You use your casting skill for the attack roll, and successful attacks deal 2d4 damage to a target within Range. Move: You move a cubic foot of the chosen element up to Range in any direction. Special: You may use the elements to create an additional effect with the GM's approval. Some examples are using air to blow out a torch, fill holes in a stone wall, grow a small flame to the size of a torch, or purify a gallon of water.",
             modifiers: [
                 {
                     name: "Weather Manipulation",
@@ -310,7 +310,7 @@ export const Magic = () => {
             target: "Individual",
             opposedBy: "Harmless",
             type: "Arcane",
-            description: "Lock permanently seals a door, window, container, envelope, drawer, box, or other closeable item. Any attempt to force the opening is made with a Bane. The caster may set a passphrase during casting that allows access to the object. Unlock may be used to cancel Lock. Lock does not physically activate a lock, nor does Unlock unlock physical locks.",
+            description: "Lock permanently seals a door, window, container, envelope, drawer, box, or other closeable item. Any attempt to forcfully open the target is made with a Bane. The caster may set a passphrase during casting that allows access to the object. Unlock may be used to cancel Lock. Lock does not physically activate a lock, nor does Unlock unlock physical locks.",
             modifiers: [
                 MODIFIERS.alarm,
             ],
@@ -558,7 +558,7 @@ export const Magic = () => {
 
 
     return (
-        <section className={"contents"}>
+        <section className={"container contents"}>
             <h1>Magic</h1>
             <section>
                 <h3>Type</h3>
