@@ -3,7 +3,7 @@ import { LINKS } from "../../constants.jsx";
 
 export const General = () => {
     return (
-        <section className={"contents mb-5"}>
+        <section className={"container mb-5"}>
             <h1>General Mechanics</h1>
             <section>
                 <h3>Dice Rolling</h3>

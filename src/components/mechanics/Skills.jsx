@@ -184,7 +184,7 @@ export const Skills = () => {
     ];
 
     return (
-        <section className={"contents"}>
+        <section className={"container"}>
             <h1>Skills</h1>
             <section>
                 <h3>Non-Combat Skills</h3>

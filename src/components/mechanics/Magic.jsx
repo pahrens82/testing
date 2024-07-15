@@ -558,7 +558,7 @@ export const Magic = () => {
 
 
     return (
-        <section className={"container contents"}>
+        <section className={"container"}>
             <h1>Magic</h1>
             <section>
                 <h3>Type</h3>

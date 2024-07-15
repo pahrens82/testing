@@ -51,7 +51,7 @@ export const CharacterCreation = () => {
     ];
 
     return (
-        <section className={"contents"}>
+        <section className={"container"}>
             <h1>Character Creation</h1>
             <ol>
                 <li className={"mb-2"}>

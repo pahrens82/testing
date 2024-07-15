@@ -239,7 +239,7 @@ export const Abilities = () => {
     ABILITIES.sort((a, b) => a.name > b.name)
 
     return (
-        <section className={"contents"}>
+        <section className={"container"}>
             <h1>Abilities</h1>
             {ABILITIES.map((ability, index) => {
                 return (

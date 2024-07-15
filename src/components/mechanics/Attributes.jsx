@@ -2,7 +2,7 @@ import {LINKS} from "../../constants.jsx";
 
 export const Attributes = () => {
 	return (
-		<div className={"contents"}>
+		<div className={"container"}>
 			<h1>Attributes</h1>
 			<p>Attribute represent the general physical and mental qualities of your character.</p>
 			<ol className={"list-unstyled"}>

@@ -634,7 +634,7 @@ export const Species = ({ type }) => {
             console.log("SWITCH DEFAULT")
     }
     return (
-        <section className={"contents mb-5 lh-lg"}>
+        <section className={"container mb-5 lh-lg"}>
             {returnable}
         </section>
     )

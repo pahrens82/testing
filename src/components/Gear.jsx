@@ -56,7 +56,7 @@ export const Gear = ({ category }) => {
             break;
     }
     return (
-        <>
+        <section className={"container"}>
             <section>
                 <h1>Gear</h1>
                 <h3>Carrying Capacity</h3>
@@ -124,6 +124,6 @@ export const Gear = ({ category }) => {
                 </div>
             </section>
             {component}
-        </>
+        </section>
     )
 };

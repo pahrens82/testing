@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export const Combat = () => {
     return (
-        <section className={"contents"}>
+        <section className={"container"}>
             <h1>Combat</h1>
             <h3>Before Combat</h3>
             <h5 id={"sneak-attack"}>Sneak Attacks</h5>

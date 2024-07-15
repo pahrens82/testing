@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Health = () => {
     return (
-        <section className={"contents"}>
+        <section className={"container"}>
             <h1>Health, Healing, and Dying</h1>
             <section>
                 <h3>Measuring Health</h3>

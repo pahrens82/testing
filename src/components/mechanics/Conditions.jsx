@@ -3,7 +3,7 @@ import { LINKS } from "../../constants";
 
 export const Conditions = () => {
     return (
-        <section className={"contents"}>
+        <section className={"container"}>
             <h1>Conditions and Hazards</h1>
             <section>
                 <h3>Conditions</h3>

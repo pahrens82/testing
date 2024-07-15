@@ -1,6 +1,6 @@
 export const Resting = () => {
     return (
-        <section className={"contents"}>
+        <section className={"container"}>
             <h1>Resting</h1>
             <p>There are three types of rests:</p>
             <ul>
