@@ -24,6 +24,7 @@ export const App = () => {
                 "Added backstory questions.",
                 "Added a link to the Discord channel to the Navbar component.",
                 "Clarifies some language for spells.",
+                "Updates weapon attack critical hit effects.",
             ]
         }
     ];

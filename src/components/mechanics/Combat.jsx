@@ -105,10 +105,10 @@ export const Combat = () => {
             <h3>Critical Hits and Misses</h3>
             <p>If you roll a 1 on your attack roll, you may select one of the following effects:</p>
             <ul>
-                <li>Double your weapon's dice for damage on this attack.</li>
                 <li>Immediately perform an attack against another enemy.</li>
                 <li>If you are wielding a <i>piercing</i> weapon, ignore your target's armor for this attack.</li>
                 <li>If you are wielding a <i>bludgeoning</i> weapon, knock your enemy prone.</li>
+                <li>If you are wielding a <i>slashing</i> weapon, double your weapon's dice for damage on this attack.</li>
             </ul>
             <p>If you roll a 20 on your attack roll, roll 1d6 to determine the effect:</p>
             <ol>
