@@ -96,7 +96,7 @@ export const MELEE_WEAPONS = [
         damage: "1d10",
         durability: 9,
         cost: 2,
-        features: "Cannot Parry, React",
+        features: "Cannot Parry, Reach",
         availability: 0,
     },
     {

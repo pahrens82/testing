@@ -60,6 +60,25 @@ export const General = () => {
                     <li>Depending on circumstances, such a situation might be resolved by having everyone make a check, or by having the character with the highest or lowest skill make the check.</li>
                 </ul>
             </section>
+            <section>
+                <h3>Carrying Capacity</h3>
+                <ul>
+                    <li>Characters can carry a number of items equal to half their Strength, rounded up.</li>
+                    <li>Backpacks increase the number of items a character can carry by 2</li>
+                    <li>Some large or voluminous items take up more than 1 space.</li>
+                    <li>Characters can carry any number of Tiny items, with the GM's discretion.</li>
+                    <li>Characters can also carry 3 hands worth of weapons. For example, you could carry 3 daggers, or a short spear, long sword, and shield.</li>
+                </ul>
+                <h3>Encumberance</h3>
+                <ul>
+                    <li>If you are carrying more than your normal encumberance limit:</li>
+                    <ul>
+                        <li>you must make a Strength roll whenever you want to move during combat. If the Strength roll fails, you must either drop what you are carrying, or stay where you are.</li>
+                        <li>you move at half speed outside combat.</li>
+                    </ul>
+                    <li>If you are carrying another character, you automatically count as encumbered and cannot fight in combat.</li>
+                </ul>
+            </section>
         </section>
     )
 };

@@ -18,7 +18,7 @@ export const Weapons = ({ equipment, label }) => {
     equipment.sort((a, b) => a.name > b.name);
 
     return (
-        <section>
+        <section className={"container-fluid"}>
             <h1>{label}</h1>
             <section>
                 <div className="form-check form-check-inline">

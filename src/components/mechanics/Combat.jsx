@@ -36,7 +36,7 @@ export const Combat = () => {
             <h3>Combat Actions</h3>
             <p>You are able to take one action per turn, and any number
                 of free actions. Each free action may only be taken
-                once per round, however.
+                once per turn, however.
             </p>
             <h5>Actions</h5>
             <ul>
@@ -103,12 +103,11 @@ export const Combat = () => {
                 <li>You cannot attempt to Dodge and Parry against the same attack.</li>
             </ol>
             <h3>Critical Hits and Misses</h3>
-            <p>If you roll a 1 on your attack roll, you may select one of the following effects:</p>
+            <p>If you roll a 1 on your attack roll, the effect is determined by the damage type of your weapon:</p>
             <ul>
-                <li>Immediately perform an attack against another enemy.</li>
                 <li>If you are wielding a <i>piercing</i> weapon, ignore your target's armor for this attack.</li>
-                <li>If you are wielding a <i>bludgeoning</i> weapon, knock your enemy prone.</li>
-                <li>If you are wielding a <i>slashing</i> weapon, double your weapon's dice for damage on this attack.</li>
+                <li>If you are wielding a <i>bludgeoning</i> weapon, roll double your weapon dice for this attack.</li>
+                <li>If you are wielding a <i>slashing</i> weapon, immediately perform an attack against another enemy within reach after resolving your current attack.</li>
             </ul>
             <p>If you roll a 20 on your attack roll, roll 1d6 to determine the effect:</p>
             <ol>

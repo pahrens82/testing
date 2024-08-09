@@ -7,11 +7,9 @@ export const LINKS = {
     },
     attribute: <Link to={"/mechanics/attributes"}>attribute</Link>,
     attributes: <Link to={"/mechanics/attributes"}>attributes</Link>,
-    boon: <Link to={"/glossary#boon"}>boon</Link>,
     condition: <Link to={"/mechanics/conditions"}>condition</Link>,
     conditions: <Link to={"/mechanics/health#conditions"}>conditions</Link>,
     disease: <Link to={"/mechanics/health#disease"}>disease</Link>,
-    glossary: <Link to={"/glossary"}>glossary</Link>,
     poison: <Link to={"/mechanics/health#poison"}>poison</Link>,
     push: <Link to={"/mechanics/general#push-your-luck"} > Push Your Luck</Link>,
     // skill: <Link to={"/mechanics/skills/"}>skill</Link>,
@@ -55,7 +53,7 @@ export const SPECIES = [
     "Half-Elves",
     "Kender",
     "Dwarves",
-    // "Elves",
+    "Elves",
 ];
 
 export const LOCATIONS = [

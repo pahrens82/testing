@@ -48,7 +48,7 @@ export const NavigationBar = () => {
                     <Dropdowns.Mechanics />
                     <Dropdowns.SpeciesDropdown />
                     <Dropdowns.Equipment />
-                    <Dropdowns.Locations />
+                    {/* <Dropdowns.Locations /> */}
                     <li className={"nav-item"}>
                         <a
                             className={"nav-link"}

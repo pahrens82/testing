@@ -26,19 +26,35 @@ export const App = () => {
                 "Clarifies some language for spells.",
                 "Updates weapon attack critical hit effects.",
             ]
+        },
+        {
+            date: "8/9/2024",
+            changes: [
+                "Corrected a typo.",
+                "Removed the Locations dropdown",
+                "Added mechanics for spell casting.",
+                "Clarified critical hits effects.",
+                "Clarified free action frequency.",
+                "Reveals Elves in the Species dropdown, which I don't remember hiding.",
+                "Adds carrying capacity rules under General.",
+            ]
         }
     ];
 
     return (
-        <>
-            <h1>Change Log</h1>
-            <ul>
-                {CHANBGE_LOG.map((log, index) => {
-                    return (
-                        <li>{log.date}: <ol>{log.changes.map((change, indexx) => { return (<li>{change}</li>)})}</ol></li>
-                    )
-                })}
-            </ul>
-        </>
+        <section className={"container-fluid"}>
+            <div className={"row"}>
+                <div className={"col"}>
+                    <h1>Change Log</h1>
+                    <ul>
+                        {CHANBGE_LOG.map((log, index) => {
+                            return (
+                                <li>{log.date}: <ol>{log.changes.map((change, indexx) => { return (<li>{change}</li>) })}</ol></li>
+                            )
+                        })}
+                    </ul>
+                </div>
+            </div>
+        </section>
     )
 }

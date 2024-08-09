@@ -47,7 +47,7 @@ export const PlayerCharacters = () => {
                 ],
             }
         ),
-        patrick: new PC(
+        pattrick: new PC(
             {
                 attributes: {
                     str: 13,
@@ -237,7 +237,7 @@ export const PlayerCharacters = () => {
                             className="form-check-label"
                             htmlFor="inlineCheckbox1"
                         >
-                            Patrick
+                            Pattrick
                         </label>
                     </div>
                     <div className="form-check form-check-inline">
@@ -307,47 +307,53 @@ export const PlayerCharacters = () => {
                 </section>
             </section>
             <section className={"d-flex"}>
-                <section className={`card px-3 me-3 d-${checked.has(0) ? "block" : "none"}`}>
+                <section className={`card px-3 me-3 d-${checked.has(0) ? "block" : "none"} character`}>
                     <small>Nate</small>
                     <h3>
                         {characters.nate.name}
                     </h3>
-                    {characters.nate.skillsToTable()}
+                    {characters.nate.attributesToTable()}
+                    {characters.nate.skillsToTable(characters.nate.name)}
                 </section>
-                <section className={`card px-3 me-3 d-${checked.has(1) ? "block" : "none"}`}>
+                <section className={`card px-3 me-3 d-${checked.has(1) ? "block" : "none"} character`}>
                     <small>Patrick</small>
                     <h3 className={"m-0"}>
-                        {characters.patrick.name}
+                        {characters.pattrick.name}
                     </h3>
-                    {characters.patrick.skillsToTable()}
+                    {characters.mitch.attributesToTable()}
+                    {characters.pattrick.skillsToTable(characters.pattrick.name)}
                 </section>
-                <section className={`card px-3 me-3 d-${checked.has(2) ? "block" : "none"}`}>
+                <section className={`card px-3 me-3 d-${checked.has(2) ? "block" : "none"} character`}>
                     <small>Mike</small>
                     <h3 className={"m-0"}>
                         {characters.mike.name}
                     </h3>
-                    {characters.mike.skillsToTable()}
+                    {characters.mike.attributesToTable()}
+                    {characters.mike.skillsToTable(characters.mike.name)}
                 </section>
-                <section className={`card px-3 me-3 d-${checked.has(3) ? "block" : "none"}`}>
+                <section className={`card px-3 me-3 d-${checked.has(3) ? "block" : "none"} character`}>
                     <small>Chris</small>
                     <h3 className={"m-0"}>
                         {characters.chris.name}
                     </h3>
-                    {characters.chris.skillsToTable()}
+                    {characters.chris.attributesToTable()}
+                    {characters.chris.skillsToTable(characters.chris.name)}
                 </section>
-                <section className={`card px-3 me-3 d-${checked.has(4) ? "block" : "none"}`}>
+                <section className={`card px-3 me-3 d-${checked.has(4) ? "block" : "none"} character`}>
                     <small>Dowell</small>
                     <h3 className={"m-0"}>
                         {characters.dowell.name}
                     </h3>
-                    {characters.dowell.skillsToTable()}
+                    {characters.dowell.attributesToTable()}
+                    {characters.dowell.skillsToTable(characters.dowell.name)}
                 </section>
-                <section className={`card px-3 me-3 d-${checked.has(5) ? "block" : "none"}`}>
+                <section className={`card px-3 me-3 d-${checked.has(5) ? "block" : "none"} character`}>
                     <small>Mitch</small>
                     <h3 className={"m-0"}>
                         {characters.mitch.name}
                     </h3>
-                    {characters.mitch.skillsToTable()}
+                    {characters.mitch.attributesToTable()}
+                    {characters.mitch.skillsToTable(characters.mitch.name)}
                 </section>
             </section>
         </section>

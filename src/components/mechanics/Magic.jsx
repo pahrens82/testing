@@ -561,6 +561,18 @@ export const Magic = () => {
         <section className={"container"}>
             <h1>Magic</h1>
             <section>
+                <h3>Mechanics</h3>
+                <ul>
+                    <li>Expend Willpower per the spell you are attempting to cast.
+                        This is determined by the base cost of the spell plus any
+                        modifiers you select.
+                    </li>
+                    <li>Roll a casting check.</li>
+                    <li>If your check succeeds, resolve the spell.</li>
+                    <li>If your check fails, your action is over.</li>
+                </ul>
+            </section>
+            <section>
                 <h3>Type</h3>
                 {TYPES.map((casterType, index) => {
                     return (

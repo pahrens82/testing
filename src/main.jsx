@@ -10,7 +10,6 @@ import {
 
 import { App } from './App.jsx'
 import { Schedule } from "./components/Schedule.jsx";
-import { Glossary } from "./components/Glossary.jsx";
 
 import { Character } from "./components/characters/Character.jsx";
 
@@ -72,10 +71,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                         element={<CharacterCreation />}
                     />
                     <Route
-                        path={"/glossary"}
-                        element={<Glossary />}
-                    />
-                    <Route
                         path={"/mechanics/general"}
                         element={<Mechanic.General />}
                     />
@@ -87,10 +82,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                         path={"/mechanics/attributes"}
                         element={<Mechanic.Attributes />}
                     />
-                    {/* <Route
-                        path={"/mechanics/species"}
-                        element={<Mechanic.Species />}
-                    /> */}
                     <Route
                         path={"/mechanics/professions"}
                         element={<Mechanic.Professions />}
@@ -103,10 +94,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                         path={"/mechanics/abilities"}
                         element={<Mechanic.Abilities />}
                     />
-                    {/* <Route
-                        path={"/mechanics/gear"}
-                        element={<Mechanic.Gear />}
-                    /> */}
                     <Route
                         path={"/mechanics/magic"}
                         element={<Mechanic.Magic />}
@@ -122,10 +109,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                     <Route
                         path={"/mechanics/conditions"}
                         element={<Mechanic.Conditions />}
-                    />
-                    <Route
-                        path={"/mechanics/travel"}
-                        element={<Mechanic.Travel />}
                     />
                     <Route
                         path={"/characters"}
