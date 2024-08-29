@@ -66,7 +66,7 @@ export const PlayerCharacters = () => {
                     "survival",
                     "swimming",
                     "tinkering",
-                    "knives",                    
+                    "knives",
                 ],
             }
         ),
@@ -92,11 +92,11 @@ export const PlayerCharacters = () => {
                     "alchemy",
                     "arcane casting",
                     "beast lore",
+                    "bows",
                     "dodge",
                     "herbalism",
-                    "myths and legends",
                     "perception",
-                    "staves",
+                    "tracking",
                 ],
                 improvements: [
                     "arcane casting",
@@ -216,10 +216,10 @@ export const PlayerCharacters = () => {
                 abilities: [],
                 classSkills: [
                     "divine casting",
-                    "dodge",
                     "herbalism",
                     "medicine",
                     "persuasion",
+                    "axes",
                     "bludgeons", // Is this supposed to be axes?
                     "slings",
                     "staves",
