@@ -1,3 +1,16 @@
+const WEAPON_SKILLS = [
+    "axes",
+    "bludgeons",
+    "bows",
+    "brawling",
+    "crossbows",
+    "knives",
+    "slings",
+    "spears",
+    "staves",
+    "swords",
+];
+
 export class PC {
     constructor(
         {
@@ -18,6 +31,7 @@ export class PC {
             gear = [],
             name,
             classSkills = [],
+            improvements = [],
             skills = {
                 acrobatics: { attr: "dex", score: 0, name: "Acrobatics", description: "(Dex) Used for jumping, balancing, and similar physical actions." },
                 alchemy: { attr: "int", score: 0, name: "Alchemy", description: "(Int) This skill lets you identify alchemical items. With the Alchemist ability and proper equipment and ingredients, you can craft alchemical items as well." },
@@ -62,12 +76,29 @@ export class PC {
         this.name = name;
         this.classSkills = classSkills;
         this.skills = skills;
+        this.improvements = improvements;
     };
 
     getSkills = () => {
         let skills = {};
         Object.keys(this.skills).forEach((skill, index) => {
-            skills[this.skills[skill].name] = { score: this.attributesToSkills(this.attributes[this.skills[skill].attr], this.classSkills.includes(skill)), description: this.skills[skill].description }
+            if (!WEAPON_SKILLS.includes(skill)) {
+                let score = this.attributesToSkills(this.attributes[this.skills[skill].attr], this.classSkills.includes(skill));
+                if (this.improvements.includes(skill)) score += 1;
+                skills[this.skills[skill].name] = { score: score, description: this.skills[skill].description };
+            }
+        });
+        return skills;
+    };
+
+    getWeaponSkills = () => {
+        let skills = {};
+        Object.keys(this.skills).forEach((skill, index) => {
+            if (WEAPON_SKILLS.includes(skill)) {
+                let score = this.attributesToSkills(this.attributes[this.skills[skill].attr], this.classSkills.includes(skill));
+                if (this.improvements.includes(skill)) score += 1;
+                skills[this.skills[skill].name] = { score: score, description: this.skills[skill].description };
+            }
         });
         return skills;
     };
@@ -135,8 +166,14 @@ export class PC {
         )
     }
 
-    skillsToTable = (name) => {
-        let skills = this.getSkills();
+    skillsToTable = (name, weaponsOnly = false) => {
+        let skills;
+        if (weaponsOnly) {
+            skills = this.getWeaponSkills();
+        } else {
+            skills = this.getSkills();
+        }
+
         return (
             <>
                 <table className={"table table-striped table-sm"}>
@@ -154,8 +191,12 @@ export class PC {
                                     title={skills[skill].description}
                                     onClick={() => this.showModal(`dialog-${name}-${skill}`)}
                                 >
-                                    <td>{skill}</td>
-                                    <td>{skills[skill].score}</td>
+                                    <td className={this.classSkills.includes(skill.toLowerCase()) ? "fw-bold" : ""}>
+                                        {skill}
+                                    </td>
+                                    <td>
+                                        {skills[skill].score}
+                                    </td>
                                 </tr>
                             )
                         })}

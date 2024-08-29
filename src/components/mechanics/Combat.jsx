@@ -31,19 +31,25 @@ export const Combat = () => {
             <h3>The Combat Round</h3>
             <p>On your turn during a combat round you may move up to
                 your speed. At any point during your turn you may
-                also take one action.
+                also take one Action.
             </p>
             <h3>Combat Actions</h3>
-            <p>You are able to take one action per turn, and any number
-                of free actions. Each free action may only be taken
+            <p>You are able to take one Action per turn, and any number
+                of free actions. Each free Action may only be taken
                 once per turn, however.
             </p>
             <h5>Actions</h5>
             <ul>
                 <li><strong>Dash</strong>: Move up to your speed (essentially doubling your movement).</li>
-                <li><strong>Attack</strong>: Attack an enemy within reach or range of your weapon.</li>
-                <li><strong>Parry</strong>: Parrying is a <i>reaction</i> that takes place outside your turn and uses your action for the round.</li>
-                <li><strong>Dodge</strong>: Doding is a <i>reaction</i> that takes place outside your turn and uses your action for the round.</li>
+                <li><strong>Attack</strong>: Attack an enemy within reach or range of your weapon.
+                    <ul>
+                        <li><strong>Grapple</strong>: You can try to grapple foes. This is handled via opposed Brawling checks. The attack uses your Action in combat, and cannot be Parried or Dodged. You receive a Bane on your roll for each size category larger the target is than yourself. If you fail, you fall to the ground. If you succeed, both you and your foe fall to the ground. As long as you maintain the grapple (via additional opposed Brawling checks) the enemy can neither move nor perform any Action that requires body movement except trying to break free. The enemy attempts to break free via opposed Brawling checks on their turn.</li>
+                        <li><strong>Disarming</strong>: You can attempt to disarm a foe of their weapon. This counts as an Action for you, but not for your opponent. This Action is resolved as opposed rolls with each participant using their respective weapon skill. This attack can be neither Dodged nor Parried. If your opponent is wielding their weapon with two hands, you receive a Bane to your roll. If you succeed, your opponent's weapon lands in an adjacent hex. If you critically succeed and have a free hand, you can grab your opponent's weapon (assuming you are able to wield it). If you critically fail, you are instead disarmed, with your weapon landing in an adjacent hex.</li>
+                        <li><strong>Charging</strong>: You can charge on foot or on a mount. You must spend at least half your maximum speed moving directly toward your target and then melee attack when able. You receive a Bane on this attack roll. If you hit, you roll an additional die of weapon damage, or two additional dice of weapon damage if you are wielding a lance.</li>
+                    </ul>
+                </li>
+                <li><strong>Parry</strong>: Parrying is a <i>reaction</i> that takes place outside your turn and uses your Action for the round.</li>
+                <li><strong>Dodge</strong>: Doding is a <i>reaction</i> that takes place outside your turn and uses your Action for the round.</li>
                 <li><strong>Retrieve Item</strong>: Retrieving an item from your space, an adjacent space, or from your backpack.</li>
                 <li><strong>Rally</strong>: Use Persuasion to enable a character at 0 HP continue taking actions, or a WIL check for your own character.</li>
                 <li><strong>Use A Skill</strong>: Basically any use of a Skill is an Action.</li>
@@ -80,11 +86,11 @@ export const Combat = () => {
             <h3>Parrying</h3>
             <ol>
                 <li>Parrying is done as a reaction to being hit in combat.</li>
-                <li>Parrying consumes your action for the round. If you've already acted this round, you can't Parry.</li>
+                <li>Parrying consumes your Action for the round. If you've already acted this round, you can't Parry.</li>
                 <li>Melee attacks can be Parried with a drawn weapon or shield.</li>
                 <li>Ranged attacks can be Parried with a readied shield (or a drawn weapon if you have the Deflect Arrow ability).</li>
                 <li>To Parry, you make a check against the Skill corresponding to the weapon you are wielding.</li>
-                <li>If your Parry succeeds, your opponent rolls damage, and that damage is compared to the Durability of your weapon. If the damage exceeds the Durability of your weapon, your weapon Breaks.</li>
+                <li>If your Parry succeeds, your opponent rolls damage, and that damage is compared to the Durability of your weapon. If the damage meets or exceeds the Durability of your weapon, your weapon Breaks.</li>
                 <li>If you are wielding a shield in addition to your weapon, you may compare the damage to your shield's Durability instead of your weapon's. Shields generally have a higher Durability rating.</li>
                 <li>If the hit against you is critical, you must roll a critical success to Parry it.</li>
                 <li>If you roll a critical success on your Parry attempt, and the hit against you is not critical, you get a free attack against your attacker.</li>
@@ -94,7 +100,7 @@ export const Combat = () => {
             <h3>Dodging</h3>
             <ol>
                 <li>Dodging is done as a reaction to being hit in combat.</li>
-                <li>Dodging consumes your action for the round. If you've already acted this round, you can't Dodge.</li>
+                <li>Dodging consumes your Action for the round. If you've already acted this round, you can't Dodge.</li>
                 <li>To Dodge, you make a check against Dodge skill.</li>
                 <li>If your Dodge check succeeds, your opponent's attack misses.</li>
                 <li>If the hit against you is critical, you must roll a critical success to Dodge it.</li>
@@ -120,7 +126,8 @@ export const Combat = () => {
             </ol>
             <h3>Combat Maneuvers</h3>
             <ul>
-                <li><strong>Grapple</strong>: You can try to grapple foes. This is handled via opposed Brawling checks. The attack uses your action in combat, and cannot be Parried or Dodged. You receive a Bane on your roll for each size category larger the target is than yourself. If you fail, you fall to the ground. If you succeed, both you and your foe fall to the ground. As long as you maintain the grapple (via additional opposed Brawling checks) the enemy can neither move nor perform any action that requires body movement except trying to break free. The enemy attempts to break free via opposed Brawling checks on their turn.</li>
+                <li><strong>Grapple</strong>: You can try to grapple foes. This is handled via opposed Brawling checks. The attack uses your Action in combat, and cannot be Parried or Dodged. You receive a Bane on your roll for each size category larger the target is than yourself. If you fail, you fall to the ground. If you succeed, both you and your foe fall to the ground. As long as you maintain the grapple (via additional opposed Brawling checks) the enemy can neither move nor perform any Action that requires body movement except trying to break free. The enemy attempts to break free via opposed Brawling checks on their turn.</li>
+                <li><strong>Disarming</strong>: You can attempt to disarm a foe of their weapon. This counts as an Action for you, but not for your opponent. This Action is resolved as opposed rolls with each participant using their respective weapon skill. This attack can be neither Dodged nor Parried. If your opponent is wielding their weapon with two hands, you receive a Bane to your roll. If you succeed, your opponent's weapon lands in an adjacent hex. If you critically succeed and have a free hand, you can grab your opponent's weapon (assuming you are able to wield it). If you critically fail, you are instead disarmed, with your weapon landing in an adjacent hex.</li>
                 <li><strong>Charging</strong>: You can charge on foot or on a mount. You must spend at least half your maximum speed moving directly toward your target and then attack when able. You receive a Bane on this attack roll. If you hit, you roll an additional die of weapon damage, or two additional dice of weapon damage if you are wielding a lance.</li>
             </ul>
         </section>

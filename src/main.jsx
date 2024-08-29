@@ -52,7 +52,7 @@ import { PlayerCharacters } from './components/PlayerCharacters.jsx';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
+    // <React.StrictMode>
         <HashRouter>
             <NavigationBar />
             <main>
@@ -215,5 +215,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 </Routes>
             </main>
         </HashRouter>
-    </React.StrictMode>,
+    // </React.StrictMode>,
 )

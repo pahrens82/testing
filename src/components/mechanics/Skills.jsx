@@ -115,7 +115,7 @@ export const Skills = () => {
         },
         {
             name: "Swimming",
-            attribute: "DEX",
+            attribute: "STR",
             description: "Under normal circumstances, characters can float for one Shift without making Swimming checks. Your movement rate is halved while swimming. Ranged attacks are impossible, and melee attacks receive a Bane, while swimming. The frequency at which you must make Swimming checks depends on the environment and your armor.",
         },
         {

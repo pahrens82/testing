@@ -6,13 +6,23 @@ import './App.css'
 export const App = () => {
     const CHANBGE_LOG = [
         {
-            date: "7/9/2024",
+            date: "8/19/2024",
             changes: [
-                "Removed the Barter skill.",
-                "Updated the text for Opposed Rolls.",
-                "Added new session to schedue.",
-                "Changed order sessions are listed in the schedule.",
-                "Changed the Medicine skill's Save A Life task name to First Aid.",
+                "Adds the PCs page link to the navbar.",
+                "Corrects the Swimming skill to be based off STR instead of DEX.",
+                "Adds start times to the schedule with 11 AM as the default.",
+            ]
+        },
+        {
+            date: "8/9/2024",
+            changes: [
+                "Corrected a typo.",
+                "Removed the Locations dropdown",
+                "Added mechanics for spell casting.",
+                "Clarified critical hits effects.",
+                "Clarified free action frequency.",
+                "Reveals Elves in the Species dropdown, which I don't remember hiding.",
+                "Adds carrying capacity rules under General.",
             ]
         },
         {
@@ -28,17 +38,16 @@ export const App = () => {
             ]
         },
         {
-            date: "8/9/2024",
+            date: "7/9/2024",
             changes: [
-                "Corrected a typo.",
-                "Removed the Locations dropdown",
-                "Added mechanics for spell casting.",
-                "Clarified critical hits effects.",
-                "Clarified free action frequency.",
-                "Reveals Elves in the Species dropdown, which I don't remember hiding.",
-                "Adds carrying capacity rules under General.",
+                "Removed the Barter skill.",
+                "Updated the text for Opposed Rolls.",
+                "Added new session to schedue.",
+                "Changed order sessions are listed in the schedule.",
+                "Changed the Medicine skill's Save A Life task name to First Aid.",
             ]
-        }
+        },        
+        
     ];
 
     return (

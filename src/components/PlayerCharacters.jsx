@@ -2,8 +2,31 @@ import React, { useState } from "react";
 import { PC } from "../classes/pc";
 
 
+// const NAMES = [
+//     "sandy",
+//     "bernard",
+//     "unknown",
+//     "cyril",
+//     "borden",
+//     "garth",
+// ];
+
+
 export const PlayerCharacters = () => {
+    // let name = prompt("What is your name?");
+    // let defaultChecked = new Set();
+    // if (typeof name === "undefined") {
+    //     prompt("What is your name?");
+    // } else {
+    //     let index = NAMES.indexOf(name.toLowerCase())
+    //     console.log(index)
+    //     defaultChecked.add(index);
+    // }
+    // const [checked, setChecked] = useState(defaultChecked);
     const [checked, setChecked] = useState(new Set([0, 1, 2, 3, 4, 5]));
+    
+
+    
 
     const handleChange = (event) => {
         let set = new Set([...checked]);
@@ -20,8 +43,8 @@ export const PlayerCharacters = () => {
         nate: new PC(
             {
                 attributes: {
-                    str: 11,
-                    dex: 18,
+                    str: 13,
+                    dex: 16,
                     con: 11,
                     int: 12,
                     wil: 11,
@@ -30,7 +53,7 @@ export const PlayerCharacters = () => {
                 description: "A kender burglar",
                 species: "kender",
                 profession: "burglar",
-                name: "Merry Fishmas",
+                name: "Sandy Briarborn", // Sandfish "Sandy" Briarborn
                 weaknesses: [
                     "Big Mouth"
                 ],
@@ -38,23 +61,23 @@ export const PlayerCharacters = () => {
                 classSkills: [
                     "acrobatics",
                     "dodge",
-                    "stealth",
-                    "sleightOfHand",
-                    "tinkering",
-                    "knives",
+                    "sleight of hand",
+                    "stealth",                    
                     "survival",
                     "swimming",
+                    "tinkering",
+                    "knives",                    
                 ],
             }
         ),
-        pattrick: new PC(
+        patrick: new PC(
             {
                 attributes: {
-                    str: 13,
+                    str: 10,
                     dex: 13,
                     con: 13,
-                    int: 9,
-                    wil: 16,
+                    int: 13,
+                    wil: 15,
                     cha: 8,
                 },
                 description: "A half-elf mage.",
@@ -67,14 +90,17 @@ export const PlayerCharacters = () => {
                 abilities: [],
                 classSkills: [
                     "alchemy",
-                    "arcaneCasting",
-                    "beastLore",
+                    "arcane casting",
+                    "beast lore",
                     "dodge",
                     "herbalism",
-                    "mythsAndLegends",
+                    "myths and legends",
                     "perception",
                     "staves",
                 ],
+                improvements: [
+                    "arcane casting",
+                ]
             }
         ),
         mike: new PC(
@@ -110,12 +136,12 @@ export const PlayerCharacters = () => {
         chris: new PC(
             {
                 attributes: {
-                    str: 9,
-                    dex: 18,
-                    con: 12,
+                    str: 10,
+                    dex: 16,
+                    con: 11,
                     int: 10,
                     wil: 9,
-                    cha: 14,
+                    cha: 16,
                 },
                 description: "A human bard.",
                 species: "townsfolk",
@@ -127,10 +153,10 @@ export const PlayerCharacters = () => {
                 abilities: [],
                 classSkills: [
                     "acrobatics",
-                    "mythsAndLegends",
+                    "myths and legends",
                     "performance",
                     "persuasion",
-                    "sleightOfHand",
+                    "sleight of hand",
                     "knives",
                     "perception",
                     "bows",
@@ -165,28 +191,31 @@ export const PlayerCharacters = () => {
                     "crafting",
                     "survival",
                 ],
+                improvements: [
+                    "survival",
+                ]
             }
         ),
         mitch: new PC(
             {
                 attributes: {
-                    str: 9,
-                    dex: 13,
+                    str: 13,
+                    dex: 9,
                     con: 13,
                     int: 13,
                     wil: 16,
                     cha: 8,
                 },
-                description: "A hill dwarf cleric.",
+                description: "A hill-dwarf cleric.",
                 species: "hill dwarf",
                 profession: "cleric",
-                name: "Garth Goldgrail ",
+                name: "Garth Goldegrail ",
                 weaknesses: [
                     "Afraid of Magic",
                 ],
                 abilities: [],
                 classSkills: [
-                    "divineCasting",
+                    "divine casting",
                     "dodge",
                     "herbalism",
                     "medicine",
@@ -237,7 +266,7 @@ export const PlayerCharacters = () => {
                             className="form-check-label"
                             htmlFor="inlineCheckbox1"
                         >
-                            Pattrick
+                            Patrick
                         </label>
                     </div>
                     <div className="form-check form-check-inline">
@@ -309,19 +338,21 @@ export const PlayerCharacters = () => {
             <section className={"d-flex"}>
                 <section className={`card px-3 me-3 d-${checked.has(0) ? "block" : "none"} character`}>
                     <small>Nate</small>
-                    <h3>
+                    <h3 className={"m-0"}>
                         {characters.nate.name}
                     </h3>
                     {characters.nate.attributesToTable()}
                     {characters.nate.skillsToTable(characters.nate.name)}
+                    {characters.nate.skillsToTable(characters.nate.name, true)}
                 </section>
                 <section className={`card px-3 me-3 d-${checked.has(1) ? "block" : "none"} character`}>
                     <small>Patrick</small>
                     <h3 className={"m-0"}>
-                        {characters.pattrick.name}
+                        {characters.patrick.name}
                     </h3>
                     {characters.mitch.attributesToTable()}
-                    {characters.pattrick.skillsToTable(characters.pattrick.name)}
+                    {characters.patrick.skillsToTable(characters.patrick.name)}
+                    {characters.patrick.skillsToTable(characters.patrick.name, true)}
                 </section>
                 <section className={`card px-3 me-3 d-${checked.has(2) ? "block" : "none"} character`}>
                     <small>Mike</small>
@@ -330,6 +361,7 @@ export const PlayerCharacters = () => {
                     </h3>
                     {characters.mike.attributesToTable()}
                     {characters.mike.skillsToTable(characters.mike.name)}
+                    {characters.mike.skillsToTable(characters.mike.name, true)}
                 </section>
                 <section className={`card px-3 me-3 d-${checked.has(3) ? "block" : "none"} character`}>
                     <small>Chris</small>
@@ -338,6 +370,7 @@ export const PlayerCharacters = () => {
                     </h3>
                     {characters.chris.attributesToTable()}
                     {characters.chris.skillsToTable(characters.chris.name)}
+                    {characters.chris.skillsToTable(characters.chris.name, true)}
                 </section>
                 <section className={`card px-3 me-3 d-${checked.has(4) ? "block" : "none"} character`}>
                     <small>Dowell</small>
@@ -346,6 +379,7 @@ export const PlayerCharacters = () => {
                     </h3>
                     {characters.dowell.attributesToTable()}
                     {characters.dowell.skillsToTable(characters.dowell.name)}
+                    {characters.dowell.skillsToTable(characters.dowell.name, true)}
                 </section>
                 <section className={`card px-3 me-3 d-${checked.has(5) ? "block" : "none"} character`}>
                     <small>Mitch</small>
@@ -354,6 +388,7 @@ export const PlayerCharacters = () => {
                     </h3>
                     {characters.mitch.attributesToTable()}
                     {characters.mitch.skillsToTable(characters.mitch.name)}
+                    {characters.mitch.skillsToTable(characters.mitch.name, true)}
                 </section>
             </section>
         </section>

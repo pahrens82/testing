@@ -20,9 +20,10 @@ export const Schedule = () => {
                                 className={"card w-auto p-2 mt-3"}
                             >
                                 <p className={"m-0"}>
-                                    {session.date}<br />
-                                    {session.host} <br />
-                                    {session.address}
+                                    Date: {session.date}<br />
+                                    Host: {session.host} <br />
+                                    Address: {session.address} <br />
+                                    Start time: {session.startTime}
                                 </p>
                                 <a
                                     target={"_blank"}
