@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { SKILLS } from "../../constants";
 
 
 export const Skills = () => {
@@ -186,32 +187,16 @@ export const Skills = () => {
     return (
         <section className={"container"}>
             <h1>Skills</h1>
-            <section>
-                <h3>Non-Combat Skills</h3>
-                <ul>
-                    {NON_COMBAT_SKILLS.map((skill, index) => {
-                        return (
-                            <li key={skill.name} id={skill.name.toLocaleLowerCase()}>
-                                <strong>{skill.name} ({skill.attribute})</strong>
-                                <p>{skill.description}</p>
-                            </li>
-                        )
-                    })}
-                </ul>
-            </section>
-            <section>
-                <h3>Combat Skills</h3>
-                <ul>
-                    {COMBAT_SKILLS.map((skill, index) => {
-                        return (
-                            <li key={skill.name} id={skill.name.toLocaleLowerCase()}>
-                                <strong>{skill.name} ({skill.attribute})</strong>
-                                <p>{skill.description}</p>
-                            </li>
-                        )
-                    })}
-                </ul>
-            </section>
+            <ul>
+            {Object.values(SKILLS).map((skill, index) => {
+                return (
+                    <li key={skill.name} id={skill.name.toLocaleLowerCase()}>
+                        <strong>{skill.name} ({skill.attr.toLocaleUpperCase()})</strong>
+                        <p>{skill.description}</p>
+                    </li>
+                )
+            })}
+            </ul>
         </section>
     )
 };
