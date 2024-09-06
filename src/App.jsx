@@ -9,6 +9,7 @@ export const App = () => {
             date: "9/6/2024",
             changes: [
                 "Updates to the PCs page.",
+                "Makes the skills list consistent.",
             ]
         },
         {
