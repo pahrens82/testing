@@ -6,6 +6,12 @@ import './App.css'
 export const App = () => {
     const CHANBGE_LOG = [
         {
+            date: "9/6/2024",
+            changes: [
+                "Updates to the PCs page.",
+            ]
+        },
+        {
             date: "8/19/2024",
             changes: [
                 "Adds the PCs page link to the navbar.",
