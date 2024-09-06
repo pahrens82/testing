@@ -32,6 +32,7 @@ export class PC {
             name,
             classSkills = [],
             improvements = [],
+            weaknesses = [],
             skills = {
                 acrobatics: { attr: "dex", score: 0, name: "Acrobatics", description: "(Dex) Used for jumping, balancing, and similar physical actions." },
                 alchemy: { attr: "int", score: 0, name: "Alchemy", description: "(Int) This skill lets you identify alchemical items. With the Alchemist ability and proper equipment and ingredients, you can craft alchemical items as well." },
@@ -77,6 +78,7 @@ export class PC {
         this.classSkills = classSkills;
         this.skills = skills;
         this.improvements = improvements;
+        this.weaknesses = weaknesses;
     };
 
     getSkills = () => {

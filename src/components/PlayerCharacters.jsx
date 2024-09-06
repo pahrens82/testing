@@ -2,31 +2,22 @@ import React, { useState } from "react";
 import { PC } from "../classes/pc";
 
 
-// const NAMES = [
-//     "sandy",
-//     "bernard",
-//     "unknown",
-//     "cyril",
-//     "borden",
-//     "garth",
-// ];
-
-
 export const PlayerCharacters = () => {
-    // let name = prompt("What is your name?");
-    // let defaultChecked = new Set();
-    // if (typeof name === "undefined") {
-    //     prompt("What is your name?");
-    // } else {
-    //     let index = NAMES.indexOf(name.toLowerCase())
-    //     console.log(index)
-    //     defaultChecked.add(index);
-    // }
-    // const [checked, setChecked] = useState(defaultChecked);
     const [checked, setChecked] = useState(new Set([0, 1, 2, 3, 4, 5]));
-    
 
-    
+    let showWeaknesses = false;
+    let showAttributes = false;
+    let showAbilities = false;
+    let searchParams = new URLSearchParams(window.location.href.slice(window.location.href.indexOf("?")));
+    if (searchParams.has("weakness")) {
+        showWeaknesses = searchParams.get("weakness");
+    }
+    if (searchParams.has("attributes")) {
+        showAttributes = searchParams.get("attributes");
+    }
+    if (searchParams.has("abilities")) {
+        showAbilities = searchParams.get("abilities");
+    }    
 
     const handleChange = (event) => {
         let set = new Set([...checked]);
@@ -216,13 +207,13 @@ export const PlayerCharacters = () => {
                 abilities: [],
                 classSkills: [
                     "divine casting",
+                    "dodge",
                     "herbalism",
                     "medicine",
-                    "persuasion",
-                    "axes",
-                    "bludgeons", // Is this supposed to be axes?
+                    "bludgeons",
                     "slings",
-                    "staves",
+                    "axes",
+                    "perception",
                 ],
             }
         ),
@@ -341,7 +332,25 @@ export const PlayerCharacters = () => {
                     <h3 className={"m-0"}>
                         {characters.nate.name}
                     </h3>
-                    {characters.nate.attributesToTable()}
+                    {showAttributes ?
+                        characters.nate.attributesToTable()
+                        :
+                        null
+                    }
+                    {showWeaknesses ?
+                        <>
+                        <strong className={"d-block"}>Weaknesses</strong>
+                            {characters.nate.weaknesses.map((weakness, index) => {
+                                return (
+                                    <span key={`nate-weakness-${index}`}>
+                                        {weakness}
+                                    </span>
+                                )
+                            })}
+                        </>
+                        :
+                        null
+                    }
                     {characters.nate.skillsToTable(characters.nate.name)}
                     {characters.nate.skillsToTable(characters.nate.name, true)}
                 </section>
@@ -350,7 +359,25 @@ export const PlayerCharacters = () => {
                     <h3 className={"m-0"}>
                         {characters.patrick.name}
                     </h3>
-                    {characters.mitch.attributesToTable()}
+                    {showAttributes ?
+                        characters.patrick.attributesToTable()
+                        :
+                        null
+                    }
+                    {showWeaknesses ?
+                        <>
+                            <strong className={"d-block"}>Weaknesses</strong>
+                            {characters.patrick.weaknesses.map((weakness, index) => {
+                                return (
+                                    <span key={`patrick-weakness-${index}`}>
+                                        {weakness}
+                                    </span>
+                                )
+                            })}
+                        </>
+                        :
+                        null
+                    }
                     {characters.patrick.skillsToTable(characters.patrick.name)}
                     {characters.patrick.skillsToTable(characters.patrick.name, true)}
                 </section>
@@ -359,7 +386,25 @@ export const PlayerCharacters = () => {
                     <h3 className={"m-0"}>
                         {characters.mike.name}
                     </h3>
-                    {characters.mike.attributesToTable()}
+                    {showAttributes ?
+                        characters.mike.attributesToTable()
+                        :
+                        null
+                    }
+                    {showWeaknesses ?
+                        <>
+                            <strong className={"d-block"}>Weaknesses</strong>
+                            {characters.mike.weaknesses.map((weakness, index) => {
+                                return (
+                                    <span key={`mike-weakness-${index}`}>
+                                        {weakness}
+                                    </span>
+                                )
+                            })}
+                        </>
+                        :
+                        null
+                    }
                     {characters.mike.skillsToTable(characters.mike.name)}
                     {characters.mike.skillsToTable(characters.mike.name, true)}
                 </section>
@@ -368,7 +413,25 @@ export const PlayerCharacters = () => {
                     <h3 className={"m-0"}>
                         {characters.chris.name}
                     </h3>
-                    {characters.chris.attributesToTable()}
+                    {showAttributes ?
+                        characters.chris.attributesToTable()
+                        :
+                        null
+                    }
+                    {showWeaknesses ?
+                        <>
+                            <strong className={"d-block"}>Weaknesses</strong>
+                            {characters.chris.weaknesses.map((weakness, index) => {
+                                return (
+                                    <span key={`chris-weakness-${index}`}>
+                                        {weakness}
+                                    </span>
+                                )
+                            })}
+                        </>
+                        :
+                        null
+                    }
                     {characters.chris.skillsToTable(characters.chris.name)}
                     {characters.chris.skillsToTable(characters.chris.name, true)}
                 </section>
@@ -377,7 +440,25 @@ export const PlayerCharacters = () => {
                     <h3 className={"m-0"}>
                         {characters.dowell.name}
                     </h3>
-                    {characters.dowell.attributesToTable()}
+                    {showAttributes ?
+                        characters.dowell.attributesToTable()
+                        :
+                        null
+                    }
+                    {showWeaknesses ?
+                        <>
+                            <strong className={"d-block"}>Weaknesses</strong>
+                            {characters.dowell.weaknesses.map((weakness, index) => {
+                                return (
+                                    <span key={`dowell-weakness-${index}`}>
+                                        {weakness}
+                                    </span>
+                                )
+                            })}
+                        </>
+                        :
+                        null
+                    }
                     {characters.dowell.skillsToTable(characters.dowell.name)}
                     {characters.dowell.skillsToTable(characters.dowell.name, true)}
                 </section>
@@ -386,7 +467,25 @@ export const PlayerCharacters = () => {
                     <h3 className={"m-0"}>
                         {characters.mitch.name}
                     </h3>
-                    {characters.mitch.attributesToTable()}
+                    {showAttributes ?
+                        characters.mitch.attributesToTable()
+                        :
+                        null
+                    }
+                    {showWeaknesses ?
+                        <>
+                            <strong className={"d-block"}>Weaknesses</strong>
+                            {characters.mitch.weaknesses.map((weakness, index) => {
+                                return (
+                                    <span key={`mitch-weakness-${index}`}>
+                                        {weakness}
+                                    </span>
+                                )
+                            })}
+                        </>
+                        :
+                        null
+                    }
                     {characters.mitch.skillsToTable(characters.mitch.name)}
                     {characters.mitch.skillsToTable(characters.mitch.name, true)}
                 </section>

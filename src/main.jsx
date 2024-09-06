@@ -115,7 +115,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                         element={<Characters />}
                     />
                     <Route
-                        path={"/pcs"}
+                        path={"/pcs/*"}
                         element={<PlayerCharacters />}
                     />
                     <Route
