@@ -1,10 +1,20 @@
-import { NavigationBar } from "./components/NavigationBar.jsx";
-import { Outlet } from "react-router-dom";
-import * as bootstrap from "bootstrap";
 import './App.css'
+
 
 export const App = () => {
     const CHANBGE_LOG = [
+        {
+            date: "9/9/2024",
+            changes: [
+                "Updated slings to require 2 hands for use, but they are still Tiny items.",
+                "Corrected skills list on PC page so Arcane and Divine Casting should be calculated correctly.",
+                "Updates PC skill improvements from previous session.",
+                "Clarifies Sneak Attacks.",
+                "Changes Initiative instructions to the card-based system",
+                "Updates critical hit effects.",
+                "Updates text for Disarming.",
+            ]
+        },
         {
             date: "9/6/2024",
             changes: [

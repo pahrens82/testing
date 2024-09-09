@@ -7,13 +7,14 @@ export const Combat = () => {
             <h3>Before Combat</h3>
             <h5 id={"sneak-attack"}>Sneak Attacks</h5>
             <p>If you are able to move adjacent to a target without the
-                target becoming aware (via a successful Stealth check),
+                target becoming aware via an unopposed Stealth check,
                 you may Sneak Attack that target. You gain a Boon on
                 your attack roll, and the target may neither Dodge
                 nor Parry your attack. If you are wielding a <i>subtle</i> weapon,
                 you deal an additional die of damage. Sneak Attacks
                 can only occur BEFORE of combat (unless you are a Thief),
-                and are always resolved individually.
+                and are always resolved individually. If your Stealth
+                check fails, immediately go into initiative.
             </p>
             <h5 id={"ambush"}>Ambush</h5>
             <p>In order to Ambush a foe, all party members who
@@ -24,9 +25,9 @@ export const Combat = () => {
             </p>
             <h3>Initiative</h3>
             <ol>
-                <li>Each participant rolls 1d20.</li>
-                <li>Monsters roll 1d20 per Ferocity.</li>
-                <li>Turn order proceeds from highest to lowest.</li>
+                <li>Each participant is dealt a card.</li>
+                <li>Monsters receive 1 initiative card per Ferocity.</li>
+                <li>Turn order proceeds from lowest to highest.</li>
             </ol>
             <h3>The Combat Round</h3>
             <p>On your turn during a combat round you may move up to
@@ -109,10 +110,10 @@ export const Combat = () => {
                 <li>You cannot attempt to Dodge and Parry against the same attack.</li>
             </ol>
             <h3>Critical Hits and Misses</h3>
-            <p>If you roll a 1 on your attack roll, the effect is determined by the damage type of your weapon:</p>
+            <p>If you roll a 1 on your attack roll, you roll an additional die of weapon damage, and an additional effect determined by the damage type of the weapon you are wielding:</p>
             <ul>
                 <li>If you are wielding a <i>piercing</i> weapon, ignore your target's armor for this attack.</li>
-                <li>If you are wielding a <i>bludgeoning</i> weapon, roll double your weapon dice for this attack.</li>
+                <li>If you are wielding a <i>bludgeoning</i> weapon, roll an additional die of weapon damage for this attack.</li>
                 <li>If you are wielding a <i>slashing</i> weapon, immediately perform an attack against another enemy within reach after resolving your current attack.</li>
             </ul>
             <p>If you roll a 20 on your attack roll, roll 1d6 to determine the effect:</p>
@@ -124,10 +125,11 @@ export const Combat = () => {
                 <li>You slam your weapon into something and Break it.</li>
                 <li>You hit yourself somehow, dealing only the weapon's damage. You cannot Parry or Dodge this attack.</li>
             </ol>
+            <h3>Critical Successes/Failures for Magic? Coming soon?</h3>
             <h3>Combat Maneuvers</h3>
             <ul>
                 <li><strong>Grapple</strong>: You can try to grapple foes. This is handled via opposed Brawling checks. The attack uses your Action in combat, and cannot be Parried or Dodged. You receive a Bane on your roll for each size category larger the target is than yourself. If you fail, you fall to the ground. If you succeed, both you and your foe fall to the ground. As long as you maintain the grapple (via additional opposed Brawling checks) the enemy can neither move nor perform any Action that requires body movement except trying to break free. The enemy attempts to break free via opposed Brawling checks on their turn.</li>
-                <li><strong>Disarming</strong>: You can attempt to disarm a foe of their weapon. This counts as an Action for you, but not for your opponent. This Action is resolved as opposed rolls with each participant using their respective weapon skill. This attack can be neither Dodged nor Parried. If your opponent is wielding their weapon with two hands, you receive a Bane to your roll. If you succeed, your opponent's weapon lands in an adjacent hex. If you critically succeed and have a free hand, you can grab your opponent's weapon (assuming you are able to wield it). If you critically fail, you are instead disarmed, with your weapon landing in an adjacent hex.</li>
+                <li><strong>Disarming</strong>: You can attempt to disarm a foe of their weapon. This counts as an Action for you, but not for your opponent. This Action is resolved as opposed rolls with each participant using their respective weapon skill. This attack can be neither Dodged nor Parried. If the defender is wielding their weapon with two hands, you receive a Bane to your roll. If you succeed, your opponent's weapon lands in an adjacent hex. If you critically succeed and have a free hand, you can grab your opponent's weapon (assuming you are able to wield it). If you critically fail, you are instead disarmed, with your weapon landing in an adjacent hex.</li>
                 <li><strong>Charging</strong>: You can charge on foot or on a mount. You must spend at least half your maximum speed moving directly toward your target and then attack when able. You receive a Bane on this attack roll. If you hit, you roll an additional die of weapon damage, or two additional dice of weapon damage if you are wielding a lance.</li>
             </ul>
         </section>

@@ -31,6 +31,9 @@ const characters = {
                 "tinkering",
                 "knives",
             ],
+            improvements: [
+
+            ],
         }
     ),
     Patrick: new PC(
@@ -53,7 +56,7 @@ const characters = {
             abilities: [],
             classSkills: [
                 "alchemy",
-                "arcane casting",
+                "arcaneCasting",
                 "beast lore",
                 "bows",
                 "dodge",
@@ -85,7 +88,6 @@ const characters = {
             ],
             abilities: [],
             classSkills: [
-                "climbing",
                 "perception",
                 "survival",
                 "tracking",
@@ -93,6 +95,11 @@ const characters = {
                 "crossbows",
                 "herbalism",
                 "cooking",
+                "knives",
+            ],
+            improvements: [
+                "beastLore",
+                "knives",
             ],
         }
     ),
@@ -124,6 +131,9 @@ const characters = {
                 "perception",
                 "bows",
             ],
+            improvements: [
+                "perception",
+            ]
         }
     ),
     Dowell: new PC(
@@ -156,6 +166,7 @@ const characters = {
             ],
             improvements: [
                 "survival",
+                "cooking",
             ]
         }
     ),
@@ -172,13 +183,11 @@ const characters = {
             description: "A hill-dwarf cleric.",
             species: "hill dwarf",
             profession: "cleric",
-            name: "Garth Goldegrail ",
-            weaknesses: [
-                "Afraid of Magic",
-            ],
+            name: "Garth Goldegrail",
+            weaknesses: [],
             abilities: [],
             classSkills: [
-                "divine casting",
+                "divineCasting",
                 "dodge",
                 "herbalism",
                 "medicine",
@@ -186,6 +195,9 @@ const characters = {
                 "slings",
                 "axes",
                 "perception",
+            ],
+            improvements: [
+
             ],
         }
     ),

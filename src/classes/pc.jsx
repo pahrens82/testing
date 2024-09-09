@@ -54,7 +54,7 @@ export class PC {
             if (!WEAPON_SKILLS.includes(skill)) {
                 let score = this.attributesToSkills(this.attributes[this.skills[skill].attr], this.classSkills.includes(skill));
                 if (this.improvements.includes(skill)) score += 1;
-                skills[this.skills[skill].name] = { score: score, description: this.skills[skill].description, attr: this.skills[skill].attr };
+                skills[skill] = { score: score, description: this.skills[skill].description, attr: this.skills[skill].attr, name: this.skills[skill].name };
             }
         });
         return skills;
@@ -66,7 +66,7 @@ export class PC {
             if (WEAPON_SKILLS.includes(skill)) {
                 let score = this.attributesToSkills(this.attributes[this.skills[skill].attr], this.classSkills.includes(skill));
                 if (this.improvements.includes(skill)) score += 1;
-                skills[this.skills[skill].name] = { score: score, description: this.skills[skill].description, attr: this.skills[skill].attr };
+                skills[skill] = { score: score, description: this.skills[skill].description, attr: this.skills[skill].attr, name: this.skills[skill].name };
             }
         });
         return skills;
@@ -160,8 +160,8 @@ export class PC {
                                     title={`(${skills[skill].attr.toLocaleString()}) ${skills[skill].description}`}
                                     onClick={() => this.showModal(`dialog-${name}-${skill}`)}
                                 >
-                                    <td className={this.classSkills.includes(skill.toLowerCase()) ? "fw-bold" : ""}>
-                                        {skill}
+                                    <td className={this.classSkills.includes(skill) ? "fw-bold" : ""}>
+                                        {skills[skill].name}
                                     </td>
                                     <td>
                                         {skills[skill].score}

@@ -352,7 +352,7 @@ export const RANGED_WEAPONS = [
     {
         name: "Sling",
         skill: "Slings",
-        grip: 0,
+        grip: 2,
         minStr: 3,
         range: 12,
         damage: "1d8",
