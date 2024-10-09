@@ -2,7 +2,15 @@ import './App.css'
 
 
 export const App = () => {
-    const CHANBGE_LOG = [
+    const CHANGE_LOG = [
+        {
+            date: "10/9/2024",
+            changes: [
+                "Adds a missing key.",
+                "Fixes the dropdowns which had stopped working for some reason.",
+                "Updates arcane casting mechanics.",
+            ]
+        },
         {
             date: "9/9/2024",
             changes: [
@@ -73,9 +81,9 @@ export const App = () => {
                 <div className={"col"}>
                     <h1>Change Log</h1>
                     <ul>
-                        {CHANBGE_LOG.map((log, index) => {
+                        {CHANGE_LOG.map((log, index) => {
                             return (
-                                <li>{log.date}: <ol>{log.changes.map((change, indexx) => { return (<li>{change}</li>) })}</ol></li>
+                                <li key={index}>{log.date}: <ol>{log.changes.map((change, indexx) => { return (<li key={change}>{change}</li>) })}</ol></li>
                             )
                         })}
                     </ul>

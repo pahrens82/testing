@@ -8,6 +8,9 @@ import {
     Routes,
 } from "react-router-dom";
 
+
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
+
 import { App } from './App.jsx'
 import { Schedule } from "./components/Schedule.jsx";
 

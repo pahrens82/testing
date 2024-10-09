@@ -561,7 +561,7 @@ export const Magic = () => {
         <section className={"container"}>
             <h1>Magic</h1>
             <section>
-                <h3>Mechanics</h3>
+                <h3>General Mechanics</h3>
                 <ul>
                     <li>Expend Willpower per the spell you are attempting to cast.
                         This is determined by the base cost of the spell plus any
@@ -570,6 +570,20 @@ export const Magic = () => {
                     <li>Roll a casting check.</li>
                     <li>If your check succeeds, resolve the spell.</li>
                     <li>If your check fails, your action is over.</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Arcane Magic</h3>
+                <ul>
+                    <li>Arcane casters have a grimoire within which they record their spells.</li>
+                    <li>Recording a spell requires 1 Shift per rank of the spell.</li>
+                    <li>An arcane caster can memorize spells from their grimoire.</li>
+                    <li>Memorizing spells requires a Long Rest.</li>
+                    <li>Memorized spells remain so until this action is taken again.</li>
+                    <li>Memorized spells require a single action (or whatever is noted in the spell's description) to cast.</li>
+                    <li>Spells can be cast directly from the grimoire, although their casting times are doubled.</li>
+                    <li>If an arcane caster loses their grimoire, they cannot memorize spells until their grimoire is replaced.</li>
+                    <li>Initially, arcane casters can have two memorized spells, with that number increasing by 1 on even "levels" (IE, 3 at level 2, 4 at level 4, 5 at level 6, etc.)</li>
                 </ul>
             </section>
             <section>
