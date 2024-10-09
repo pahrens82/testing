@@ -7,7 +7,7 @@ export const Abilities = () => {
             desc: "This ability lets you use the Alchemy skill to craft alchemical items.",
         },
         {
-            name: "Assassing",
+            name: "Assassin",
             req: "Knives 12",
             cost: 3,
             desc: "Your Sneak Attacks with Knives deal an additional 1d10 damage. This ability can be combined with the Backstabbing ability. You activate this ability after your roll to hit, but before you roll for damage.",

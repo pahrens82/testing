@@ -361,6 +361,18 @@ export const RANGED_WEAPONS = [
         features: "Tiny, Cannnot Parry",
         availability: 0,
     },
+    {
+        name: "Sling, Staff",
+        skill: "Slings/Staves",
+        grip: 2,
+        minStr: 7,
+        range: 12,
+        damage: "2d4",
+        durability: 3,
+        cost: 0.7,
+        features: "Can be used as a Staff",
+        availability: 0,
+    },
 ];
 
 export const SHIELDS = [
