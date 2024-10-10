@@ -9,6 +9,7 @@ export const App = () => {
                 "Adds a missing key.",
                 "Fixes the dropdowns which had stopped working for some reason.",
                 "Updates arcane casting mechanics.",
+                "Updates armor listings.",
             ]
         },
         {

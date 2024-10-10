@@ -23,6 +23,7 @@ import {
 
 import {
     ALCHEMICAL,
+    AMMUNITION,
     ARMOR,
     CLOTHES,
     CONTAINERS,
@@ -128,6 +129,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                     <Route
                         path={"/equipment/ranged_weapons"}
                         element={<Equipment.Weapons equipment={RANGED_WEAPONS} label={"Ranged Weapons"} />}
+                    />
+                    <Route
+                        path={"/equipment/ammunition"}
+                        element={<Equipment.Weapons equipment={AMMUNITION} label={"Ammunition"} />}
                     />
                     <Route
                         path={"/equipment/shields"}
