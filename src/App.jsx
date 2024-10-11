@@ -10,6 +10,8 @@ export const App = () => {
                 "Fixes the dropdowns which had stopped working for some reason.",
                 "Updates arcane casting mechanics.",
                 "Updates armor listings.",
+                "Updates to various item prices",
+                "Adds verbose item pricing",
             ]
         },
         {
