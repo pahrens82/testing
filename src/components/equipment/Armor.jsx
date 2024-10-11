@@ -15,7 +15,7 @@ export const Armor = ({ equipment, label }) => {
         setChecked(set);
     };
 
-    equipment.sort((a, b) => a.name > b.name);
+    equipment.sort((a, b) => a.rating > b.rating);
 
     return (
         <section className={"container-fluid"}>
