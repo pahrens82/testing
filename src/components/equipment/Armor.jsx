@@ -90,8 +90,8 @@ export const Armor = ({ equipment, label }) => {
                                         <td>{item.name}</td>
                                         <td>{item.minStr}</td>
                                         <td>{item.rating}</td>
-                                        <td>{item.grip}</td>
                                         <td>{item.cost}</td>
+                                        <td>{item.bulk}</td>
                                         <td>{item.effect}</td>
                                     </tr>
                                 )
