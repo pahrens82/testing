@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { makePricingVerbose } from "../../constants";
 
 
 export const General = ({ equipment, label }) => {
@@ -86,7 +87,7 @@ export const General = ({ equipment, label }) => {
                                 return (
                                     <tr key={item.name}>
                                         <td>{item.name}</td>
-                                        <td>{item.cost}</td>
+                                        <td>{makePricingVerbose(item.cost)}</td>
                                         {item.bulk ?
                                             <td>{item.bulk}</td>
                                             :

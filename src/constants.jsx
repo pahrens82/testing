@@ -103,6 +103,30 @@ export const SKILLS = {
     swords: { attr: "str", score: 0, name: "Swords", description: "Used for combat with all types of swords." },
 };
 
+export const makePricingVerbose = (price) => {
+    if (Number.isInteger(price)) {
+        return `${price} gold`;
+    } else {
+        let priceAsString = price.toString().split(".");
 
+        let gp = priceAsString[0];
+        if (gp === "0") gp = null;
 
-
+        let sp, cp;
+        if (priceAsString[1].length === 2) {
+            let decimalsSplit = priceAsString[1].split("");
+            sp = decimalsSplit[0];
+            if (sp === "0") sp = null;
+            cp = decimalsSplit[1];
+            if (cp === "0") cp = null;
+        } else {
+            sp = priceAsString[1];
+            if (sp === "0") sp = null;
+        }
+        let response = "";
+        if (gp) response += `${gp} gold `;
+        if (sp) response += `${sp} silver `;
+        if (cp) response += `${cp} copper `;
+        return response;
+    }
+};

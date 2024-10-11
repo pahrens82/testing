@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { makePricingVerbose } from "../../constants";
 
 
 export const Weapons = ({ equipment, label }) => {
@@ -97,7 +98,7 @@ export const Weapons = ({ equipment, label }) => {
                                         <td>{item.range || "Adjacent"}</td>
                                         <td>{item.damage}</td>
                                         <td>{item.durability}</td>
-                                        <td>{item.cost}</td>
+                                        <td>{makePricingVerbose(item.cost)}</td>
                                         <td>{item.features}</td>
                                     </tr>
                                 )

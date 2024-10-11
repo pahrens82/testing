@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { makePricingVerbose } from "../../constants";
 
 
 export const Armor = ({ equipment, label }) => {
@@ -90,7 +91,7 @@ export const Armor = ({ equipment, label }) => {
                                         <td>{item.name}</td>
                                         <td>{item.minStr}</td>
                                         <td>{item.rating}</td>
-                                        <td>{item.cost}</td>
+                                        <td>{makePricingVerbose(item.cost)}</td>
                                         <td>{item.bulk}</td>
                                         <td>{item.effect}</td>
                                     </tr>
