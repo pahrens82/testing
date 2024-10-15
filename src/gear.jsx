@@ -1553,7 +1553,7 @@ export const MEDICINAL = [
         cost: 1,
         availability: 0,
         bulk: 1,
-        effect: "One bandage. Using a bandage avoids a Bane when using the Medicine skill to Save a Life.",
+        effect: "A 120-inch roll of cotton 2-inch wide cotton fabric. Using a bandage avoids a Bane when using the Medicine skill to Save a Life.",
     },
     {
         name: "Healer's Kit",
