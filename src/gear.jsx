@@ -921,6 +921,20 @@ export const MISCELLANEOUS = [
         bulk: "Tiny",
         effect: "Emits a sound that can be heard up to 300 feet away.",
     },
+    {
+        name: "Wick, Candle",
+        cost: 0.01,
+        availability: 1,
+        bulk: "Tiny",
+        effect: "4 feet of candle wick.",
+    },
+    {
+        name: "Wick, Lamp",
+        cost: 0.02,
+        availability: 1,
+        bulk: "Tiny",
+        effect: "4 feet of lamp wick.",
+    },
 ];
 
 export const HUNTING_AND_FISHING = [
