@@ -607,6 +607,23 @@ export const CLOTHES = [
         bulk: 1,
         effect: "Grants a Boon to saves agains the effects of wet environments.",
     },
+    // Red (raspberry red): Rose Madder/Dyer's Madder, extract from Rubia Tinctorum
+    // Blue, Dull: Woad leaves (same chemical as extract from Indigofera tinctoria, but in a lower concentration)
+    // Blue, Rich: Indigofera tinctoria plant
+    // Crimson (cherry red): Cochineal/carmine
+    // Purple, Dull: Elderberries - tends to be splotchy
+    // Purple, Rich: Murex snail shells [Tyrian purple] - consistent color, very expensive
+    // Yellow: Turmeric, saffron, marigold
+    // Green: Combine woad or indigo with either iron or a yellow dye
+    // Brown: Walnut shells
+    // Black: Oak gall
+    {
+        name: "Dye",
+        cost: "Varies",
+        availability: 1,
+        bulk: "Tiny",
+        effect: "Fabric dye in 8 ounce clay bottles. Each pot is sufficient to dye ~3 yards of fabric (approximately 2 shirts). Available in raspberry red (4 sp), dull blue (9 sp), rich blue (3 gp), cherry red (4 sp), dull purple (9 sp), rich purple (4 gp), yellow (3 sp), dull green (1 gp), vivid green (3 gp), brown (4 sp), and black (4 sp).",
+    },
     {
         name: "Garments, Linen",
         cost: 1,
