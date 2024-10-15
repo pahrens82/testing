@@ -747,11 +747,39 @@ export const MISCELLANEOUS = [
         effect: "Boon when determining random winner.",
     },
     {
+        name: "Doll, Fabric",
+        cost: 0.3,
+        availability: 0,
+        bulk: "Tiny",
+        effect: "A doll resembling an animal or humanoid, made from fabric canvas and stuffed with wool.",
+    },
+    {
+        name: "Doll, Porcelain",
+        cost: 5,
+        availability: 2,
+        bulk: 1,
+        effect: "A humanoid or animal doll crafted from porcelain and dressed with rich clothing.",
+    },
+    {
         name: "Field Kitchen",
         cost: 4,
         availability: 0,
         bulk: 2,
         effect: "Boon on Cooking checks in the wilderness.",
+    },
+    {
+        name: "Figurine, Wood",
+        cost: 0.5,
+        availability: 0,
+        bulk: 1,
+        effect: "The figure of an animal or humanoid carved from wood.",
+    },
+    {
+        name: "Figurine, Stone",
+        cost: 1,
+        availability: 1,
+        bulk: 1,
+        effect: "The figure of an animal or humanoid carved from stone.",
     },
     {
         name: "Grappling Hook",
@@ -822,6 +850,13 @@ export const MISCELLANEOUS = [
         availability: 1,
         bulk: 1,
         effect: "Opposed Bluff check to determine winner.",
+    },
+    {
+        name: "Puppet",
+        cost: 2,
+        availability: 1,
+        bulk: 1,
+        effect: "A marionette made of wood and fabric. Various costumes available.",
     },
     {
         name: "Quiver",
