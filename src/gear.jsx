@@ -705,6 +705,13 @@ export const MISCELLANEOUS = [
         effect: "Required for a comfortable Long Rest in temperate wilderness.",
     },
     {
+        name: "Beeswax",
+        cost: 1,
+        availability: 0,
+        bulk: 1,
+        effect: "1 pound of beeswax. Color can be added for an additional silver, and scent for an additional 4 silver.",
+    },
+    {
         name: "Blanket",
         cost: 1,
         availability: 0,
@@ -717,6 +724,13 @@ export const MISCELLANEOUS = [
         availability: 1,
         bulk: 1,
         effect: "Opposed INT to determine the winner.",
+    },
+    {
+        name: "Candle Mold",
+        cost: 1.2,
+        availability: 1,
+        bulk: 1,
+        effect: "Makes four taper candles out of a pound of wax or tallow. Wicks sold separately.",
     },
     {
         name: "Dice",
@@ -896,19 +910,33 @@ export const HUNTING_AND_FISHING = [
         bulk: "Tiny",
         effect: "Used for catching small game. While hunting, replaces the attack roll with a Survival check. Single use.",
     },
+    {
+        name: "Trap, Eel",
+        cost: 3,
+        availability: 1,
+        bulk: 2,
+        effect: "Used for catching eels in rivers. While hunting, replaces the attack roll with a Survival check. Reusable.",
+    },
+    {
+        name: "Trap, Lobster",
+        cost: 5,
+        availability: 1,
+        bulk: 2,
+        effect: "Used for catching lobsters in open water. While hunting, replaces the attack roll with a Survival check. Reusable.",
+    },
 ];
 
 export const LIGHT_SOURCES = [
     {
         name: "Candle, Beeswax",
-        cost: 0.5,
+        cost: 0.05,
         availability: 1,
         bulk: "Tiny",
         effect: "Illuminates personal space. Burns for one Shift. Not smokey or smelly.",
     },
     {
         name: "Candle, Tallow",
-        cost: 0.05,
+        cost: 0.02,
         availability: 0,
         bulk: "Tiny",
         effect: "Illuminates personal space. Burns for one Shift. Smokey and smelly.",
