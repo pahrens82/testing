@@ -684,6 +684,20 @@ export const MISCELLANEOUS = [
         effect: "Boon on INT checks for solving mathematical problems.",
     },
     {
+        name: 'Balls, Leather, 2"',
+        cost: 0.1,
+        availability: 0,
+        bulk: "Tiny",
+        effect: 'A 2" cowhide ball made from and stuffed with leather scraps.',
+    },
+    {
+        name: 'Balls, Leather, 12"',
+        cost: 2,
+        availability: 0,
+        bulk: 1,
+        effect: 'A 12" cowhide ball stuffed with cloth scraps.',
+    },
+    {
         name: "Bed Roll",
         cost: 1,
         availability: 0,
