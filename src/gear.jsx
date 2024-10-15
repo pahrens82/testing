@@ -1040,7 +1040,7 @@ export const LIGHT_SOURCES = [
         effect: "Illuminates a 30' radius.",
     },
     {
-        name: "Oil Lamp",
+        name: "Lamp, Oil",
         cost: 2,
         availability: 0,
         bulk: 1,
