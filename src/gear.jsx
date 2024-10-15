@@ -939,6 +939,20 @@ export const MISCELLANEOUS = [
 
 export const HUNTING_AND_FISHING = [
     {
+        name: "Cage, Wood, Fowler's",
+        cost: 8,
+        availability: 0,
+        bulk: 1,
+        effect: "Contains a creature up to the size of a falcon.",
+    },
+    {
+        name: "Cage, Brass, Fowler's",
+        cost: 8,
+        availability: 1,
+        bulk: 1,
+        effect: "Contains a creature up to the size of a falcon.",
+    },
+    {
         name: "Fishing Rod",
         cost: 2,
         availability: 0,
