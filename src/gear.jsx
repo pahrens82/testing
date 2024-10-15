@@ -1421,7 +1421,7 @@ export const CONTAINERS = [
         cost: 1,
         availability: 1,
         bulk: 1,
-        effect: "Holds enough water for one medium creature for one day.",
+        effect: "A cleaned sheep's bladder that holds enough water for one day.",
     },
 ];
 
