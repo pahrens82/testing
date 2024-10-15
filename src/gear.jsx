@@ -573,18 +573,18 @@ export const CLOTHES = [
         effect: "Holds your coin pouch.",
     },
     {
-        name: "Boots, Riding",
+        name: "Boots, Hard",
         cost: 6,
         availability: 1,
         bulk: 1,
-        effect: "Boon to rolls against various environmental hazards.",
+        effect: "Crafted from boiled leather which prevents bites and stings from snakes, scorpions, etc. Boon to rolls against various environmental hazards, but three consecutive Shifts of walking results in Exhaustion.",
     },
     {
         name: "Boots, Soft",
         cost: 2,
         availability: 0,
         bulk: 1,
-        effect: "Boon to rolls against various environmental hazards.",
+        effect: "Crafted from soft leather, so these are comfortable enough to wear for lengthy stretches of time. Boon to rolls against various environmental hazards.",
     },
     {
         name: "Cloak, Fur",
