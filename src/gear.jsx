@@ -814,7 +814,7 @@ export const MISCELLANEOUS = [
         cost: 2,
         availability: 0,
         bulk: 1,
-        effect: "A bag of polished stone marbles. Can be used for a game, or to turn a space into Difficult Terrain.",
+        effect: "A bag of 20 polished stone marbles. Can be used for a game, or to turn a space into Difficult Terrain.",
     },
     {
         name: "Mirror, Glass",
