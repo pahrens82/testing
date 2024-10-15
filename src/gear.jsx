@@ -699,7 +699,7 @@ export const MISCELLANEOUS = [
     },
     {
         name: "Bed Roll",
-        cost: 1,
+        cost: 17,
         availability: 0,
         bulk: 1,
         effect: "Required for a comfortable Long Rest in temperate wilderness.",
@@ -783,7 +783,7 @@ export const MISCELLANEOUS = [
     },
     {
         name: "Marbles",
-        cost: 1,
+        cost: 2,
         availability: 0,
         bulk: 1,
         effect: "A bag of polished stone marbles. Can be used for a game, or to turn a space into Difficult Terrain.",
@@ -949,9 +949,9 @@ export const LIGHT_SOURCES = [
         effect: "Required to light torches, candles, lanterns, and to start fires.",
     },
     {
-        name: "Lamp Oil",
-        cost: 1,
-        availability: 0,
+        name: "Oil",
+        cost: 0.06,
+        availability: 1,
         bulk: 1,
         effect: "Enough oil to fuel a lantern for 8 Shifts.",
     },
@@ -964,7 +964,7 @@ export const LIGHT_SOURCES = [
     },
     {
         name: "Lantern, Hooded",
-        cost: 6,
+        cost: 7,
         availability: 0,
         bulk: 1,
         effect: "Illuminates a 30' radius.",
@@ -1285,7 +1285,7 @@ export const CONTAINERS = [
     },
     {
         name: "Saddle Bag",
-        cost: 6,
+        cost: 2,
         availability: 0,
         bulk: "Tiny",
         effect: "Increases mount's carrying capacity by 2. A mount can benefit from two saddle bags.",
@@ -1372,21 +1372,21 @@ export const SERVICES = [
 export const INSTRUMENTS = [
     {
         name: "Bagpipes",
-        cost: 30,
+        cost: 100,
         availability: 1,
         bulk: 1,
         effect: "Reduces the cost of the Musician ability by 2 and increases the ability's range to 120 feet.",
     },
     {
         name: "Drum",
-        cost: 4,
+        cost: 10,
         availability: 0,
         bulk: 1,
         effect: "Increases the range of the Musician ability to 60 feet.",
     },
     {
         name: "Flute",
-        cost: 2,
+        cost: 10,
         availability: 0,
         bulk: 1,
         effect: "Reduces the WP cost of the Musician ability by 1.",
@@ -1417,7 +1417,7 @@ export const INSTRUMENTS = [
 export const MEDICINAL = [
     {
         name: "Bandages",
-        cost: 0.2,
+        cost: 1,
         availability: 0,
         bulk: 1,
         effect: "One bandage. Using a bandage avoids a Bane when using the Medicine skill to Save a Life.",
