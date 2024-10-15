@@ -1023,7 +1023,7 @@ export const LIGHT_SOURCES = [
         cost: 0.06,
         availability: 1,
         bulk: 1,
-        effect: "Enough oil to fuel a lantern for 8 Shifts.",
+        effect: "A one-pint clay bottle of oil, which burns for 3 Shifts.",
     },
     {
         name: "Lantern, Bullseye",
