@@ -1196,8 +1196,22 @@ export const LODGING = [
 
 export const SCHOLARLY_ITEMS = [
     {
-        name: "Book",
-        cost: 25,
+        name: "Book, Blank",
+        cost: "Varies",
+        availability: 1,
+        bulk: 1,
+        effect: 'A 9" x 12" book filled with blank parchment pages. The cover is birch bark covered with leather, cloth, or felt. Available in the following page counts: 25 pages/50 gp, 50 pages/90 gp, 75 pages/125 gp, 100 pages/175 gp, 200 pages/300 gp, 500 pages/725 gp. A lock can be added for 100 gp.',
+    },
+    {
+        name: "Tome, Blank",
+        cost: "Varies",
+        availability: 2,
+        bulk: 1,
+        effect: 'A 15" x 20" tome filled with blank parchment pages. The cover is birch bark covered with leather, cloth, or felt. Available in the following page counts: 25 pages/75 gp, 50 pages/135 gp, 75 pages/180 gp, 100 pages/250 gp, 200 pages/450 gp, 500 pages/1000 gp. A lock can be added for 150 gp.',
+    },
+    {
+        name: "Book, Educational",
+        cost: "15 gp / rank",
         availability: 2,
         bulk: 1,
         effect: "Can be studied to gain an Advancement Opportunity. To gain this benefit, you must spend a number of Shifts reading the book equal to your relevant Skill.",
