@@ -1057,11 +1057,32 @@ export const LIGHT_SOURCES = [
 
 export const TOOLS = [
     {
+        name: "Axe, Hatchet",
+        cost: 3,
+        availability: 0,
+        bulk: 1,
+        effect: "2d4 damage against wood. Does not take damage.",
+    },
+    {
+        name: "Body Sleight",
+        cost: 8,
+        availability: 0,
+        bulk: 4,
+        effect: "A body can be secured to this sleigh for movement. Speed is reduced by half.",
+    },
+    {
         name: "Bow Drill",
         cost: 3,
         availability: 0,
         bulk: 1,
-        effect: "Drills a half-inch hole in wood.",
+        effect: "Drills a half-inch hole in wood per round.",
+    },
+    {
+        name: "Cording Mallet",
+        cost: 10,
+        availability: 0,
+        bulk: 2,
+        effect: "Used for splitting logs.",
     },
     {
         name: "Hammer",
