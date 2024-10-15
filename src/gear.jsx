@@ -880,6 +880,13 @@ export const MISCELLANEOUS = [
         effect: "Required avoid a Bane on Riding checks during combat.",
     },
     {
+        name: "Sphere, Warming",
+        cost: 0.8,
+        availability: 0,
+        bulk: 1,
+        effect: "This fist-sized hollow copper sphere has a trapdoor through which coals can be added. This can be held or tucked into a bedroll to provide warmth, and negates a Bane due to cold temperatures.",
+    },
+    {
         name: "Tent, Small",
         cost: 5,
         availability: 0,
