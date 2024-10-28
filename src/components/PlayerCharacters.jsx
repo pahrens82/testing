@@ -260,12 +260,13 @@ export const PlayerCharacters = () => {
                     })}
                 </section>
             </section>
-            <section className={"d-flex"}>
+            <section className={"row"}>
+                <section className={"col-12 col-md-4"}>
                 {Object.keys(characters).map((key, index) => {
                     return (
                         <section
                             key={`${key}-details`}
-                            className={`card px-3 me-3 d-${checked.has(key) ? "block" : "none"} character`}
+                            className={`card px-3 mt-3 mt-md-0 d-${checked.has(key) ? "block" : "none"}`}
                         >
                             <small>{key}</small>
                             <h3 className={"m-0"}>
@@ -291,6 +292,7 @@ export const PlayerCharacters = () => {
                         </section>
                     )
                 })}
+                </section>
             </section>
         </section>
     )
