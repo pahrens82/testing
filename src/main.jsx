@@ -53,6 +53,7 @@ import { Species } from './components/Species.jsx';
 import { CharacterCreation } from './components/CharacterCreation.jsx';
 import { Characters } from './components/dropdowns/Characters.jsx';
 import { PlayerCharacters } from './components/PlayerCharacters.jsx';
+import { Foes } from './components/Foes.jsx';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -121,6 +122,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                     <Route
                         path={"/pcs/*"}
                         element={<PlayerCharacters />}
+                    />
+                    <Route
+                        path={"/foes"}
+                        element={<Foes />}
                     />
                     <Route
                         path={"/equipment/melee_weapons"}
