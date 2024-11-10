@@ -24,6 +24,7 @@ import {
 import {
     ALCHEMICAL,
     AMMUNITION,
+    ANIMALS,
     ARMOR,
     CLOTHES,
     CONTAINERS,
@@ -203,10 +204,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                         path={"/equipment/alchemical_products"}
                         element={<Equipment.General equipment={ALCHEMICAL} label={"Alchemical Products"} />}
                     />
-                    {/* <Route
+                    <Route
                         path={"/equipment/animals"}
-                        element={<Equipment.MeleeWeapons />}
-                    /> */}
+                        element={<Equipment.General equipment={ANIMALS} label={"Animals"} />}
+                    />
                     {SPECIES.map((specie, index) => {
                         return (
                             <Route

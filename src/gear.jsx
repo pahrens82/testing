@@ -1852,7 +1852,7 @@ export const ANIMALS = [
         effect: "Can be used for wool production. Provides 1d4+4 meals if slaughtered.",
     },
     {
-        name: "'Wari'",
+        name: "Wari",
         cost: 30,
         availability: 1,
         bulk: 0,
