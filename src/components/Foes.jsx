@@ -130,18 +130,33 @@ export const Foes = () => {
             </section>
             <section className={"row"}>
                 <section className={"col"}>
-                    {SESSIONS.map((session, index) => {
+                    {FOES.map((foe, index) => {
                         return (
                             <div
-                                key={session.date}
+                                key={foe.name.replace(" ", "-")}
                                 className={"card w-auto p-2 mt-3"}
                             >
-                                <p className={"m-0"}>
-                                    Date: {session.date}<br />
-                                    Host: {session.host} <br />
-                                    Address: {session.address} <br />
-                                    Start time: {session.startTime}
-                                </p>
+                                <details>
+                                    <summary className={"fw-bold"}>
+                                        {foe.name}
+                                    </summary>
+                                    <ul className={"m-0 list-unstyled"}>
+                                        <li>Speed: {foe.movement}</li>
+                                        <li>Damage Bonus: {foe.damageBonus}</li>
+                                        <li>HP: {foe.hp}</li>
+                                        <li>WP: {foe.wp}</li>
+                                        <li>Skills: {foe.skills}</li>
+                                        <li>Armor: {foe.armor}</li>
+                                        <li>Weapons
+                                            <ol>
+                                                {foe.weapons.map((weapon, index) => {
+                                                    return <li>{weapon}</li>
+                                                })}
+                                            </ol>
+                                        </li>
+                                    </ul>
+                                </details>
+                                
                             </div>
                         )
                     })}
