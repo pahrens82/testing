@@ -516,7 +516,6 @@ export const Animals = () => {
             <section className={"row"}>
                 <section className={"col"}>
                     {animals.map((animal, index) => {
-                        console.log(animal)
                         let size;
                         ANIMALS_BY_SIZE.forEach((category, index) => {
                             if (category.includes(animal.name)) size = index + 1;

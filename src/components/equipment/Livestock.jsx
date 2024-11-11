@@ -85,7 +85,6 @@ export const Livestock = () => {
                             <th>Skills</th>
                             <th>Hit Points</th>
                             <th>Meat</th>
-
                         </tr>
                     </thead>
                     <tbody>
