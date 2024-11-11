@@ -61,13 +61,20 @@ export const General = () => {
                 </ul>
             </section>
             <section>
-                <h3>Carrying Capacity</h3>
+                <h3>Carrying Capacity For Non-Weapon Items</h3>
                 <ul>
                     <li>Characters can carry a number of items equal to half their Strength, rounded up.</li>
                     <li>Backpacks increase the number of items a character can carry by 2</li>
                     <li>Some large or voluminous items take up more than 1 space.</li>
                     <li>Characters can carry any number of Tiny items, with the GM's discretion.</li>
+                    <li>Carrying more than 5 of any particular type of Tiny item counts instead as 1 item.</li>
                     <li>Characters can also carry 3 hands worth of weapons. For example, you could carry 3 daggers, or a short spear, long sword, and shield.</li>
+                </ul>
+                <h3>Carrying Capacity For Weapons</h3>
+                <ul>
+                    <li>Characters can also carry 3 hands (known as "grip") worth of weapons and/or shields.</li>
+                    <li>Grip is also the number of hands that are required to effectively wield a weapon.</li>
+                    <li>For example, you could carry 3 daggers, or a short spear, long sword, and shield.</li>
                 </ul>
                 <h3>Encumberance</h3>
                 <ul>

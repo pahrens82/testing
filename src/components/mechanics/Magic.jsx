@@ -557,32 +557,52 @@ export const Magic = ({type}) => {
             <section>
                 <h3>General Mechanics</h3>
                 <ul>
-                    <li>Expend Willpower per the spell you are attempting to cast.
-                        This is determined by the base cost of the spell plus any
-                        modifiers you select.
-                    </li>
+                    <li>Casting a spell requires an audible vocalization and hand gestures.</li>
+                    <li>Some spells may also require a specific ingredient.</li>
+                    <li>Casting spells produces a visual effect, and possibly an audible effect.</li>
+                    <li>Expend Willpower per the spell you are attempting to cast.</li>
+                    <ul>
+                        <li>The WP expended to cast a spell is the sum of the base cost of the spell and any modifiers you select.</li>
+                    </ul>                        
                     <li>Roll a casting check.</li>
                     <li>If your check succeeds, resolve the spell.</li>
                     <li>If your check fails, your action is over.</li>
+                    <li>If your check critically fails, a Mishap occurs.</li>
                 </ul>
             </section>
             <section>
-                <h3>Casting Mechanics</h3>
+                <h3>{type} Magic Specifics</h3>
                 {type.toLowerCase() === "arcane" ?
                 <ul>
                     <li>Arcane casters have a grimoire within which they record their spells.</li>
+                    <li>The grimoire counts as 1 item for determining encumberance.</li>
                     <li>Recording a spell in your grimoire requires 1 Shift per rank of the spell.</li>
                     <li>An arcane caster can memorize spells from their grimoire.</li>
-                    <li>Memorizing spells requires a Long Rest.</li>
+                    <li>Memorizing spells requires studying a grimoire as part of a Long Rest.</li>
                     <li>Memorized spells remain so until this action is taken again.</li>
                     <li>Memorized spells require a single action (or whatever is noted in the spell's description) to cast.</li>
-                    <li>Spells may be cast directly from the grimoire, although the casting time is doubled.</li>
+                    <li>Spells may be cast directly from the grimoire, but the grimoire must be held in one hand and the casting time is doubled.</li>
                     <li>If an arcane caster loses their grimoire, they cannot memorize spells until their grimoire is replaced.</li>
-                    <li>Initially, arcane casters can have two memorized spells, with that number increasing by 1 on even "levels" (IE, 3 at level 2, 4 at level 4, 5 at level 6, etc.)</li>
+                    <li>An arcane caster begins play with a number of spells in their grimoire equal to their base chance for INT.</li>
+                    <li>An arcane caster can memorize a number of spells equal to half (rounded down) their base chance for INT.</li>
+                    <li>Metal disrupts arcane magic.
+                        <ul>
+                            <li>Wearing metal armor or wielding a weapon with metal components prevents arcane spell casting.</li>
+                            <li>Items in your inventory do not have this impact.</li>
+                        </ul>
+                    </li>
                 </ul>
                 :
                 <ul>
-                    <li>TBD</li>
+                    <li>Divine casters have a holy symbol that is required for preparing spells.</li>
+                    <li>The holy symbol counts as a Tiny item.</li>
+                    <li>Prepared spells require a single action (or whatever is noted in the spell's description) to cast.</li>
+                    <li>Preparing spells requires praying and meditating as part of a Long Rest.</li>
+                    <li>Prepared spells remain so until this action is taken again.</li>
+                    <li>Spells can be cast without preparation, but the caster's symbol must be wielded in one hand and the casting time is doubled.</li>
+                    <li>If a divine caster loses their holy symbol, they will no longer be able to prepare spells until the holy symbol is replaced.</li>                    
+                    <li>An divine caster begins play familiar with a number of spells equal to their base chance for WIL.</li>
+                    <li>An divine caster can prepare a number of spells equal to half (rounded down) their base chance for WIL.</li>
                 </ul>
                 }
             </section>

@@ -11,6 +11,7 @@ export const App = () => {
                 "Moves Character Creation to the Game Mechanics dropdown.",
                 "Moves Species to the Game Mechanics dropdown.",
                 "Moves Magic to the navbar for easier access.",
+                "Expands on the magic/casting system.",
             ]
         },
         {
