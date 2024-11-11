@@ -14,9 +14,8 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 import { App } from './App.jsx'
 import { Schedule } from "./components/Schedule.jsx";
 
-import { Character } from "./components/characters/Character.jsx";
-
 import {
+    FOES,
     LOCATIONS,
     SPECIES,
 } from "./constants.jsx";
@@ -24,7 +23,7 @@ import {
 import {
     ALCHEMICAL,
     AMMUNITION,
-    ANIMALS,
+    // LIVESTOCK,
     ARMOR,
     CLOTHES,
     CONTAINERS,
@@ -55,7 +54,8 @@ import { CharacterCreation } from './components/CharacterCreation.jsx';
 import { Characters } from './components/dropdowns/Characters.jsx';
 import { PlayerCharacters } from './components/PlayerCharacters.jsx';
 import { PlayerCharacter } from './components/PlayerCharacter.jsx';
-import { Foes } from './components/Foes.jsx';
+import { Creatures } from './components/Creatures.jsx';
+import { Animals } from "./components/Animals.jsx";
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -156,7 +156,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                     />
                     <Route
                         path={"/foes"}
-                        element={<Foes />}
+                        element={<Creatures title={"Foes"} creatures={FOES} />}
+                    />
+                    <Route
+                        path={"/animals"}
+                        element={<Animals />}
                     />
                     <Route
                         path={"/equipment/melee_weapons"}
@@ -235,8 +239,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                         element={<Equipment.General equipment={ALCHEMICAL} label={"Alchemical Products"} />}
                     />
                     <Route
-                        path={"/equipment/animals"}
-                        element={<Equipment.General equipment={ANIMALS} label={"Animals"} />}
+                        path={"/equipment/livestock"}
+                        element={<Equipment.Livestock />}
                     />
                     {SPECIES.map((specie, index) => {
                         return (
