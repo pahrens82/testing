@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 
 
-export const Magic = () => {
-    const TYPES = ["Arcane", "Divine", "Both"];
+export const Magic = ({type}) => {
     const RANKS = [1, 2, 3, 4, 5];
 
     const [selectedRanks, setSelectedRanks] = useState(new Set([1]));
-    const [type, setType] = useState(TYPES[2]);
 
     const rankInputs = [1, 2, 3, 4, 5];
 
@@ -19,10 +17,6 @@ export const Magic = () => {
             set.delete(parseInt(target.value));
         }
         setSelectedRanks(set);
-    };
-
-    const handleTypeChange = (value) => {
-        setType(value);
     };
 
     const MODIFIERS = {
@@ -559,7 +553,7 @@ export const Magic = () => {
 
     return (
         <section className={"container"}>
-            <h1>Magic</h1>
+            <h1>{type} Magic</h1>
             <section>
                 <h3>General Mechanics</h3>
                 <ul>
@@ -573,44 +567,24 @@ export const Magic = () => {
                 </ul>
             </section>
             <section>
-                <h3>Arcane Magic</h3>
+                <h3>Casting Mechanics</h3>
+                {type.toLowerCase() === "arcane" ?
                 <ul>
                     <li>Arcane casters have a grimoire within which they record their spells.</li>
-                    <li>Recording a spell requires 1 Shift per rank of the spell.</li>
+                    <li>Recording a spell in your grimoire requires 1 Shift per rank of the spell.</li>
                     <li>An arcane caster can memorize spells from their grimoire.</li>
                     <li>Memorizing spells requires a Long Rest.</li>
                     <li>Memorized spells remain so until this action is taken again.</li>
                     <li>Memorized spells require a single action (or whatever is noted in the spell's description) to cast.</li>
-                    <li>Spells can be cast directly from the grimoire, although their casting times are doubled.</li>
+                    <li>Spells may be cast directly from the grimoire, although the casting time is doubled.</li>
                     <li>If an arcane caster loses their grimoire, they cannot memorize spells until their grimoire is replaced.</li>
                     <li>Initially, arcane casters can have two memorized spells, with that number increasing by 1 on even "levels" (IE, 3 at level 2, 4 at level 4, 5 at level 6, etc.)</li>
                 </ul>
-            </section>
-            <section>
-                <h3>Type</h3>
-                {TYPES.map((casterType, index) => {
-                    return (
-                        <div
-                            className={"form-check form-check-inline"}
-                            key={casterType}
-                        >
-                            <input
-                                className={"form-check-input"}
-                                type={"radio"}
-                                id={`typeRadio${index}`}
-                                value={index}
-                                checked={casterType === type}
-                                onChange={() => handleTypeChange(casterType)}
-                            />
-                            <label
-                                className={"form-check-label"}
-                                htmlFor={`typeRadio${index}`}
-                            >
-                                {casterType}
-                            </label>
-                        </div>
-                    )
-                })}
+                :
+                <ul>
+                    <li>TBD</li>
+                </ul>
+                }
             </section>
             <section className={"mt-3"}>
                 <h3>Ranks</h3>
@@ -642,10 +616,7 @@ export const Magic = () => {
                 <h3>Spells</h3>
                 {SPELLS.map((spell, index) => {
                     if (selectedRanks.has(spell.rank)) {
-                        if (
-                            (spell.type === type || spell.type === "Both") ||
-                            (type === "Both")
-                        ) {
+                        if (spell.type === type || spell.type === "Both") {
                             return (
                                 <ul key={spell.name.replace(/ /g, "-")} className={"list-unstyled mb-4"}>
                                     <li><span className={"h5"}>{spell.name}</span></li>

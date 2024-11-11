@@ -37,26 +37,18 @@ export const NavigationBar = () => {
                             Schedule
                         </Link>
                     </li>
-                    <li className={"nav-item"}>
-                        <Link
-                            className={"nav-link"}
-                            to={"/creation"}
-                        >
-                            Character Creation
-                        </Link>
-                    </li>
-                    <li className={"nav-item"}>
+                    {/* <li className={"nav-item"}>
                         <Link
                             className={"nav-link"}
                             to={"/pcs"}
                         >
                             PCs
                         </Link>
-                    </li>
+                    </li> */}
+                    <Dropdowns.PCs />
                     <Dropdowns.Mechanics />
-                    <Dropdowns.SpeciesDropdown />
                     <Dropdowns.Equipment />
-                    {/* <Dropdowns.Locations /> */}
+                    <Dropdowns.Magic />
                     <li className={"nav-item"}>
                         <a
                             className={"nav-link"}

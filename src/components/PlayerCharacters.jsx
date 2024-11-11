@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { PC } from "../classes/pc";
 
 
-const characters = {
+export const CHARACTERS = {
     Nate: new PC(
         {
             attributes: {
@@ -206,7 +206,7 @@ const characters = {
 
 
 export const PlayerCharacters = () => {
-    const [checked, setChecked] = useState(new Set(Object.keys(characters)));
+    const [checked, setChecked] = useState(new Set(Object.keys(CHARACTERS)));
 
     let showWeaknesses = false;
     let showAttributes = false;
@@ -239,22 +239,22 @@ export const PlayerCharacters = () => {
             </section>
             <section className={"row"}>
                 <section className={"col"}>
-                    {Object.keys(characters).map((key, index) => {
+                    {Object.keys(CHARACTERS).map((character, index) => {
                         return (
-                            <div key={`${key}-card`} className={"form-check form-check-inline"}>
+                            <div key={`${character}-card`} className={"form-check form-check-inline"}>
                                 <input
                                     className={"form-check-input"}
                                     type={"checkbox"}
-                                    id={`inlineCheckbox-${key}`}
-                                    value={key}
-                                    checked={checked.has(key)}
+                                    id={`inlineCheckbox-${character}`}
+                                    value={character}
+                                    checked={checked.has(character)}
                                     onChange={handleChange}
                                 />
                                 <label
                                     className={"form-check-label"}
-                                    htmlFor={`inlineCheckbox-${key}`}
+                                    htmlFor={`inlineCheckbox-${character}`}
                                 >
-                                    {key}
+                                    {character}
                                 </label>
                             </div>
                         )
@@ -263,23 +263,23 @@ export const PlayerCharacters = () => {
             </section>
             <section className={"row"}>
                 <section className={"col-12 col-md-4"}>
-                {Object.keys(characters).map((key, index) => {
+                {Object.keys(CHARACTERS).map((character, index) => {
                     return (
                         <section
-                            key={`${key}-details`}
-                            className={`card px-3 mt-3 mt-md-0 d-${checked.has(key) ? "block" : "none"}`}
+                            key={`${character}-details`}
+                            className={`card px-3 mt-3 mt-md-0 d-${checked.has(character) ? "block" : "none"}`}
                         >
-                            <small>{key}</small>
+                            <small>{character}</small>
                             <h3 className={"m-0"}>
-                                {characters[key].name}
+                                {CHARACTERS[character].name}
                             </h3>
-                            {characters[key].attributesToTable()}
+                            {CHARACTERS[character].attributesToTable()}
                             {showWeaknesses ?
                                 <>
                                     <strong className={"d-block"}>Weaknesses</strong>
-                                    {characters[key].weaknesses.map((weakness, index) => {
+                                    {CHARACTERS[character].weaknesses.map((weakness, index) => {
                                         return (
-                                            <span key={`${key}-weakness-${index}`}>
+                                            <span key={`${character}-weakness-${index}`}>
                                                 {weakness}
                                             </span>
                                         )
@@ -288,8 +288,8 @@ export const PlayerCharacters = () => {
                                 :
                                 null
                             }
-                            {characters[key].skillsToTable(characters[key].name)}
-                            {characters[key].skillsToTable(characters[key].name, true)}
+                            {CHARACTERS[character].skillsToTable(CHARACTERS[character].name)}
+                            {CHARACTERS[character].skillsToTable(CHARACTERS[character].name, true)}
                         </section>
                     )
                 })}

@@ -4,6 +4,16 @@ import './App.css'
 export const App = () => {
     const CHANGE_LOG = [
         {
+            date: "11/10/2024",
+            changes: [
+                "Corrects how skill improvements are calculated.",
+                "Changes the common PCs page to a navbar dropdown.",
+                "Moves Character Creation to the Game Mechanics dropdown.",
+                "Moves Species to the Game Mechanics dropdown.",
+                "Moves Magic to the navbar for easier access.",
+            ]
+        },
+        {
             date: "11/9/2024",
             changes: [
                 "Adds trail rations under Miscellaneous.",

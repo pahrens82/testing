@@ -54,6 +54,7 @@ import { Species } from './components/Species.jsx';
 import { CharacterCreation } from './components/CharacterCreation.jsx';
 import { Characters } from './components/dropdowns/Characters.jsx';
 import { PlayerCharacters } from './components/PlayerCharacters.jsx';
+import { PlayerCharacter } from './components/PlayerCharacter.jsx';
 import { Foes } from './components/Foes.jsx';
 
 
@@ -73,7 +74,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                         element={<Schedule />}
                     />
                     <Route
-                        path={"/creation"}
+                        path={"/mechanics/character_creation"}
                         element={<CharacterCreation />}
                     />
                     <Route
@@ -100,10 +101,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                         path={"/mechanics/abilities"}
                         element={<Mechanic.Abilities />}
                     />
-                    <Route
-                        path={"/mechanics/magic"}
-                        element={<Mechanic.Magic />}
-                    />
+                    
                     <Route
                         path={"/mechanics/combat"}
                         element={<Mechanic.Combat />}
@@ -115,6 +113,38 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                     <Route
                         path={"/mechanics/conditions"}
                         element={<Mechanic.Conditions />}
+                    />
+                    <Route
+                        path={"/magic/arcane"}
+                        element={<Mechanic.Magic type={"Arcane"} />}
+                    />
+                    <Route
+                        path={"/magic/divine"}
+                        element={<Mechanic.Magic type={"Divine"} />}
+                    />
+                    <Route
+                        path={"/pcs/nate"}
+                        element={<PlayerCharacter player={"Nate"} />}
+                    />
+                    <Route
+                        path={"/pcs/patrick"}
+                        element={<PlayerCharacter player={"Patrick"} />}
+                    />
+                    <Route
+                        path={"/pcs/mike"}
+                        element={<PlayerCharacter player={"Mike"} />}
+                    />
+                    <Route
+                        path={"/pcs/chris"}
+                        element={<PlayerCharacter player={"Chris"} />}
+                    />
+                    <Route
+                        path={"/pcs/dowell"}
+                        element={<PlayerCharacter player={"Dowell"} />}
+                    />
+                    <Route
+                        path={"/pcs/mitch"}
+                        element={<PlayerCharacter player={"Mitch"} />}
                     />
                     <Route
                         path={"/characters"}

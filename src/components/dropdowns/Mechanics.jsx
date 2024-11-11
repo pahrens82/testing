@@ -9,9 +9,10 @@ export const Mechanics = () => {
 		"Abilities",
 		"Combat",
 		"Health",
-        "Magic",
         "Resting",
         "Conditions",
+        "Character Creation",
+        "Species",
 	];
 	return (
 		<li className={"nav-item dropdown"}>
