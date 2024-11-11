@@ -53,7 +53,9 @@ export class PC {
         Object.keys(this.skills).forEach((skill, index) => {
             if (!WEAPON_SKILLS.includes(skill)) {
                 let score = this.attributesToSkills(this.attributes[this.skills[skill].attr], this.classSkills.includes(skill));
-                if (this.improvements.includes(skill)) score += 1;
+                this.improvements.forEach((improvement) => {
+                    if (improvement === skill) score += 1;
+                });
                 skills[skill] = { score: score, description: this.skills[skill].description, attr: this.skills[skill].attr, name: this.skills[skill].name };
             }
         });

@@ -65,7 +65,9 @@ const characters = {
                 "tracking",
             ],
             improvements: [
-                "arcane casting",
+                "arcaneCasting",
+                "perception",
+                "bluff",
             ]
         }
     ),
@@ -100,6 +102,7 @@ const characters = {
             improvements: [
                 "beastLore",
                 "knives",
+                "tinkering",
             ],
         }
     ),
@@ -117,9 +120,7 @@ const characters = {
             species: "townsfolk",
             profession: "bard",
             name: "Cyril Runan",
-            weaknesses: [
-                "Clumsy",
-            ],
+            weaknesses: [],
             abilities: [],
             classSkills: [
                 "acrobatics",
@@ -150,9 +151,7 @@ const characters = {
             species: "plains nomad",
             profession: "fighter",
             name: "Borden Longwalker ",
-            weaknesses: [
-                "Slothful",
-            ],
+            weaknesses: [],
             abilities: [],
             classSkills: [
                 "acrobatics",
@@ -167,6 +166,7 @@ const characters = {
             improvements: [
                 "survival",
                 "cooking",
+                "perception",
             ]
         }
     ),
@@ -197,7 +197,8 @@ const characters = {
                 "perception",
             ],
             improvements: [
-
+                "tracking",
+                "dodge",
             ],
         }
     ),
