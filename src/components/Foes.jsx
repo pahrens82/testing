@@ -1,8 +1,9 @@
+const NA = "N/A";
 const FOES = [
     {
         name: "Goblin Scout",
         movement: 6,
-        damageBonus: "N/A",
+        damageBonus: NA,
         hp: 9,
         wp: 8,
         skills: "Perception: 10, Dodge: 10, Stealth: 12",
@@ -15,7 +16,7 @@ const FOES = [
     {
         name: "Goblin Warrior",
         movement: 6,
-        damageBonus: "N/A",
+        damageBonus: NA,
         hp: 10,
         wp: 8,
         skills: "Perception: 10, Dodge: 10, Stealth: 12",
@@ -28,7 +29,7 @@ const FOES = [
     {
         name: "Hobgoblin Scout",
         movement: 6,
-        damageBonus: "N/A",
+        damageBonus: NA,
         hp: 9,
         wp: 8,
         skills: "Perception: 12, Dodge: 12, Stealth: 14",
@@ -41,7 +42,7 @@ const FOES = [
     {
         name: "Hobgoblin Fighter",
         movement: 6,
-        damageBonus: "N/A",
+        damageBonus: NA,
         hp: 12,
         wp: 8,
         skills: "Perception: 10, Dodge: 12, Stealth: 10",
@@ -114,6 +115,18 @@ const FOES = [
         weapons: [
             "Spiked Club (12), 1d10 + 1d4, Durability 6",
             "Short Spear (12), 2d4 + 1d4, Durability 9",
+        ],
+    },
+    {
+        name: "Satyr",
+        movement: 5,
+        damageBonus: NA,
+        hp: 10,
+        wp: 12,
+        skills: "Bluff 10, Dodge 10, Performance 14, Persuasion 12",
+        armor: "Boiled Leather (2)",
+        weapons: [
+            "Short Spear (10), 2d4 + 1d4, Durability 9",
         ],
     },
 ]
