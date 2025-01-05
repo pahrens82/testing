@@ -1650,7 +1650,7 @@ export const ALCHEMICAL = [
         cost: 10,
         availability: 2,
         bulk: 1,
-        effect: "When ignited, fills a 7-hexagon area with obscuring smoke for 5 rounds.",
+        effect: "When ignited, fills the target and adjacent hexes with obscuring smoke for 5 rounds.",
     },
     {
         name: "Tinder Twig",
@@ -1664,14 +1664,14 @@ export const ALCHEMICAL = [
         cost: 20,
         availability: 2,
         bulk: 1,
-        effect: "When ignited, fills a 7-hexagon area with a disgusting odor. Characters gain the Sickly Condition while in the area of effect.",
+        effect: "When ignited, fills the target and adjacent hexes with a disgusting odor. Characters gain the Sickly Condition while in the area of effect.",
     },
     {
         name: "Flash Powder",
         cost: 10,
         availability: 2,
         bulk: 1,
-        effect: "Explodes in a brilliant white light with a loud bang. Inflicts the Dazed Condition on anyone within a 7-hexagon area.",
+        effect: "Explodes in a brilliant white light with a loud bang. Inflicts the Dazed Condition on anyone within the target and adjacent hexes.",
     },
     {
         name: "Glass Silvering",
@@ -1683,8 +1683,36 @@ export const ALCHEMICAL = [
     {
         name: "Parade Torch",
         cost: 10,
-        availability: 2,
+        availability: 1,
         bulk: 1,
         effect: "A wooden tube that shoots out colorful flames and sparks upon ignition.",
+    },
+    {
+        name: "Chalk, Glow",
+        cost: 5,
+        availability: 1,
+        bulk: "Tiny",
+        effect: "A block of chalk that has been mixed with glowing fungus. Glows faintly in the dark.",
+    },
+    {
+        name: "Ink, Disappearing",
+        cost: 10,
+        availability: 1,
+        bulk: 1,
+        effect: "Ink that disappears shortly after being applied to a surface, and becomes permanently visible upon exposure to heat.",
+    },
+    {
+        name: "Ink, Waterproof",
+        cost: 25,
+        availability: 1,
+        bulk: 1,
+        effect: "Oily ink that doesn't smear if exposed to moisture.",
+    },
+    {
+        name: "Blister Brew",
+        cost: 50,
+        availability: 1,
+        bulk: 1,
+        effect: "A clay pot that contains a liquid blistering agent. Exposure causes blisters to develop immediately, dealing 2d4 damage. Even minimal irritation of the blisters causes them to burst, dealing a further 1d4 damage.",
     },
 ];
