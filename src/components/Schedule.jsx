@@ -29,7 +29,7 @@ export const Schedule = () => {
                     <h3>Next Session:</h3>
                     <div
                         key={nextSession.date}
-                        className={"card w-auto p-2 mt-3"}
+                        className={"card border-success w-auto p-2 mt-3"}
                     >
                         <p className={"m-0"}>
                             Date: {nextSession.date}<br />
@@ -37,12 +37,16 @@ export const Schedule = () => {
                             Address: {nextSession.address} <br />
                             Start time: {nextSession.startTime}
                         </p>
+                        {nextSession.address !== "TBD" ?
                         <a
                             target={"_blank"}
                             href={`https://www.google.com/maps/place/${nextSession.address}/`}
                         >
                             Map
                         </a>
+                        :
+                        null
+                        }
                     </div>
                     <h3 className={"mt-3"}>Past Sessions:</h3>
                     {sessions.map((session, index) => {
