@@ -68,6 +68,7 @@ export const CHARACTERS = {
                 "arcaneCasting",
                 "perception",
                 "bluff",
+                "arcaneCasting",
             ]
         }
     ),
@@ -124,16 +125,17 @@ export const CHARACTERS = {
             abilities: [],
             classSkills: [
                 "acrobatics",
-                "myths and legends",
+                "mythsAndLegends",
                 "performance",
                 "persuasion",
-                "sleight of hand",
+                "sleightOfHand",
                 "knives",
                 "perception",
                 "bows",
             ],
             improvements: [
                 "perception",
+                "mythsAndLegends",
             ]
         }
     ),
@@ -167,6 +169,7 @@ export const CHARACTERS = {
                 "survival",
                 "cooking",
                 "perception",
+                "medicine",
             ]
         }
     ),
@@ -198,6 +201,7 @@ export const CHARACTERS = {
             ],
             improvements: [
                 "tracking",
+                "dodge",
                 "dodge",
             ],
         }

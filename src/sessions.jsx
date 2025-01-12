@@ -2,6 +2,7 @@ import { Session } from "./classes/session";
 
 
 export const SESSIONS = [
+    new Session({ address: "TBD", date: "2/22/2025", host: "TBD" }),
     new Session({ address: "3604 Kent Rd., Stow, OH 44224", date: "1/11/2025", host: "Mitch" }),
     new Session({ address: "3604 Kent Rd., Stow, OH 44224", date: "12/15/2024", host: "Cancelled" }),
     new Session({ address: "3383 Wilson St., Cuyahoga Falls, OH 44221", date: "11/9/2024", host: "Me" }),
