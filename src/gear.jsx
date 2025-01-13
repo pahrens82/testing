@@ -1626,7 +1626,7 @@ export const HERBAL = [
         cost: "10 x Potency",
         availability: 1,
         bulk: 1,
-        effect: "Full Effect: Ailing Condition (round interval) until death, antidote, or passing 3 Death Rolls. Limited Effect: 1d6 HP and WP.",
+        effect: "Full Effect: Ailing Condition (round interval) until death, antidote, or passing 3 Death Saves. Limited Effect: 1d6 HP and WP.",
     },
     {
         name: "Poison, Paralytic",
