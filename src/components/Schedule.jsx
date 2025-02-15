@@ -1,17 +1,25 @@
 import {Session} from "../classes/session";
 
 
+const ADDRESSES = {
+    me: "3383 Wilson St., Cuyahoga Falls, OH 44221",
+    mitch: "3604 Kent Rd., Stow, OH 44224",
+    mike: "2640 Dodd Rd., Willoughby Hills, OH 44094",
+    patrick: "387 Cathy Dr., Munroe Falls, OH 44262",
+};
+
+
 export const Schedule = () => {
     let sessions = [
-        new Session({ address: "TBD", date: "2/22/2025", host: "TBD" }),
-        new Session({ address: "3604 Kent Rd., Stow, OH 44224", date: "1/11/2025", host: "Mitch" }),
-        new Session({ address: "3604 Kent Rd., Stow, OH 44224", date: "12/15/2024", host: "Cancelled" }),
-        new Session({ address: "3383 Wilson St., Cuyahoga Falls, OH 44221", date: "11/9/2024", host: "Me" }),
-        new Session({ address: "387 Cathy Dr., Munroe Falls, OH 44262", date: "10/12/2024", host: "Patrick" }),
-        new Session({ address: "2640 Dodd Rd., Willoughby Hills, OH 44094", date: "9/7/2024", host: "Mike" }),
-        new Session({ address: "3604 Kent Rd., Stow, OH 44224", date: "8/18/2024", host: "Mitch" }),
-        new Session({ address: "3383 Wilson St., Cuyahoga Falls, OH 44221", date: "7/6/2024", host: "Me" }),
-        new Session({ address: "3383 Wilson St., Cuyahoga Falls, OH 44221", date: "6/23/2024", host: "Cancelled" }),
+        new Session({ address: ADDRESSES.me, date: "2/22/2025", host: "Me" }),
+        new Session({ address: ADDRESSES.mitch, date: "1/11/2025", host: "Mitch" }),
+        new Session({ address: ADDRESSES.mitch, date: "12/15/2024", host: "Cancelled" }),
+        new Session({ address: ADDRESSES.me, date: "11/9/2024", host: "Me" }),
+        new Session({ address: ADDRESSES.patrick, date: "10/12/2024", host: "Patrick" }),
+        new Session({ address: ADDRESSES.mike, date: "9/7/2024", host: "Mike" }),
+        new Session({ address: ADDRESSES.mitch, date: "8/18/2024", host: "Mitch" }),
+        new Session({ address: ADDRESSES.me, date: "7/6/2024", host: "Me" }),
+        new Session({ address: ADDRESSES.me, date: "6/23/2024", host: "Cancelled" }),
     ];
     let nextSession = sessions.shift();
 
