@@ -16,7 +16,7 @@ export const Creatures = ({title, creatures}) => {
                         return (
                             <div
                                 key={creature.name.replace(" ", "-")}
-                                className={"card w-auto p-2 mt-3"}
+                                className={"card w-auto p-2 my-2"}
                             >
                                 <details>
                                     <summary className={"fw-bold"}>
@@ -36,6 +36,18 @@ export const Creatures = ({title, creatures}) => {
                                                 })}
                                             </ol>
                                         </li>
+                                        {
+                                            creature?.abilities?.length ?
+                                                <li>Abilities
+                                                    <ol>
+                                                        {creature.abilities.map((ability, index) => {
+                                                            return <li>{ability}</li>
+                                                        })}
+                                                    </ol>
+                                                </li>
+                                                :
+                                                null
+                                        }
                                         {creature.livestock ?
                                             <>
                                                 <li>Price: {creature.cost}</li>

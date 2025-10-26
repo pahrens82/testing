@@ -16,7 +16,7 @@ export const CHARACTERS = {
             description: "A kender burglar",
             species: "kender",
             profession: "burglar",
-            name: "Sandy Briarborn", // Sandfish "Sandy" Briarborn
+            name: 'Sandfish "Sandy" Briarborn', // Sandfish "Sandy" Briarborn
             weaknesses: [
                 "Big Mouth"
             ],

@@ -4,6 +4,12 @@ import './App.css'
 export const App = () => {
     const CHANGE_LOG = [
         {
+            date: "10/26/2025",
+            changes: [
+                "Various minor additions and corrections.",
+            ]
+        },
+        {
             date: "1/13/2025",
             changes: [
                 "Clarifies some of the death and dying rules.",

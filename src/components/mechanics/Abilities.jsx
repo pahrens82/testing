@@ -187,6 +187,12 @@ export const Abilities = () => {
             desc: "You are skilled at finding exceptional campsites. When setting up camp, you can activate this ability to find a site that grants a Boon to one of the following: Tracking for Hunting, Survival for Fishing or Foraging, Cooking, or Perception for standing watch.",
         },
         {
+            name: "Raise Spirits",
+            req: "Perform 12",
+            cost: 3,
+            desc: "You are adept at raising others' spirits with song and poetry. Activating this ability counts as an action and removes a chosen condition from a person with earshot. The target cannot be yourself.",
+        },
+        {
             name: "Robust",
             req: "",
             cost: 0,
