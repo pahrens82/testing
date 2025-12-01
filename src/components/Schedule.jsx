@@ -11,7 +11,7 @@ const ADDRESSES = {
 
 export const Schedule = () => {
     let sessions = [
-        new Session({ address: ADDRESSES.me, date: "TBD", host: "Me" }),
+        new Session({ address: ADDRESSES.me, date: "12/28/2025", host: "Me" }),
         new Session({ address: ADDRESSES.me, date: "2/22/2025", host: "Me" }),
         new Session({ address: ADDRESSES.mitch, date: "1/11/2025", host: "Mitch" }),
         new Session({ address: ADDRESSES.mitch, date: "12/15/2024", host: "Cancelled" }),
