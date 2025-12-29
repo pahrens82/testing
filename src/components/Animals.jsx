@@ -474,7 +474,7 @@ export let animals = [
             ENVIRONS.grasslands,
             ENVIRONS.desert,
         ],
-        huntable: true,
+        huntable: false,
         fightsBack: false,
     },
     {
@@ -708,7 +708,18 @@ export const Animals = () => {
     let storedEnvironsList = localStorage.getItem("stored-environs");
     if (!storedEnvironsList) storedEnvironsList = [];
     const [selectedEnvirons, setSelectedEnvirons] = useState(storedEnvironsList);
-    const [animalsToShow, setAnimalsToShow] = useState([]);
+
+    let storedAnimalList = localStorage.getItem("stored-animal-list");
+    if (storedAnimalList) {
+        storedAnimalList = JSON.parse(storedAnimalList);
+    } else {
+        storedAnimalList = [];
+    }
+    const [animalsToShow, setAnimalsToShow] = useState(storedAnimalList);
+
+    let storedShowHuntable = localStorage.getItem("stored-show-huntable");
+    if (!storedShowHuntable) storedShowHuntable = true;
+    const [showHuntable, setShowHuntable] = useState(storedShowHuntable);
 
     const handleChange = (event) => {
         let target = event.currentTarget;
@@ -728,7 +739,14 @@ export const Animals = () => {
         });
         localStorage.setItem("stored-environs", checkedBoxValues)
         setSelectedEnvirons(checkedBoxValues);
+        localStorage.setItem("stored-animal-list", JSON.stringify(newAnimalsToShow));
         setAnimalsToShow(newAnimalsToShow);
+    };
+
+    const handleShowHuntableChange = (event) => {
+        let checked = event.currentTarget.checked;
+        localStorage.setItem("stored-show-huntable", checked)
+        setShowHuntable(checked);
     };
 
     return (
@@ -766,6 +784,26 @@ export const Animals = () => {
                             </div>
                         )
                     })}
+                </section>
+            </section>
+            <section className={"row"}>
+                <section className={"col"}>
+                    <div className={"form-check"}>
+                        <input
+                            checked={showHuntable}
+                            className={"form-check-input"}
+                            id={"show-huntable-checkbox"}
+                            name={"show-huntable-checkbox"}
+                            type={"checkbox"}
+                            onChange={handleShowHuntableChange}
+                        />
+                        <label
+                            className={"form-check-label"}
+                            htmlFor={"show-huntable-checkbox"}
+                        >
+                            Show Huntable?
+                        </label>
+                    </div>
                 </section>
             </section>
             <section className={"row"}>
