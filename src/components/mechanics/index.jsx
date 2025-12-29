@@ -8,6 +8,7 @@ import { Magic } from "./Magic.jsx";
 import { Professions } from "./Professions.jsx";
 import { Resting } from "./Resting.jsx";
 import { Skills } from "./Skills.jsx";
+import {Travel} from "./Travel.jsx";
 
 export {
     Abilities,
@@ -20,4 +21,5 @@ export {
     Professions,
     Resting,
     Skills,
+    Travel,
 };

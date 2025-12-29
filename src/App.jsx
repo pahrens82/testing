@@ -4,6 +4,19 @@ import './App.css'
 export const App = () => {
     const CHANGE_LOG = [
         {
+            date: "12/18/2025",
+            changes: [
+                "Updated the schedule.",
+                "Updated the descriptions of the Cooking, Survival, and Tinkering skills.",
+                "Adds an entry under Game Mechanics for Travel.",
+                "Updates blanket pricing and description.",
+                "Updates warming sphere description.",
+                "Updates the whistle item description",
+                "Adds a metal whistle item.",
+                "Revamps the Animals page.",
+            ]
+        },
+        {
             date: "10/26/2025",
             changes: [
                 "Various minor additions and corrections.",

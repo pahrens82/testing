@@ -720,10 +720,10 @@ export const MISCELLANEOUS = [
     },
     {
         name: "Blanket",
-        cost: 1,
+        cost: 3,
         availability: 0,
         bulk: 1,
-        effect: "Required for a Comfortable Long Rest in cold wilderness.",
+        effect: "Can be combined with a Bed Roll to make it a 'Bed Roll, Cold Weather'.",
     },
     {
         name: "Board Game",
@@ -891,7 +891,7 @@ export const MISCELLANEOUS = [
         cost: 0.8,
         availability: 0,
         bulk: 1,
-        effect: "This fist-sized hollow copper sphere has a trapdoor through which coals can be added. This can be held or tucked into a bedroll to provide warmth, and negates a Bane due to cold temperatures.",
+        effect: "This fist-sized hollow copper sphere has a trapdoor through which coals can be added. This can be held to provide warmth, and negates a Bane due to cold temperatures.",
     },
     {
         name: "Tent, Small",
@@ -929,11 +929,18 @@ export const MISCELLANEOUS = [
         effect: "Handy when you don't have time to find your food in the wilds. Each ration is wrapped in waxed parchment, then wrapped in sackcloth and tied with string. Each packet includes two pieces of hardtack, a few ounces of hard cheese, some dried fruit, some dried meat, and some sort of tuber or root vegetable.",
     },
     {
-        name: "Whistle",
+        name: "Whistle, Metal",
+        cost: 5,
+        availability: 2,
+        bulk: "Tiny",
+        effect: "Emits a sound that can be heard up to a mile away, depending on conditions.",
+    },
+    {
+        name: "Whistle, Wood",
         cost: 0.5,
         availability: 0,
         bulk: "Tiny",
-        effect: "Emits a sound that can be heard up to 300 feet away.",
+        effect: "Emits a sound that can be heard up to half a mile away, depending on conditions.",
     },
     {
         name: "Wick, Candle",

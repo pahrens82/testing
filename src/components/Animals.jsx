@@ -1,101 +1,104 @@
-import {makePricingVerbose} from "../constants";
+import { useState } from "react";
+
+import { makePricingVerbose } from "../constants";
 
 export const MEAT = [
     "1",
-    "1d2",
-    "1d2+1",
-    "2d2",
-    "1d3+2",
-    "1d3+3",
-    "1d3+4",
-    "1d3+5",
-    "1d4+6",
+    "1d3",
+    "1d4",
+    "1d6",
+    "2d4",
+    "2d6",
 ];
 
 export const DAMAGE = [
-    "1d2",
     "1d3",
     "1d4",
     "1d6",
     "1d8",
-    "2d4",
     "1d10",
-    "2d6",
+    "1d12",
     "2d8",
 ];
 
 export const ANIMALS_BY_SIZE = [
     [
-        "Ferret",
-        "Magpie",
-        "Pigeon",
-        "Rat",
-        "Squirrel",
-        "Hedgehog",
         "Cat",
-        "Weasel",
-    ],
-    [
-        "Partridge",
-        "Rabbit",
         "Chicken",
         "Crow",
         "Duck",
-    ],
-    [
-        "Hawk",
-        "Possum",
-        "Raccoon",
-        "Skunk",
-        "Snake",
+        "Ferret",
+        "Hedgehog",
+        "Magpie",
+        "Partridge",
+        "Pheasant",
+        "Pigeon",
+        "Rat",
+        "Squirrel",
+        "Rabbit",
+        "Weasel",
     ],
     [
         "Badger",
         "Beaver",
         "Fox",
         "Goose",
+        "Hawk",
         "Porcupine",
+        "Possum",
+        "Raccoon",
+        "Snake",
+        "Skunk",
     ],
     [
+        "Dog",
         "Dog, Companion",
         "Dog, Guard",
         "Dog, Hunting",
         "Dog, War",
-        "Sheep",
-        "Dog",
         "Goat",
         "Lynx",
         "Pig",
-    ],
-    [
-        "Cougar",
-        "Wolf",
-        "Wari",
-        "Boar",
-        "Mountain Lion",
-        "Donkey",
-        "Llama",
-        "Mule",
+        "Sheep",
     ],
     [
         "Bear, Black",
-        "Cow",
-        "Deer",
-        "Horse, Riding",
+        "Boar",
+        "Cougar",
+        "Donkey",
+        "Llama",
+        "Mountain Lion",
+        "Mule",
+        "Wari",
+        "Wolf",
     ],
     [
         "Bear, Brown",
         "Bull",
-        "Ox",
+        "Cow",
+        "Deer",
         "Horse, Draft",
+        "Horse, Riding",
         "Horse, War",
+        "Ox",
     ],
     [
-        "Elk",
         "Bear, Grizzly",
+        "Elk",
         "Moose",
     ],
 ];
+
+const ENVIRONS = {
+    grasslands: "Grasslands",
+    woodlands: "Woodlands",
+    subalpine: "Sub-Alpine", // Sub-alpine refers to a high-elevation ecological zone just below the treeline in mountains. This zone is characterized by cool climates, deep snow, and hardy coniferous forests.
+    freshwater: "Fresh Water",
+    wetlands: "Wetlands",
+    desert: "Deserts",
+    mountains: "Mountains",
+    swamps: "Swamps",
+};
 
 export let animals = [
     {
@@ -107,6 +110,12 @@ export let animals = [
             "Perception 14",
             "Stealth 12",
         ],
+        environs: [
+            ENVIRONS.grasslands,
+            ENVIRONS.woodlands,
+        ],
+        huntable: true,
+        fightsBack: true,
     },
     {
         name: "Bear, Black",
@@ -116,6 +125,11 @@ export let animals = [
             "Dodge 8",
             "Perception 10",
         ],
+        environs: [
+            ENVIRONS.woodlands,
+        ],
+        huntable: true,
+        fightsBack: true,
     },
     {
         name: "Bear, Brown",
@@ -125,6 +139,11 @@ export let animals = [
             "Dodge 8",
             "Perception 10",
         ],
+        environs: [
+            ENVIRONS.woodlands,
+        ],
+        huntable: true,
+        fightsBack: true,
     },
     {
         name: "Bear, Grizzly",
@@ -134,6 +153,12 @@ export let animals = [
             "Dodge 8",
             "Perception 10",
         ],
+        environs: [
+            ENVIRONS.woodlands,
+            ENVIRONS.subalpine,
+        ],
+        huntable: true,
+        fightsBack: true,
     },
     {
         name: "Beaver",
@@ -144,6 +169,11 @@ export let animals = [
             "Perception 12",
             "Swimming 16",
         ],
+        environs: [
+            ENVIRONS.freshwater,
+        ],
+        huntable: true,
+        fightsBack: false,
     },
     {
         name: "Boar",
@@ -153,6 +183,13 @@ export let animals = [
             "Dodge 8",
             "Perception 10",
         ],
+        environs: [
+            ENVIRONS.woodlands,
+            ENVIRONS.grasslands,
+            ENVIRONS.wetlands,
+        ],
+        huntable: true,
+        fightsBack: true,
     },
     {
         name: "Bull",
@@ -164,6 +201,9 @@ export let animals = [
         ],
         availability: 1,
         cost: 30,
+        environs: [],
+        huntable: false,
+        fightsBack: false,
     },
     {
         name: "Cat",
@@ -176,6 +216,9 @@ export let animals = [
         ],
         availability: 0,
         cost: 0.2,
+        environs: [],
+        huntable: false,
+        fightsBack: false,
     },
     {
         name: "Chicken",
@@ -187,6 +230,9 @@ export let animals = [
         ],
         availability: 0,
         cost: 0.05,
+        environs: [],
+        huntable: false,
+        fightsBack: false,
     },
     {
         name: "Cougar",
@@ -197,6 +243,14 @@ export let animals = [
             "Perception 14",
             "Stealth 14",
         ],
+        environs: [
+            ENVIRONS.desert,
+            ENVIRONS.mountains,
+            ENVIRONS.woodlands,
+            ENVIRONS.swamps,
+        ],
+        huntable: true,
+        fightsBack: true,
     },
     {
         name: "Cow",
@@ -208,6 +262,9 @@ export let animals = [
         ],
         availability: 1,
         cost: 15,
+        environs: [],
+        huntable: false,
+        fightsBack: false,
     },
     {
         name: "Deer",
@@ -217,6 +274,13 @@ export let animals = [
             "Dodge 12",
             "Perception 12",
         ],
+        environs: [
+            ENVIRONS.mountains,
+            ENVIRONS.woodlands,
+            ENVIRONS.grasslands,
+        ],
+        huntable: true,
+        fightsBack: false,
     },
     {
         name: "Dog, Companion",
@@ -229,6 +293,9 @@ export let animals = [
         ],
         availability: 0,
         cost: 10,
+        environs: [],
+        huntable: false,
+        fightsBack: false,
     },
     {
         name: "Dog, Guard",
@@ -241,6 +308,9 @@ export let animals = [
         ],
         availability: 0,
         cost: 25,
+        environs: [],
+        huntable: false,
+        fightsBack: false,
     },
     {
         name: "Dog, Hunting",
@@ -253,6 +323,9 @@ export let animals = [
         ],
         availability: 0,
         cost: 40,
+        environs: [],
+        huntable: false,
+        fightsBack: false,
     },
     {
         name: "Dog, War",
@@ -265,6 +338,9 @@ export let animals = [
         ],
         availability: 1,
         cost: 40,
+        environs: [],
+        huntable: false,
+        fightsBack: false,
     },
     {
         name: "Donkey",
@@ -276,6 +352,9 @@ export let animals = [
         ],
         availability: 1,
         cost: 12,
+        environs: [],
+        huntable: false,
+        fightsBack: false,
     },
     {
         name: "Duck",
@@ -288,6 +367,12 @@ export let animals = [
         ],
         availability: 0,
         cost: 0.06,
+        environs: [
+            ENVIRONS.wetlands,
+            ENVIRONS.freshwater,
+        ],
+        huntable: true,
+        fightsBack: false,
     },
     {
         name: "Elk",
@@ -297,6 +382,12 @@ export let animals = [
             "Dodge 12",
             "Perception 12",
         ],
+        environs: [
+            ENVIRONS.woodlands,
+            ENVIRONS.mountains,
+        ],
+        huntable: true,
+        fightsBack: true,
     },
     {
         name: "Ferret",
@@ -307,6 +398,12 @@ export let animals = [
             "Perception 12",
             "Stealth 14",
         ],
+        environs: [
+            ENVIRONS.woodlands,
+            ENVIRONS.grasslands,
+        ],
+        huntable: true,
+        fightsBack: true,
     },
     {
         name: "Fox",
@@ -317,6 +414,14 @@ export let animals = [
             "Perception 12",
             "Stealth 14",
         ],
+        environs: [
+            ENVIRONS.woodlands,
+            ENVIRONS.grasslands,
+            ENVIRONS.mountains,
+            ENVIRONS.desert,
+        ],
+        huntable: true,
+        fightsBack: false,
     },
     {
         name: "Goat",
@@ -328,6 +433,12 @@ export let animals = [
         ],
         availability: 0,
         cost: 5,
+        environs: [
+            ENVIRONS.mountains,
+            ENVIRONS.subalpine,
+        ],
+        huntable: true,
+        fightsBack: true,
     },
     {
         name: "Goose",
@@ -340,6 +451,13 @@ export let animals = [
         ],
         availability: 1,
         cost: 0.1,
+        environs: [
+            ENVIRONS.freshwater,
+            ENVIRONS.wetlands,
+            ENVIRONS.grasslands,
+        ],
+        huntable: true,
+        fightsBack: true,
     },
     {
         name: "Hawk",
@@ -351,6 +469,13 @@ export let animals = [
         ],
         availability: 2,
         cost: 250,
+        environs: [
+            ENVIRONS.woodlands,
+            ENVIRONS.grasslands,
+            ENVIRONS.desert,
+        ],
+        huntable: true,
+        fightsBack: false,
     },
     {
         name: "Horse, Draft",
@@ -362,6 +487,9 @@ export let animals = [
         ],
         availability: 1,
         cost: 350,
+        environs: [],
+        huntable: false,
+        fightsBack: false,
     },
     {
         name: "Horse, Riding",
@@ -373,6 +501,9 @@ export let animals = [
         ],
         availability: 1,
         cost: 275,
+        environs: [],
+        huntable: false,
+        fightsBack: false,
     },
     {
         name: "Horse, War",
@@ -384,6 +515,9 @@ export let animals = [
         ],
         availability: 2,
         cost: 700,
+        environs: [],
+        huntable: false,
+        fightsBack: false,
     },
     {
         name: "Llama",
@@ -393,8 +527,14 @@ export let animals = [
             "Dodge 12",
             "Perception 12",
         ],
-        availability: 1,
+        availability: 2,
         cost: 75,
+        environs: [
+            ENVIRONS.subalpine,
+            ENVIRONS.mountains,
+        ],
+        huntable: true,
+        fightsBack: false,
     },
     {
         name: "Moose",
@@ -404,6 +544,12 @@ export let animals = [
             "Dodge 8",
             "Perception 10",
         ],
+        environs: [
+            ENVIRONS.woodlands,
+            ENVIRONS.wetlands,
+        ],
+        huntable: true,
+        fightsBack: true,
     },
     {
         name: "Mule",
@@ -415,6 +561,9 @@ export let animals = [
         ],
         availability: 1,
         cost: 12,
+        environs: [],
+        huntable: false,
+        fightsBack: false,
     },
     {
         name: "Ox",
@@ -426,6 +575,9 @@ export let animals = [
         ],
         availability: 1,
         cost: 23,
+        environs: [],
+        huntable: false,
+        fightsBack: false,
     },
     {
         name: "Partridge",
@@ -437,6 +589,11 @@ export let animals = [
         ],
         availability: 0,
         cost: 0.05,
+        environs: [
+            ENVIRONS.grasslands,
+        ],
+        huntable: true,
+        fightsBack: false,
     },
     {
         name: "Pig",
@@ -448,6 +605,9 @@ export let animals = [
         ],
         availability: 0,
         cost: 6,
+        environs: [],
+        huntable: false,
+        fightsBack: false,
     },
     {
         name: "Pigeon",
@@ -459,6 +619,12 @@ export let animals = [
         ],
         availability: 0,
         cost: 0.02,
+        environs: [
+            ENVIRONS.mountains,
+            ENVIRONS.subalpine,
+        ],
+        huntable: true,
+        fightsBack: false,
     },
     {
         name: "Sheep",
@@ -470,6 +636,9 @@ export let animals = [
         ],
         availability: 0,
         cost: 4,
+        environs: [],
+        huntable: false,
+        fightsBack: false,
     },
     {
         name: "Snake",
@@ -479,6 +648,18 @@ export let animals = [
             "Dodge 10",
             "Perception 12",
         ],
+        environs: [
+            ENVIRONS.desert,
+            ENVIRONS.freshwater,
+            ENVIRONS.grasslands,
+            ENVIRONS.mountains,
+            ENVIRONS.subalpine,
+            ENVIRONS.swamps,
+            ENVIRONS.wetlands,
+            ENVIRONS.woodlands,
+        ],
+        huntable: true,
+        fightsBack: false,
     },
     {
         name: "Wari",
@@ -490,6 +671,11 @@ export let animals = [
         ],
         availability: 1,
         cost: 30,
+        environs: [
+            ENVIRONS.grasslands,
+        ],
+        huntable: true,
+        fightsBack: true,
     },
     {
         name: "Wolf",
@@ -500,10 +686,51 @@ export let animals = [
             "Perception 14",
             "Stealth 14",
         ],
+        environs: [
+            ENVIRONS.grasslands,
+            ENVIRONS.subalpine,
+            ENVIRONS.mountains,
+            ENVIRONS.woodlands,
+        ],
+        huntable: true,
+        fightsBack: true,
     },
 ];
 
+const AVAILABILITIES = [
+    "Common",
+    "Uncommon",
+    "Rare",
+];
+
+
 export const Animals = () => {
+    let storedEnvironsList = localStorage.getItem("stored-environs");
+    if (!storedEnvironsList) storedEnvironsList = [];
+    const [selectedEnvirons, setSelectedEnvirons] = useState(storedEnvironsList);
+    const [animalsToShow, setAnimalsToShow] = useState([]);
+
+    const handleChange = (event) => {
+        let target = event.currentTarget;
+        let checkedBoxValues = Array.from(target.closest("section.col").querySelectorAll("input:checked")).map((element) => ENVIRONS[element.value]);
+        let newAnimalsToShow = [];
+        let animalsAdded = [];
+        animals.forEach((animal) => {
+            checkedBoxValues.forEach((value) => {
+                if (
+                    (animal.environs.includes(value)) &&
+                    (!animalsAdded.includes(animal.name))
+                ) {
+                    animalsAdded.push(animal.name);
+                    newAnimalsToShow.push(animal);
+                }
+            });
+        });
+        localStorage.setItem("stored-environs", checkedBoxValues)
+        setSelectedEnvirons(checkedBoxValues);
+        setAnimalsToShow(newAnimalsToShow);
+    };
+
     return (
         <section className={"container"}>
             <section className={"row"}>
@@ -515,25 +742,62 @@ export const Animals = () => {
             </section>
             <section className={"row"}>
                 <section className={"col"}>
-                    {animals.map((animal, index) => {
-                        let size;
-                        ANIMALS_BY_SIZE.forEach((category, index) => {
-                            if (category.includes(animal.name)) size = index + 1;
-                        });
+                    {Object.keys(ENVIRONS).map((environ, index) => {
                         return (
                             <div
-                                key={animal.name.replace(" ", "-")}
-                                className={"card w-auto p-2 mt-3"}
+                                className={"form-check"}
+                                key={environ}
                             >
-                                <details>
-                                    <summary className={"fw-bold"}>
-                                        {animal.name}
-                                    </summary>
-                                    <ul className={"m-0 list-unstyled"}>
-                                        <li>Speed: {animal.movement}</li>
-                                        <li>HP: {size * 2}</li>
-                                        <li>Skills
-                                            <ul>
+                                <input
+                                    checked={selectedEnvirons.includes(ENVIRONS[environ])}
+                                    className={"form-check-input"}
+                                    id={environ}
+                                    name={"environ-checkbox"}
+                                    type={"checkbox"}
+                                    value={environ}
+                                    onChange={handleChange}
+                                />
+                                <label
+                                    className={"form-check-label"}
+                                    htmlFor={environ}
+                                >
+                                    {ENVIRONS[environ]}
+                                </label>
+                            </div>
+                        )
+                    })}
+                </section>
+            </section>
+            <section className={"row"}>
+                <section className={"col"}>
+                    <table className={"table table-hover table-sm"}>
+                        <thead className={"table-dark"}>
+                            <tr>
+                                <td>Roll for Hunting</td>
+                                <td>Animal</td>
+                                <td>Speed</td>
+                                <td>HP</td>
+                                <td>Skills</td>
+                                <td>Huntable?</td>
+                                <td>Fights Back?</td>
+                                <td>Meat</td>
+                                <td>Price</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {animalsToShow.map((animal, index) => {
+                                let size;
+                                ANIMALS_BY_SIZE.forEach((category, index) => {
+                                    if (category.includes(animal.name)) size = index + 1;
+                                });
+                                return (
+                                    <tr key={animal.name.replace(" ", "-")}>
+                                        <td>{index + 1}</td>
+                                        <td>{animal.name}</td>
+                                        <td>{animal.movement}</td>
+                                        <td>{size * 2}</td>
+                                        <td>
+                                            <ul className={"list-unstyled"}>
                                                 {animal.skills.map((skill, index) => {
                                                     return (
                                                         <li key={`${animal.name}-${skill}`}>
@@ -542,23 +806,32 @@ export const Animals = () => {
                                                     )
                                                 })}
                                             </ul>
-                                        </li>
-                                        <li>Meat: {MEAT[size]}</li>
-                                        {animal.cost ?
-                                            <>
-                                                <li>Availability: {animal.availability}</li>
-                                                <li>Price: {makePricingVerbose(animal.cost)}</li>
-                                            </>
-                                            :
-                                            null
-                                        }
-                                    </ul>
-                                </details>
-                            </div>
-                        )
-                    })}
+                                        </td>
+                                        <td>{animal.huntable ? "Yes" : "No"}</td>
+                                        <td>{animal.fightsBack ? "Yes" : "No"}</td>
+                                        <td>{MEAT[size]}</td>
+                                        <td>
+                                            <ul className={"list-unstyled"}>
+                                                {animal.cost ?
+                                                    <>
+                                                        <li>Availability: {AVAILABILITIES[animal.availability]}</li>
+                                                        <li>Price: {makePricingVerbose(animal.cost)}</li>
+                                                    </>
+                                                    :
+                                                    <>
+                                                        <li>Availability: N/A</li>
+                                                        <li>Price: N/A</li>
+                                                    </>
+                                                }
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                )
+                            })}
+                        </tbody>
+                    </table>
                 </section>
             </section>
         </section>
-    )
+    );
 };

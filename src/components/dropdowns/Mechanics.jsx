@@ -13,6 +13,7 @@ export const Mechanics = () => {
         "Conditions",
         "Character Creation",
         "Species",
+        "Travel",
 	];
 	return (
 		<li className={"nav-item dropdown"}>
