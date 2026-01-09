@@ -1592,9 +1592,41 @@ export const MEDICINAL = [
     },
 ];
 
+const TRANQUILIZER_POISON_NAMES = [    
+    "Condensed Cruniex Gas",    
+    "Jellied Phexol Musk",    
+    "Essence of Klapisin Root",
+    "Bosyn's Insidious Unguent",
+];
+
+const PARALYTIC_POISON_NAMES = [
+    "Feeby's Paralytic",
+    "Dream Tar",  // Induces a dreamlike state
+    "Syroxil Juice", // 
+    "Grell's Rigor", //
+];
+
+const EMETIC_POISON_NAMES = [
+    "Fox's Purgative", 
+    "Bosyn's Hoofrot",
+    "Zagnotic Ichor",
+    "Vyrr's Malodorous Liquor",
+];
+
+const LETHAL_POISON_NAMES = [
+    "Russula Toxin", // Causes rhabdomyolosis
+    "Foolscap Essence", // Causes liver failure and internal bleeding
+    "Fire Coral Essence", // Causes rupture of alveoli in the lungs
+    "Satra Toxin", // Rash, nosebleeds, chest pain, bleeding in the lungs, fever, headache, fatigue
+];
+
+const randomName = (names) => {
+    return names[Math.floor(Math.random() * names.length)]
+};
+
 export const HERBAL = [
     {
-        name: "Antidote",
+        name: "Herbal Antidote",
         cost: "2 x Potency",
         availability: 1,
         bulk: 1,
@@ -1622,32 +1654,32 @@ export const HERBAL = [
         effect: "A strong herbal concoction that heals 5d6 HP.",
     },
     {
-        name: "Poison, Emetic",
+        name: randomName(EMETIC_POISON_NAMES),
         cost: "3 x Potency per dose",
         availability: 0,
         bulk: 1,
-        effect: "Full Effect: Sickly Condition and pass a CON check per round or lose turn to vomiting. Limited Effect: Sickly Condition.",
+        effect: "Emetic poison. Full Effect: Sickly Condition and pass a CON check per round or lose turn to vomiting. Limited Effect: Sickly Condition.",
     },
     {
-        name: "Poison, Lethal",
+        name: randomName(LETHAL_POISON_NAMES),
         cost: "10 x Potency",
         availability: 1,
         bulk: 1,
-        effect: "Full Effect: Ailing Condition (round interval) until death, antidote, or passing 3 Death Saves. Limited Effect: 1d6 HP and WP.",
+        effect: "Lethal poison. Full Effect: Ailing Condition (round interval) until death, antidote, or passing 3 Death Saves. Limited Effect: 1d6 HP and WP.",
     },
     {
-        name: "Poison, Paralytic",
+        name: randomName(PARALYTIC_POISON_NAMES),
         cost: "7 x Potency",
         availability: 1,
         bulk: 1,
-        effect: "Full Effect: Dazed Condition and must pass a CON check each round to act. Limited Effect: Dazed Condition.",
+        effect: "Paralytic poison. Full Effect: Dazed Condition and must pass a CON check each round to act. Limited Effect: Dazed Condition.",
     },
     {
-        name: "Poison, Tranquilizer",
+        name: randomName(TRANQUILIZER_POISON_NAMES),
         cost: "5 x Potency",
         availability: 1,
         bulk: 1,
-        effect: "Full Effect: Exhausted Condition and must pass a CON check each round to stay awake. Limited Effect: Exhausted Condition.",
+        effect: "Tranquilizer. Full Effect: Exhausted Condition and must pass a CON check each round to stay awake. Limited Effect: Exhausted Condition.",
     },
 ];
 

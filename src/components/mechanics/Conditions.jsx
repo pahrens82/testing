@@ -66,7 +66,7 @@ export const Conditions = () => {
                      The end condition is eating a meal.</li>
                     
                     <li><strong>Poison</strong>: Your character can be poisoned via injury, ingestion, or inhalation. If your character becomes poisoned, you make an opposed CON
-                     vs Potency check. If you fail this check your character suffer the effects specific to the Poison.</li>
+                     vs Potency check. If you fail this check your character suffers the effects specific to the Poison.</li>
                     
                     <li><strong>Sleep Deprivation</strong>: If your character stays awake for 6 Shifts without a Long Rest, they gain the Exhausted and Ailing conditions. The
                      interval for Ailing is per Shift. The end condition is a Long Rest.</li>

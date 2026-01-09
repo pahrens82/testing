@@ -4,6 +4,13 @@ import './App.css'
 export const App = () => {
     const CHANGE_LOG = [
         {
+            date: "01/09/2026",
+            changes: [
+                "Adds Escape Entanglement to the list of Combat Actions.",
+                "Adds fun poison names for fun.",
+            ]
+        },
+        {
             date: "12/18/2025",
             changes: [
                 "Updated the schedule.",

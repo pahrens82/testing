@@ -57,6 +57,7 @@ export const Combat = () => {
                 <li><strong>Use An Item</strong>: Using an item is an Action.</li>
                 <li><strong>Casting A Spell</strong>: Casting a spell is an Action.</li>
                 <li><strong>Round Rest</strong>: Once per combat per Shift you can spend a round doing nothing in order to regain 1d6 WP.</li>
+                <li><strong>Escape Entanglement</strong>: Various things can cause characters to become entangled, preventing them from taking any action except this one. Escaping tanglement requires a Strength Check. Other PCs can help.</li>
             </ul>
             <h5>Free Actions</h5>
             <ul>

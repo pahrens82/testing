@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { makePricingVerbose } from "../../constants";
-
 import {
-    animals,
-    ANIMALS_BY_SIZE,
+    ANIMALS,
     DAMAGE,
-    MEAT
-} from "../Animals";
+    MEAT,
+    makePricingVerbose,
+} from "../../constants";
+
 
 
 export const Livestock = () => {
@@ -88,11 +87,7 @@ export const Livestock = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {animals.map((animal, index) => {
-                            let size;
-                            ANIMALS_BY_SIZE.forEach((category, index) => {
-                                if (category.includes(animal.name)) size = index + 1;
-                            });
+                        {ANIMALS.map((animal, index) => {
                             if (checked.has(animal.availability)) {
                                 return (
                                     <tr key={animal.name}>
@@ -103,14 +98,14 @@ export const Livestock = () => {
                                                 {animal.skills.map((skill, index) => {
                                                     return (
                                                         <li key={`${animal.name}-${skill}`}>
-                                                            {skill}{index === 0 ? `, ${DAMAGE[size]} damage` : null}
+                                                            {skill}{index === 0 ? `, ${DAMAGE[animal.size]} damage` : null}
                                                         </li>
                                                     )
                                                 })}
                                             </ul>
                                         </td>
-                                        <td>{size * 2}</td>
-                                        <td>{MEAT[size]}</td>
+                                        <td>{Math.floor((animal.size + 1) * 1.5)}</td>
+                                        <td>{MEAT[animal.size]}</td>
                                     </tr>
                                 )
                             }

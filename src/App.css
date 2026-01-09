@@ -17,3 +17,20 @@ dialog {
 .character {
     width: 16.67%;
 }
+
+.date-table-container {
+    max-height: 5rem !important;
+    overflow-y: scroll;
+    display: block;
+    width: 100%;
+
+    tbody tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+}
+
+textarea.notes {
+    height: 40vh;
+}

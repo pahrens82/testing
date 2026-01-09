@@ -12,7 +12,7 @@ export const Creatures = ({title, creatures}) => {
             </section>
             <section className={"row"}>
                 <section className={"col"}>
-                    {creatures.map((creature, index) => {
+                    {creatures.map((creature) => {
                         return (
                             <div
                                 key={creature.name.replace(" ", "-")}
@@ -31,8 +31,8 @@ export const Creatures = ({title, creatures}) => {
                                         <li>Armor: {creature.armor}</li>
                                         <li>Weapons
                                             <ol>
-                                                {creature.weapons.map((weapon, index) => {
-                                                    return <li key={weapon}>{weapon}</li>
+                                                {creature.weapons.map((weapon) => {
+                                                    return <li key={creature + weapon}>{weapon}</li>
                                                 })}
                                             </ol>
                                         </li>
@@ -40,8 +40,8 @@ export const Creatures = ({title, creatures}) => {
                                             creature?.abilities?.length ?
                                                 <li>Abilities
                                                     <ol>
-                                                        {creature.abilities.map((ability, index) => {
-                                                            return <li>{ability}</li>
+                                                        {creature.abilities.map((ability) => {
+                                                            return <li key={creature.name + ability}>{ability}</li>
                                                         })}
                                                     </ol>
                                                 </li>
