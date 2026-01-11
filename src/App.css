@@ -19,18 +19,52 @@ dialog {
 }
 
 .date-table-container {
-    max-height: 5rem !important;
+    max-height: 5rem;
     overflow-y: scroll;
     display: block;
-    width: 100%;
 
-    tbody tr {
-        display: table;
+
+    table {
         width: 100%;
-        table-layout: fixed;
+
+        tr {
+
+            th:first-of-type,
+            td:first-of-type {
+                width: 25%;
+            }
+
+            th:nth-of-type(2),
+            td:nth-of-type(2) {
+                width: 11%;
+            }
+
+            th:nth-of-type(3),
+            td:nth-of-type(3) {
+                width: 30%;
+            }
+
+            th:nth-of-type(4),
+            td:nth-of-type(4) {
+                width: 10%;
+            }
+        }
+
+        .table-active {
+            border: thin solid red;
+        }
     }
 }
 
 textarea.notes {
     height: 40vh;
+}
+
+#admin {
+    height: 100vh;
+    background-color: black;
+}
+
+.npc-text-area {
+    height: 6rem;
 }

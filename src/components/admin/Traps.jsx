@@ -69,11 +69,11 @@ export const Traps = (
                     Trap
                 </button>
             </div>
-            <p
-                className={"trap-description"}
+            <small
+                className={"trap-description mb-0"}
                 ref={trapDescriptionRef}
             >
-            </p>
+            </small>
         </section>
     );
 };

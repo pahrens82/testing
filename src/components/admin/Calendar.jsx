@@ -7,28 +7,28 @@ import {
 import { STORAGE_KEYS } from "../../constants";
 
 const ANSALONIAN_DAYS = [
-    "Giltag", // Sunday
-    "Lunitag", // Monday
-    "Nuitag", // Tuesday
-    "Solitag", // Wednesday
-    "Majtag", // Thursday
-    "Shintag", // Friday
-    "Mishtag", // Saturday
+    "Giltag (Sunday)", // Sunday
+    "Lunitag (Monday)", // Monday
+    "Nuitag (Tuesday)", // Tuesday
+    "Solitag (Wednesday)", // Wednesday
+    "Majtag (Thursday)", // Thursday
+    "Shintag (Friday)", // Friday
+    "Mishtag (Saturday)", // Saturday
 ];
 
 const ANSALONIAN_MONTHS = [
-    "Chismont", // January
-    "Gilmont", // February
-    "Lunimont", // March
-    "Shinmont", // April
-    "Sirrimont", // May
-    "Zivmont", // June
-    "Branchmont", // July
-    "Habbamont", // August
-    "Kirimont", // September
-    "Mishmont", // October
-    "Solimont", // November
-    "Nuimont", // December
+    "Chismont (January)", // January
+    "Gilmont (February)", // February
+    "Lunimont (March)", // March
+    "Shinmont (April)", // April
+    "Sirrimont (May)", // May
+    "Zivmont (June)", // June
+    "Branchmont (July)", // July
+    "Habbamont (August)", // August
+    "Kirimont (September)", // September
+    "Mishmont (October)", // October
+    "Solimont (November)", // November
+    "Nuimont (December)", // December
 ];
 
 const MONTHS_TO_SEASONS = {
@@ -54,6 +54,15 @@ const EARTH_DAYS = [
     "Thursday",
     "Friday",
     "Saturday",
+];
+
+const SHIFT_NAMES = [
+    "Dawn Watch (6am - 10pm)",
+    "Noon Watch (10am - 2pm)",
+    "Late Watch (2pm - 6pm)",
+    "Evening Watch (6pm - 10pm)",
+    "Night Watch (10pm - 2am)",
+    "Witching Hour (2am - 6am)",
 ];
 
 const EARTH_MONTHS = [
@@ -240,6 +249,10 @@ export const Calendar = () => {
         storedDateIndex = 236;
     }
     let [currentDateIndex, setCurrentDateIndex] = useState(storedDateIndex);
+
+    let storedShiftIndex = localStorage.getItem(STORAGE_KEYS.currentShiftIndex) || 0;
+    let [currentShiftIndex, setCurrentShiftIndex] = useState(Number(storedShiftIndex));
+
     let tableContainerRef = useRef(null);
     let dates = [];
 
@@ -248,6 +261,13 @@ export const Calendar = () => {
             scrollToCurrentDate();
         },
         [currentDateIndex]
+    );
+
+    useEffect(
+        () => {
+            localStorage.setItem(STORAGE_KEYS.currentShiftIndex, currentShiftIndex);
+        },
+        [currentShiftIndex]
     );
 
     let years = 5;
@@ -299,6 +319,25 @@ export const Calendar = () => {
         }
     };
 
+    const incrementShift = () => {
+        let newShiftIndex = currentShiftIndex += 1;
+        if (newShiftIndex > SHIFT_NAMES.length - 1) {
+            newShiftIndex = 0;
+            incrementDate();
+        }
+        document.getElementById("random-event-button").click();
+        setCurrentShiftIndex(newShiftIndex);
+    };
+
+    const decrementShift = () => {
+        let newShiftIndex = currentShiftIndex -= 1;
+        if (newShiftIndex < 0) {
+            newShiftIndex = SHIFT_NAMES.length - 1;
+            decrementDate();
+        }
+        setCurrentShiftIndex(newShiftIndex);
+    };
+
     const scrollToCurrentDate = () => {
         let target = document.querySelector(`.date-${currentDateIndex}`);
         if (target) {
@@ -308,61 +347,72 @@ export const Calendar = () => {
     };
 
     return (
-        <div className={"calendar-container border rounded p-2"}>
+        <div className={"calendar-container border rounded p-2 mt-2 bg-dark-subtle"}>
             <p className={"mb-0 h3"}>
                 Calendar
             </p>
-            <div className={"d-flex justify-content-between"}>
-                <strong>Day</strong>
-                <strong>Date</strong>
-                <strong>Month</strong>
-                <strong>Year</strong>
-            </div>
             <div
-                className={"date-table-container"}
+                className={"date-table-container border"}
                 ref={tableContainerRef}
             >
-                <table className={"table table-sm"}>
+                <table className={"date-table"}>
                     <tbody>
                         {dates.map((date, index) => {
                             return (
                                 <tr
-                                    className={`date-${index} ${index === currentDateIndex ? "table-active" : ""}`}
+                                    className={`date-${index} ${index === currentDateIndex ? "border border-primary bg-primary-subtle" : "bg-light"}`}
                                     key={index}
                                 >
-                                    <td>{date.date}</td>
-                                    <td title={EARTH_DAYS[date.day]}>{ANSALONIAN_DAYS[date.day]}</td>
-                                    <td title={EARTH_MONTHS[date.month]}>{ANSALONIAN_MONTHS[date.month]}</td>
-                                    <td>{date.year} PC</td>
-                                    {/* <td>{date.weather.autumn}</td> */}
+                                    <td className={"ps-1 small"} title={EARTH_DAYS[date.day]}>{ANSALONIAN_DAYS[date.day]}</td>
+                                    <td className={"small"}>the {date.date} of</td>
+                                    <td className={"small"} title={EARTH_MONTHS[date.month]}>{ANSALONIAN_MONTHS[date.month]}</td>
+                                    <td className={"small"}>{date.year} PC</td>
                                 </tr>
                             )
                         })}
                     </tbody>
                 </table>
             </div>
-            <div className={"d-flex justify-content-between pt-2"}>
-                <button
-                    disabled={currentDateIndex === 0}
-                    className={"btn btn-danger btn-sm"}
-                    onClick={decrementDate}
-                >
-                    - Date
-                </button>
-
-                <button
-                    className={"btn btn-secondary btn-sm"}
-                    onClick={scrollToCurrentDate}
-                >
-                    Current
-                </button>
-                <button
-                    disabled={currentDateIndex === dates.length}
-                    className={"btn btn-success btn-sm"}
-                    onClick={incrementDate}
-                >
-                    Date +
-                </button>
+            <div>
+                <strong>Current Shift:</strong> {SHIFT_NAMES[currentShiftIndex]}
+            </div>
+            <div className={"d-flex justify-content-between"}>
+                <div className={"d-flex gap-2"}>
+                    <button
+                        className={"btn btn-danger btn-sm"}
+                        onClick={decrementShift}
+                    >
+                        - Shift
+                    </button>
+                    <button
+                        className={"btn btn-success btn-sm"}
+                        onClick={incrementShift}
+                    >
+                        Shift +
+                    </button>
+                </div>
+                <div className={"d-flex gap-2"}>
+                    <button
+                        disabled={currentDateIndex === 0}
+                        className={"btn btn-danger btn-sm"}
+                        onClick={decrementDate}
+                    >
+                        - Date
+                    </button>
+                    <button
+                        className={"btn btn-secondary btn-sm"}
+                        onClick={scrollToCurrentDate}
+                    >
+                        Current
+                    </button>
+                    <button
+                        disabled={currentDateIndex === dates.length}
+                        className={"btn btn-success btn-sm"}
+                        onClick={incrementDate}
+                    >
+                        Date +
+                    </button>
+                </div>
             </div>
             {/* <div>
                 <strong>Weather</strong>

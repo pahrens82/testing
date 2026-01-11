@@ -183,21 +183,22 @@ export const Events = (
     };
 
     return (
-        <div className={"events-container border rounded p-2"}>
+        <div className={"events-container d-flex gap-2 border rounded p-1 mt-2 bg-dark-subtle"}>
             <p className={"mb-0 h3"}>
                 Events
             </p>
-            <div className={"d-flex align-items-center"}>
+            <div className={"d-flex align-items-center w-100 bg-light rounded ps-1"}>
                 <button
-                    className={"btn btn-primary"}
+                    className={"btn btn-sm btn-primary"}
+                    id={"random-event-button"}
                     type={"button"}
                     onClick={handleRandomEvent}
                 >
                     Roll
                 </button>
                 <ul className={"ms-2 mb-0 p-0 list-unstyled"}>
-                    <li className={"roll-description"}>Rolled a:</li>
-                    <li className={"event-type"}>Event type: </li>
+                    <li className={"small roll-description"}>Rolled a:</li>
+                    <li className={"small event-type"}>Event type: </li>
                 </ul>
             </div>
             {/* <ul className={"list-unstyled"}>

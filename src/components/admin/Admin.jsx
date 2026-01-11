@@ -11,6 +11,7 @@ import { Notes } from "./Notes";
 import { Hunting } from "./Hunting";
 import { Dungeons } from "./Dungeons";
 import { Monsters } from "./Monsters";
+import { NPCs } from "./NPCs";
 
 import { STORAGE_KEYS } from "../../constants";
 
@@ -38,19 +39,19 @@ export const Admin = () => {
     };
 
     return (
-        <section className={"container-fluid"}>
+        <section id={"admin"} className={"container-fluid"}>
             <section className={"row"}>
                 <section className={"col-3"}>
                     <Biomes selectedBiome={selectedBiome} changeBiome={changeBiome} />
-                    <Hunting selectedBiome={selectedBiome} />
+                    <Calendar />
+                    <Events selectedBiome={selectedBiome} />                    
+                </section>
+                <section className={"col-3"}>                    
                     <Dungeons />
                     <Foes />
-                    <Monsters/>
-                </section>
-                <section className={"col-3"}>
-                    <Events selectedBiome={selectedBiome} />
-                    <Calendar />
-                    
+                    <Monsters />
+                    <NPCs />
+                    <Hunting selectedBiome={selectedBiome} />
                 </section>
                 <section className={"col-3"}>
                     <Notes />

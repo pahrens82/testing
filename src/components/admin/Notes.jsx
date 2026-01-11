@@ -18,7 +18,7 @@ export const Notes = () => {
     };
 
     return (
-        <section className={"border rounded p-2"}>
+        <section className={"border rounded p-2 mt-2 bg-dark-subtle"}>
             <p className={"mb-0 h3"}>
                 Notes
             </p>

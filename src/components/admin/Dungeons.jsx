@@ -120,79 +120,81 @@ export const Dungeons = () => {
     };
 
     return (
-        <details className={"border rounded p-1"}>
+        <details className={"border rounded p-1 mt-2 bg-dark-subtle"}>
             <summary className={"fw-bold"}>
                 Dungeons
             </summary>
-            <div className={"d-flex gap-1"}>
-                <div>
-                    <button
-                        className={"btn btn-sm btn-primary"}
-                        type={"button"}
-                        onClick={generateDungeon}
-                    >
-                        Generate Dungeon
-                    </button>
-                </div>
-                <div>
-                    <p
-                        className={"small dungeon-description mb-0"}
-                        ref={dungeonDescriptionRef}
-                    >
+            <section className={"rounded p-1 bg-light"}>
+                <div className={"d-flex gap-1 bg-light"}>
+                    <div>
+                        <button
+                            className={"btn btn-sm btn-primary"}
+                            type={"button"}
+                            onClick={generateDungeon}
+                        >
+                            Generate Dungeon
+                        </button>
+                    </div>
+                    <div>
+                        <p
+                            className={"small dungeon-description mb-0"}
+                            ref={dungeonDescriptionRef}
+                        >
 
-                    </p>
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <strong>Roll 1d10 per room to determine room type:</strong>
-            <div className={"d-flex"}>
-                <ol className={"room-type-list"}>
-                    <li>Empty</li>
-                    <li>Empty</li>
-                    <li>Trap</li>
-                    <li>Unsafe Hazard</li>
-                    <li>Solo monster</li>
-                </ol>
-                <ol className={"room-type-list"} start={"6"}>
-                    <li>Risky Hazard</li>
-                    <li>Mob</li>
-                    <li>Deadly Hazard</li>
-                    <li>Treasure</li>
-                    <li>Boss Monster</li>
-                </ol>
-            </div>
-            <Traps dangerLevel={DANGER_LEVELS[dangerLevel]} />
-            <div className={"d-flex gap-2 mt-1"}>
-                <div>
-                    <button
-                        className={"btn btn-sm btn-primary"}
-                        type={"button"}
-                        onClick={handleTreasure}
+                <strong>Roll 1d10 per room to determine room type:</strong>
+                <div className={"d-flex"}>
+                    <ol className={"room-type-list mb-0"}>
+                        <li className={"small"}>Empty</li>
+                        <li className={"small"}>Empty</li>
+                        <li className={"small"}>Trap</li>
+                        <li className={"small"}>Unsafe Hazard</li>
+                        <li className={"small"}>Solo monster</li>
+                    </ol>
+                    <ol className={"room-type-list mb-0"} start={"6"}>
+                        <li className={"small"}>Risky Hazard</li>
+                        <li className={"small"}>Mob</li>
+                        <li className={"small"}>Deadly Hazard</li>
+                        <li className={"small"}>Treasure</li>
+                        <li className={"small"}>Boss Monster</li>
+                    </ol>
+                </div>
+                <Traps dangerLevel={DANGER_LEVELS[dangerLevel]} />
+                <div className={"d-flex gap-2 mt-1"}>
+                    <div>
+                        <button
+                            className={"btn btn-sm btn-primary"}
+                            type={"button"}
+                            onClick={handleTreasure}
+                        >
+                            Treasure
+                        </button>
+                    </div>
+                    <small
+                        className={"treasure-description mb-0"}
+                        ref={treasureDescriptionRef}
                     >
-                        Treasure
-                    </button>
+                    </small>
                 </div>
-                <p
-                    className={"treasure-description mb-0"}
-                    ref={treasureDescriptionRef}
-                >
-                </p>
-            </div>
-            <div className={"d-flex gap-2 mt-1"}>
-                <div>
-                    <button
-                        className={"btn btn-sm btn-primary"}
-                        type={"button"}
-                        onClick={handleFoes}
+                <div className={"d-flex gap-2 mt-1"}>
+                    <div>
+                        <button
+                            className={"btn btn-sm btn-primary"}
+                            type={"button"}
+                            onClick={handleFoes}
+                        >
+                            Foes
+                        </button>
+                    </div>
+                    <small
+                        className={"foe-description mb-0"}
+                        ref={foeDescriptionRef}
                     >
-                        Foes
-                    </button>
+                    </small>
                 </div>
-                <p
-                    className={"foe-description mb-0"}
-                    ref={foeDescriptionRef}
-                >
-                </p>
-            </div>
+            </section>
         </details>
     );
 };

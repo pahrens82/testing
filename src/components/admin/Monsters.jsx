@@ -4,47 +4,79 @@ import { MONSTERS } from "../../constants"
 
 export const Monsters = () => {
     return (
-        <details className={"border rounded p-1"}>
+        <details className={"border rounded p-1 mt-2 bg-dark-subtle"}>
             <summary className={"fw-bold"}>
                 Monsters
             </summary>
             {MONSTERS.map((monster, index) => {
-                console.log(monster)
                 return (
                     <details
-                        className={"border rounded px-3 py-2"}
-                        key={monster.name.toLowerCase().replace(" ", "-")}
+                        className={"border rounded ps-2 py-1 bg-light"}
+                        key={monster.name.toLowerCase().replace(" ", "-") + index}
                     >
                         <summary>
                             {monster.name}
                         </summary>
-                        <div className={"d-flex"}>
+                        <div className={"d-flex small"}>
                             <ul className={"list-unstyled pe-4 mb-0"}>
-                                <li className={"small"}>Ferocity: {monster.ferocity}</li>
-                                <li className={"small"}>Movement: {monster.movement}</li>
+                                <li>
+                                    Ferocity: {monster.ferocity}
+                                </li>
+                                <li>
+                                    Movement: {monster.movement}
+                                </li>
                             </ul>
                             <ul className={"list-unstyled mb-0"}>
-                                <li className={"small"}>Size: {monster.size}</li>
-                                <li className={"small"}>HP: {monster.hp}</li>
+                                <li>
+                                    Size: {monster.size}
+                                </li>
+                                <li>
+                                    HP: {monster.hp}
+                                </li>
                             </ul>
                         </div>
-                        <ul className={"list-unstyled"}>
-                            <li className={"small"}>Armor: {monster.armor}</li>
+                        <ul className={"list-unstyled small"}>
+                            <li>
+                                Armor: {monster.armor}
+                            </li>
 
-                            <li className={`small d-${monster.gear.length ? "block" : "none"}`}>Gear: {monster.gear}</li>
-                            <li className={"small"}>Traits:
+                            <li className={`d-${monster.gear.length ? "block" : "none"}`}>
+                                Gear: {monster.gear}
+                            </li>
+                            <li>Traits:
                                 <ul>
                                     {monster.traits.map((trait) => {
-                                        return <li className={"small"}>{trait}</li>
+                                        return (
+                                            <li
+                                                className={"pe-3"}
+                                                key={monster.name + trait}
+                                            >
+                                                {trait}
+                                            </li>
+                                        )
                                     })}
                                 </ul>
                             </li>
-                            <li className={"small"}>Attacks:
+                            <li><hr className={"my-2"} /></li>
+                            <li>Attacks:
                                 <ol>
-                                    {monster.attacks.map((attack) => {
-                                        return <li className={"small"}>{attack}</li>
+                                    {monster.attacks.map((attack, indexx) => {
+                                        return (
+                                            <>
+                                                <li
+                                                    className={"pe-3"}
+                                                    key={monster.name + attack.replace(" ", "-")}
+                                                >
+                                                    {attack}
+                                                </li>
+                                                <hr className="my-2" />
+                                            </>
+                                        )
                                     })}
                                 </ol>
+                            </li>
+                            <li className={"px-3 fst-italic"}>
+                                {monster.description}
                             </li>
                         </ul>
                     </details>

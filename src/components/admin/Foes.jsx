@@ -3,7 +3,7 @@ import { FOES } from "../../constants";
 
 export const Foes = () => {
     return (
-        <details className={"border rounded p-1"}>
+        <details className={"border rounded p-1 mt-2 bg-dark-subtle"}>
             <summary className={"fw-bold"}>
                 Foes
             </summary>
@@ -11,45 +11,58 @@ export const Foes = () => {
                 FOES.map((creature) => {
                     return (
                         <details
-                            className={"border rounded p-1"}
+                            className={"border rounded ps-2 py-1 bg-light"}
                             key={creature.name.replace(" ", "-")}
                         >
-                            <summary className={"fw-bold"}>
+                            <summary>
                                 {creature.name}
                             </summary>
-                            <ul className={"m-0 list-unstyled"}>
-                                <li className={"small"}>Speed: {creature.movement}</li>
-                                <li className={"small"}>Damage Bonus: {creature.damageBonus}</li>
-                                <li className={"small"}>HP: {creature.hp}</li>
-                                <li className={"small"}>WP: {creature.wp}</li>
-                                <li className={"small"}>Skills: {creature.skills}</li>
-                                <li className={"small"}>Armor: {creature.armor}</li>
-                                <li className={"small"}>Weapons
+                            <ul className={"small m-0 list-unstyled"}>
+                                <li>
+                                    Speed: {creature.movement}
+                                </li>
+                                <li>
+                                    Damage Bonus: {creature.damageBonus}
+                                </li>
+                                <li>
+                                    HP: {creature.hp}
+                                </li>
+                                <li>
+                                    WP: {creature.wp}
+                                </li>
+                                <li>
+                                    Skills: {creature.skills}
+                                </li>
+                                <li>
+                                    Armor: {creature.armor}
+                                </li>
+                                <li>
+                                    Weapons
                                     <ol>
                                         {creature.weapons.map((weapon) => {
-                                            return <li className={"small"} key={creature + weapon}>{weapon}</li>
+                                            return (
+                                                <li key={creature + weapon}>
+                                                    {weapon}
+                                                </li>
+                                            );
                                         })}
                                     </ol>
                                 </li>
                                 {
                                     creature?.abilities?.length ?
-                                        <li className={"small"}>Abilities
+                                        <li>Abilities
                                             <ol>
                                                 {creature.abilities.map((ability) => {
-                                                    return <li className={"small"} key={creature.name + ability}>{ability}</li>
+                                                    return (
+                                                        <li key={creature.name + ability}>
+                                                            {ability}
+                                                        </li>
+                                                    );
                                                 })}
                                             </ol>
                                         </li>
                                         :
                                         null
-                                }
-                                {creature.livestock ?
-                                    <>
-                                        <li className={"small"}>Price: {creature.cost}</li>
-                                        <li className={"small"}>Meat: {creature.meat}</li>
-                                    </>
-                                    :
-                                    null
                                 }
                             </ul>
                         </details>
