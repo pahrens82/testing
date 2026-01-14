@@ -1078,7 +1078,7 @@ export const TOOLS = [
         effect: "2d4 damage against wood. Does not take damage.",
     },
     {
-        name: "Body Sleight",
+        name: "Body Sleigh",
         cost: 8,
         availability: 0,
         bulk: 4,
