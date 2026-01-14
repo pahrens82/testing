@@ -41,23 +41,20 @@ export const Admin = () => {
     return (
         <section id={"admin"} className={"container-fluid"}>
             <section className={"row"}>
-                <section className={"col-3"}>
+                <section className={"col-4"}>
                     <Biomes selectedBiome={selectedBiome} changeBiome={changeBiome} />
                     <Calendar />
-                    <Events selectedBiome={selectedBiome} />                    
+                    <Events selectedBiome={selectedBiome} />
                 </section>
-                <section className={"col-3"}>                    
+                <section className={"col-4"}>
                     <Dungeons />
                     <Foes />
                     <Monsters />
                     <NPCs />
                     <Hunting selectedBiome={selectedBiome} />
                 </section>
-                <section className={"col-3"}>
+                <section className={"col-4"}>
                     <Notes />
-                </section>
-                <section className={"col-3"}>
-
                 </section>
             </section>
         </section>
