@@ -6,8 +6,9 @@ export const Notes = () => {
         let blob = new Blob([text], {type: "text/plain"});
         let anchor = document.createElement("a");
         let date = Date();
+        let now = Date.now();
         date = date.split(" ");
-        let fileName = `${date[1]}_${date[2]}_${date[3]}_Notes`;
+        let fileName = `${date[1]}_${date[2]}_${date[3]}_${now}_Notes`;
         anchor.download = `${fileName}.txt`;
         anchor.href = window.URL.createObjectURL(blob);
         anchor.target = "_blank";
