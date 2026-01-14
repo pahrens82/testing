@@ -3,6 +3,8 @@ export const Notes = () => {
     const handleSave = (event) => {
         let text = event.currentTarget.previousElementSibling.value;
         text = text.replace(/\n/g, "\r\n");
+        let currentInGameDate = document.querySelector(".date-table .border-primary").dataset.dateIndex;
+        text = text + "\r\n" + `Current in game date index: ${currentInGameDate}`;
         let blob = new Blob([text], {type: "text/plain"});
         let anchor = document.createElement("a");
         let date = Date();

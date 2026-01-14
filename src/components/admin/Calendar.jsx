@@ -361,6 +361,7 @@ export const Calendar = () => {
                             return (
                                 <tr
                                     className={`date-${index} ${index === currentDateIndex ? "border border-primary bg-primary-subtle" : "bg-light"}`}
+                                    data-date-index={index}
                                     key={index}
                                 >
                                     <td className={"ps-1 small"} title={EARTH_DAYS[date.day]}>{ANSALONIAN_DAYS[date.day]}</td>
