@@ -12,6 +12,7 @@ import { Hunting } from "./Hunting";
 import { Dungeons } from "./Dungeons";
 import { Monsters } from "./Monsters";
 import { NPCs } from "./NPCs";
+import { Fear } from "./Fear";
 
 import { STORAGE_KEYS } from "../../constants";
 
@@ -52,6 +53,7 @@ export const Admin = () => {
                     <Monsters />
                     <NPCs />
                     <Hunting selectedBiome={selectedBiome} />
+                    <Fear />
                 </section>
                 <section className={"col-4"}>
                     <Notes />
