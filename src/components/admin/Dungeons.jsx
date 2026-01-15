@@ -100,7 +100,7 @@ export const Dungeons = () => {
                 let sizeIndex = Math.floor(Math.random() * SITE_SIZE.length) + sizeModifier;
                 if (sizeIndex >= SITE_SIZE.length) sizeIndex = SITE_SIZE.length - 1;
 
-                dungeonDescriptionRef.current.innerText = `${DANGER_LEVELS[dangerLevel]} ${siteType} with ${SITE_SIZE[sizeIndex]} rooms.`
+                dungeonDescriptionRef.current.innerText = `${DANGER_LEVELS[dangerLevel]} ${siteType} with ${SITE_SIZE[sizeIndex]} rooms.`;
 
                 notesRef.current.value = "";
                 let counter = 1;
