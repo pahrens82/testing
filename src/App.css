@@ -68,3 +68,7 @@ textarea.notes {
 .npc-text-area {
     height: 6rem;
 }
+
+.dungeon-notes {
+    height: 50vh;
+}

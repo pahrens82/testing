@@ -35,8 +35,14 @@ const TERRAIN = {
 };
 
 const SIGHTINGS = {
-    [BIOMES.village]: [],
-    [BIOMES.city]: [],
+    [BIOMES.village]: [
+        "Dungeon",
+        "Animal Tracks",
+    ],
+    [BIOMES.city]: [
+        "Dungeon",
+        "Animal Tracks",
+    ],
     [BIOMES.mountains]: [
         "Ruined Fortress",
         "Standing Stones",

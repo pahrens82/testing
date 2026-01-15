@@ -87,6 +87,7 @@ export const Dungeons = () => {
     let dungeonDescriptionRef = useRef(null);
     let treasureDescriptionRef = useRef(null);
     let foeDescriptionRef = useRef(null);
+    let notesRef = useRef(null);
 
     useEffect(
         () => {
@@ -100,6 +101,13 @@ export const Dungeons = () => {
                 if (sizeIndex >= SITE_SIZE.length) sizeIndex = SITE_SIZE.length - 1;
 
                 dungeonDescriptionRef.current.innerText = `${DANGER_LEVELS[dangerLevel]} ${siteType} with ${SITE_SIZE[sizeIndex]} rooms.`
+
+                notesRef.current.value = "";
+                let counter = 1;
+                while (counter <= Number(SITE_SIZE[sizeIndex])) {
+                    notesRef.current.value = `${notesRef.current.value} Room ${counter}: ${"\r\n"}`
+                    counter++;
+                }
             }
         },
         [dangerLevel]
@@ -194,6 +202,10 @@ export const Dungeons = () => {
                     >
                     </small>
                 </div>
+                <textarea
+                    className={"mt-3 form-control dungeon-notes"}
+                    ref={notesRef}
+                />
             </section>
         </details>
     );
