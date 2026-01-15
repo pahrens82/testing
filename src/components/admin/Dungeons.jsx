@@ -105,7 +105,7 @@ export const Dungeons = () => {
                 notesRef.current.value = "";
                 let counter = 1;
                 while (counter <= Number(SITE_SIZE[sizeIndex])) {
-                    notesRef.current.value = `${notesRef.current.value} Room ${counter}: ${"\r\n"}`
+                    notesRef.current.value = `${notesRef.current.value} Room ${counter}: ${"\r\n"}`;
                     counter++;
                 }
             }
