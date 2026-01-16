@@ -61,7 +61,7 @@ textarea.notes {
 }
 
 #admin {
-    height: 100vh;
+    height: calc(100vh - 73px);
     background-color: black;
 }
 
