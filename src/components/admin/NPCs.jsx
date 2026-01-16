@@ -394,6 +394,12 @@ export const NPCs = () => {
         setNPCs(new Map(npcs).set(key, value));
     };
 
+    const deleteNPC = (event) => {
+        npcs.delete(event.currentTarget.value);
+        let newMap = new Map(npcs);
+        setNPCs(newMap);
+    };
+
     const generateNPC = () => {
         let ancestry = ANCESTRIES[Math.floor(Math.random() * ANCESTRIES.length)];
         let gender = GENDERS[Math.floor(Math.random() * GENDERS.length)];
@@ -476,6 +482,14 @@ export const NPCs = () => {
                                     onClick={editNPC}
                                 >
                                     Edit
+                                </button>
+                                <button
+                                    className={"btn btn-sm btn-outline-danger ms-2"}
+                                    type={"button"}
+                                    value={uuid}
+                                    onClick={deleteNPC}
+                                >
+                                    Delete
                                 </button>
                             </details>
                         </li>
