@@ -1536,6 +1536,69 @@ export const MONSTERS = [
         description: "Chimera were most likely created in centuries past by magically merging common animals: it has the front body of a lion, the head and hind-quarters of a goat, and a poisonous snake for a tail."
     },
     {
+        name: "Dragon, Adult",
+        ferocity: 3,
+        movement: 8,
+        size: "Huge",
+        armor: 6,
+        hp: 84,
+        traits: [
+            "The dragon's wings allow it to move freely through the air.",
+        ],
+        gear: "",
+        attacks: [
+            "The dragon opens its mouth and lets out a menacing roar that washes over its opponents. Everyone within 60 feet suffers a Fear Attack, with a Bane on the WIL check.",
+            "The dragon sweeps its claws at two opponents that are within 10 feet of each other. The victims take 2d10 slashing damage each.",
+            "The dragon flaps its wings to create a gust of wind. Any loose objects or creatures up to human size within 30 feet are hurled back 1d4+1 hexes, take the same amount of damage, and land prone.",
+            "The dragon sweeps its spiky tail back and forth. All opponents within 20 feet take 2d8 bludgeoning damage and are knocked down.",
+            "The beast opens its jaws and bites an opponent. The attack inflicts 4d10 slashing damage.",
+            "The dragon takes a deep breath and spews a stream of [something] at its opponents. The breath forms a 30-foot cone. Anyone hit by the flames takes 3d10 fire damage. Armor has no effect.",
+        ],
+        description: "Adult dragon"
+    },
+    {
+        name: "Dragon, Ancient",
+        ferocity: 2,
+        movement: 8,
+        size: "Huge",
+        armor: 8,
+        hp: 108,
+        traits: [
+            "The dragon's wings allow it to move freely through the air. The wings of an ancient dragon are so powerful they also create powerful winds around the monster, preventing any other flying creatures from approaching in flight.",
+        ],
+        gear: "",
+        attacks: [
+            "The dragon opens its mouth and lets out a menacing roar that washes over its opponents. Everyone within 100 feet suffers a Fear Attack, with a Bane on the WIL check.",
+            "The dragon sweeps its claws at two opponents that are within 20 feet of each other. The victims take 3d10 slashing damage each.",
+            "The dragon flaps its wings to create a gust of wind. Any loose objects or creatures up to human size within 60 feet are hurled back 2d4+1 hexes, take the same amount of damage, and land prone.",
+            "The dragon sweeps its spiky tail back and forth. All opponents within 25 feet take 2d10 bludgeoning damage and are knocked down.",
+            "The beast opens its jaws and bites an opponent. The attack inflicts 5d10 slashing damage.",
+            "The dragon takes a deep breath and spews a stream of [something] at its opponents. The breath forms a 60-foot cone. Anyone hit by the flames takes 4d10 fire damage. Armor has no effect.",
+        ],
+        description: "Ancient dragon"
+    },
+    {
+        name: "Dragon, Young",
+        ferocity: 2,
+        movement: 8,
+        size: "Large",
+        armor: 4,
+        hp: 60,
+        traits: [
+            "The dragon's wings allow it to move freely through the air.",
+        ],
+        gear: "",
+        attacks: [
+            "The dragon opens its mouth and lets out a menacing roar that washes over its opponents. Everyone within 30 feet suffers a Fear Attack.",
+            "The dragon sweeps its claws at two opponents that are adjacent to each other. The victims take 2d6 slashing damage each.",
+            "The dragon flaps its wings to create a gust of wind. Any loose objects or creatures up to human size within 30 feet are hurled back 1d4 hexes, take the same amount of damage, and land prone.",
+            "The dragon sweeps its spiky tail back and forth. All opponents within 10 feet take 2d6 bludgeoning damage and are knocked down.",
+            "The beast opens its jaws and bites an opponent. The attack inflicts 3d8 slashing damage.",
+            "The dragon takes a deep breath and spews a stream of [something] at its opponents. The breath forms a 20-foot cone. Anyone hit by the flames takes 2d10 fire damage. Armor has no effect.",
+        ],
+        description: "Young dragon."
+    },
+    {
         name: "Fairy",
         ferocity: 1,
         movement: 18,
