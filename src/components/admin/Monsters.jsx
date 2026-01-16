@@ -8,14 +8,16 @@ export const Monsters = () => {
             <summary className={"fw-bold"}>
                 Monsters
             </summary>
-            {MONSTERS.map((monster, index) => {
+            {MONSTERS.map((monster) => {
+                let name = monster.name.toLowerCase().replace(" ", "-");
+
                 return (
                     <details
                         className={"border rounded ps-2 py-1 bg-light"}
-                        key={monster.name.toLowerCase().replace(" ", "-") + index}
+                        key={name}
                     >
                         <summary>
-                            {monster.name}
+                            {name}
                         </summary>
                         <div className={"d-flex small"}>
                             <ul className={"list-unstyled pe-4 mb-0"}>
@@ -49,7 +51,7 @@ export const Monsters = () => {
                                         return (
                                             <li
                                                 className={"pe-3"}
-                                                key={monster.name + trait}
+                                                key={`${name}-${trait.toLowerCase().replace(" ", "-")}`}
                                             >
                                                 {trait}
                                             </li>
@@ -60,17 +62,14 @@ export const Monsters = () => {
                             <li><hr className={"my-2"} /></li>
                             <li>Attacks:
                                 <ol>
-                                    {monster.attacks.map((attack, indexx) => {
+                                    {monster.attacks.map((attack) => {
                                         return (
-                                            <>
-                                                <li
-                                                    className={"pe-3"}
-                                                    key={monster.name + attack.replace(" ", "-")}
-                                                >
-                                                    {attack}
-                                                </li>
-                                                <hr className="my-2" />
-                                            </>
+                                            <li
+                                                className={"pe-3 mb-1"}
+                                                key={`${name}-${attack.toLowerCase().replace(" ", "-")}`}
+                                            >
+                                                {attack}
+                                            </li>
                                         )
                                     })}
                                 </ol>
