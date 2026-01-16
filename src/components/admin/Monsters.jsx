@@ -17,7 +17,7 @@ export const Monsters = () => {
                         key={name}
                     >
                         <summary>
-                            {name}
+                            {monster.name}
                         </summary>
                         <div className={"d-flex small"}>
                             <ul className={"list-unstyled pe-4 mb-0"}>
