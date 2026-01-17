@@ -57,7 +57,7 @@ dialog {
 }
 
 textarea.notes {
-    height: 80vh;
+    height: calc(100vh - 12rem);
 }
 
 #admin {
