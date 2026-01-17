@@ -42,13 +42,7 @@ export const Combat = () => {
             <h5>Actions</h5>
             <ul>
                 <li><strong>Dash</strong>: Move up to your speed (essentially doubling your movement).</li>
-                <li><strong>Attack</strong>: Attack an enemy within reach or range of your weapon.
-                    <ul>
-                        <li><strong>Grapple</strong>: You can try to grapple foes. This is handled via opposed Brawling checks. The attack uses your Action in combat, and cannot be Parried or Dodged. You receive a Bane on your roll for each size category larger the target is than yourself. If you fail, you fall to the ground. If you succeed, both you and your foe fall to the ground. As long as you maintain the grapple (via additional opposed Brawling checks) the enemy can neither move nor perform any Action that requires body movement except trying to break free. The enemy attempts to break free via opposed Brawling checks on their turn.</li>
-                        <li><strong>Disarming</strong>: You can attempt to disarm a foe of their weapon. This counts as an Action for you, but not for your opponent. This Action is resolved as opposed rolls with each participant using their respective weapon skill. This attack can be neither Dodged nor Parried. If your opponent is wielding their weapon with two hands, you receive a Bane to your roll. If you succeed, your opponent's weapon lands in an adjacent hex. If you critically succeed and have a free hand, you can grab your opponent's weapon (assuming you are able to wield it). If you critically fail, you are instead disarmed, with your weapon landing in an adjacent hex.</li>
-                        <li><strong>Charging</strong>: You can charge on foot or on a mount. You must spend at least half your maximum speed moving directly toward your target and then melee attack when able. You receive a Bane on this attack roll. If you hit, you roll an additional die of weapon damage, or two additional dice of weapon damage if you are wielding a lance.</li>
-                    </ul>
-                </li>
+                <li><strong>Attack</strong>: Attack an enemy within reach or range of your weapon. See below for combat maneuvars.</li>
                 <li><strong>Parry</strong>: Parrying is a <i>reaction</i> that takes place outside your turn and uses your Action for the round.</li>
                 <li><strong>Dodge</strong>: Doding is a <i>reaction</i> that takes place outside your turn and uses your Action for the round.</li>
                 <li><strong>Retrieve Item</strong>: Retrieving an item from your space, an adjacent space, or from your backpack.</li>
