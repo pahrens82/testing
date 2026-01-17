@@ -82,7 +82,7 @@ export const Combat = () => {
                 </li>
                 <li>Roll damage. Damage is determined by the weapon you are wielding, and possibly increased by either your STR or DEX.</li>
                 <li>If the attack is Parried, damage is applied to the target's weapon or shield. If the attack is Dodged, the damage is ignored.</li>
-                <li>If the target takes damage from your attack, that damage is reduced by the target's Armor.</li>
+                <li>If the target takes damage from your attack, that damage is reduced by the target's Armor. If the Armor completely negates the damage, the attacking weapon suffers the damage instead.</li>
                 <li>If a PC is reduced to 0 HP, they begin <Link to={"/mechanics/health#dying"}>Dying</Link>.</li>
             </ol>
             <h3>Parrying</h3>
