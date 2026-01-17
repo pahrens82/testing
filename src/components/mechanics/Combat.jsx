@@ -117,13 +117,14 @@ export const Combat = () => {
                 <li>If you are wielding a <i>bludgeoning</i> weapon, roll an additional die of weapon damage for this attack.</li>
                 <li>If you are wielding a <i>slashing</i> weapon, immediately perform an attack against another enemy within reach after resolving your current attack.</li>
             </ul>
-            <p>If you roll a 20 on your attack roll, roll 1d6 to determine the effect:</p>
+            <p>If you roll a 20 on your attack roll, roll 1d6 to determine the effect (melee/ranged):</p>
             <ol>
                 <li>You drop your weapon in your space.</li>
-                <li>You drop your defenses, granting an enemy a free attack against you. You can't Parry or Dodge this attack.</li>
-                <li>Your weapon gets stuck in something. You must use an Action to make an STR check to free it.</li>
-                <li>You accidently throw your weapon 1d4 hexes away.</li>
-                <li>You slam your weapon into something and Break it.</li>
+                <li>You drop your defenses, granting an enemy a free attack against you. You can't Parry or Dodge this attack./You run out of arrows or bolts and must get more before you can use this weapon again (re-roll for slings and thrown weapons).
+                </li>
+                <li>Your weapon gets stuck in something. You must use an Action to make an STR check to free it./You hit a valuable or important item nearby. The GM decides what it is.</li>
+                <li>You accidently throw your weapon 1d4 hexes away./You break your weapon. Any use of the weapon gets a Bane until it is repaired.</li>
+                <li>You slam your weapon into something and Break it./You accidently hit a random PC or friendly NPC. Roll damage as usual.</li>
                 <li>You hit yourself somehow, dealing only the weapon's damage. You cannot Parry or Dodge this attack.</li>
             </ol>
             <h3>Critical Successes/Failures for Magic? Coming soon?</h3>
@@ -132,6 +133,7 @@ export const Combat = () => {
                 <li><strong>Grapple</strong>: You can try to grapple foes. This is handled via opposed Brawling checks. The attack uses your Action in combat, and cannot be Parried or Dodged. You receive a Bane on your roll for each size category larger the target is than yourself. If you fail, you fall to the ground. If you succeed, both you and your foe fall to the ground. As long as you maintain the grapple (via additional opposed Brawling checks) the enemy can neither move nor perform any Action that requires body movement except trying to break free. The enemy attempts to break free via opposed Brawling checks on their turn.</li>
                 <li><strong>Disarming</strong>: You can attempt to disarm a foe of their weapon. This counts as an Action for you, but not for your opponent. This Action is resolved as opposed rolls with each participant using their respective weapon skill. This attack can be neither Dodged nor Parried. If the defender is wielding their weapon with two hands, you receive a Bane to your roll. If you succeed, your opponent's weapon lands in an adjacent hex. If you critically succeed and have a free hand, you can grab your opponent's weapon (assuming you are able to wield it). If you critically fail, you are instead disarmed, with your weapon landing in an adjacent hex.</li>
                 <li><strong>Charging</strong>: You can charge on foot or on a mount. You must spend at least half your maximum speed moving directly toward your target and then attack when able. You receive a Bane on this attack roll. If you hit, you roll an additional die of weapon damage, or two additional dice of weapon damage if you are wielding a lance.</li>
+                <li><strong>Shoving</strong>: If you hit an enemy with a melee attack and your STR damage bonus is equal to or greater than your opponenet's damage bonus, you can choose to shive the enemy back 1 hex in addition to doing damage. This movement does not count toward the enemy's total movement in the round and does not trigger free attacks from anyone. Monsters cannot shove (unless otherwise specified) or be shoved.</li>
             </ul>
         </section>
     );
