@@ -163,5 +163,5 @@ export const Professions = () => {
                 </ul>
             </div>
         </section >
-    )
+    );
 };

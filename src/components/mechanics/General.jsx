@@ -29,8 +29,10 @@ export const General = () => {
             <section>
                 <h3>Pushing Your Luck</h3>
                 <ul>
-                    <li>If you fail a check but don't roll a 20, you have the option to push your luck and roll again.</li>
-                    <li>However, you must immediately gain an Attribute Condition before re-rolling.</li>
+                    <li>If you fail a check but don't roll a 20 (a critical failure), you have the option to push your luck and roll again.</li>
+                    <li>Immediately AFTER the re-roll, you gain a Condition.</li>
+                    <li>You cannot choose a Condition you already have.</li>
+                    <li>You must be able to explain how the Condition results from the action you are trying to perform.</li>
                 </ul>
             </section>
             <section>

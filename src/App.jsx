@@ -4,6 +4,22 @@ import './App.css'
 export const App = () => {
     const CHANGE_LOG = [
         {
+            date: "01/18/2026",
+            changes: [
+                "Adds Find Weak Spot to combat maneuvers.",
+                "Adds Topple to combat maneuvers.",
+                "Clarifies rules around Pushing.",
+            ]
+        },
+        {
+            date: "01/17/2026",
+            changes: [
+                "Adds Shoving to combat maneuvers.",
+                "Adds ranged attack fumbles.",
+                "Removes charging from combat maneuvers.",
+            ]
+        },
+        {
             date: "01/09/2026",
             changes: [
                 "Adds Escape Entanglement to the list of Combat Actions.",
