@@ -13,6 +13,12 @@ export const Abilities = () => {
             desc: "Your Sneak Attacks with Knives deal an additional 1d10 damage. This ability can be combined with the Backstabbing ability. You activate this ability after your roll to hit, but before you roll for damage.",
         },
         {
+            name: "Backstabbing",
+            req: "Knives 12",
+            cost: 3,
+            desc: <span>You can activate this ability when making a melee attack against an enemy that is also adjacent to another PC. Your attack then counts as a Sneak Attack. This ability can only be used with a <i>subtle</i> weapon. Activating this ability is part of a melee attack action.</span>,
+        },
+        {
             name: "Battle Cry",
             req: "-",
             cost: 3,
