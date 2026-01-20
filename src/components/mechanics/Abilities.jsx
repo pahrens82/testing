@@ -124,13 +124,13 @@ export const Abilities = () => {
             name: "Iron Grip",
             req: "Brawling 12",
             cost: 2,
-            desc: "You get a Boon to Brawiling when trying to Grapple another person or prevent a grappled person from breaking free.",
+            desc: "You get a Boon to Brawling when trying to Grapple another person or prevent a grappled person from breaking free.",
         },
         {
             name: "Lightning Fast",
             req: "Dodge 12",
             cost: 2,
-            desc: "When rolling initiatve at the start of combat, you may roll twice and choose which result you want.",
+            desc: "You receive 2 cards when determining initative, and pick which of those two cards you want to use.",
         },
         {
             name: "Lone Wolf",
@@ -196,7 +196,7 @@ export const Abilities = () => {
             name: "Raise Spirits",
             req: "Perform 12",
             cost: 3,
-            desc: "You are adept at raising others' spirits with song and poetry. Activating this ability counts as an action and removes a chosen condition from a person with earshot. The target cannot be yourself.",
+            desc: "You are adept at raising others' spirits with song and poetry. Activating this ability counts as an action and removes a chosen Condition all PCs within earshot other than yourself.",
         },
         {
             name: "Robust",
@@ -217,7 +217,7 @@ export const Abilities = () => {
             desc: "You must be wielding a shield to use this ability. You can activate this ability when Parrying with a shield to receive a Boon to your roll. You may also activate this ability to Parry Monster attacks that normally cannot be Parried (this does not include AoE attack). This ability can be combined with Defensive.",
         },
         {
-            name: "Throwing Armr",
+            name: "Throwing Arm",
             req: "Any melee weapon skill 12",
             cost: 3,
             desc: "You can throw any one-handed melee weapon with tremendous force at an enemy up to 20 feet away; if the weapon can already be thrown, increase the throwing range to 30 feet. Roll your attack as normal. The target can Parry or Dodge as usual. The weapon lands in the same space as the enemy.",
