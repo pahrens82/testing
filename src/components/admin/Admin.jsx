@@ -15,6 +15,8 @@ import { NPCs } from "./NPCs";
 import { Fear } from "./Fear";
 import { InanimateObjectProperties } from "./InanimateObjectProperties";
 import { Hazards } from "./Hazards";
+import { CombatManeuvers } from "./CombatManeuvers";
+import { CriticalHitsAndMisses } from "./CriticalHitsAndMisses";
 
 import { STORAGE_KEYS } from "../../constants";
 
@@ -48,6 +50,10 @@ export const Admin = () => {
                     <Biomes selectedBiome={selectedBiome} changeBiome={changeBiome} />
                     <Calendar />
                     <Events selectedBiome={selectedBiome} />
+                    <InanimateObjectProperties />
+                    <Hazards />
+                    <CombatManeuvers />
+                    <CriticalHitsAndMisses />
                 </section>
                 <section className={"col-4"}>
                     <Dungeons />
@@ -56,8 +62,6 @@ export const Admin = () => {
                     <NPCs />
                     <Hunting selectedBiome={selectedBiome} />
                     <Fear />
-                    <InanimateObjectProperties />
-                    <Hazards />
                 </section>
                 <section className={"col-4"}>
                     <Notes />

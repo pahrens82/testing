@@ -13,7 +13,7 @@ export const Monsters = () => {
 
                 return (
                     <details
-                        className={"border rounded ps-2 py-1 bg-light"}
+                        className={"border rounded ps-2 py-1 bg-white"}
                         key={name}
                     >
                         <summary>

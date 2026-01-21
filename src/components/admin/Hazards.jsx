@@ -1,10 +1,10 @@
 export const Hazards = () => {
     return (
-        <details className={"border rounded p-1 mt-2 bg-dark-subtle small"}>
+        <details className={"border rounded p-1 mt-2 bg-dark-subtle"}>
             <summary className={"fw-bold"}>
                 Hazards
             </summary>
-            <div className={"bg-light pe-3"}>
+            <div className={"bg-white pe-3 small"}>
                 <p className={"p-2 pb-0 mb-0"}>
                     There are several hazards your character will likely encounter
                     while adventuring. In general, hazards are occurrences that

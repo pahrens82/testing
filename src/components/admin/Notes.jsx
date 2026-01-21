@@ -5,7 +5,7 @@ export const Notes = () => {
         text = text.replace(/\n/g, "\r\n");
         let currentInGameDate = document.querySelector(".date-table .border-primary").dataset.dateIndex;
         text = text + "\r\n" + `Current in game date index: ${currentInGameDate}`;
-        let blob = new Blob([text], {type: "text/plain"});
+        let blob = new Blob([text], { type: "text/plain" });
         let anchor = document.createElement("a");
         let date = Date();
         let now = Date.now();
@@ -21,10 +21,13 @@ export const Notes = () => {
     };
 
     return (
-        <section className={"border rounded p-2 mt-2 bg-dark-subtle"}>
-            <p className={"mb-0 h3"}>
+        <details
+            className={"border rounded p-1 mt-2 bg-dark-subtle"}
+            open
+        >
+            <summary className={"fw-bold"}>
                 Notes
-            </p>
+            </summary>
             <textarea className={"form-control notes"}></textarea>
             <button
                 className={"btn btn-primary btn-sm mt-2"}
@@ -33,6 +36,6 @@ export const Notes = () => {
             >
                 Save
             </button>
-        </section>
+        </details>
     );
 };

@@ -4,7 +4,7 @@ export const Fear = () => {
             <summary className={"fw-bold"}>
                 Fear Table
             </summary>
-            <div className={"bg-light px-2 small"}>
+            <div className={"bg-white px-2 small"}>
                 <p className={"mb-0"}>
                     When struck by a Fear attack a PC must immediately make a WIL check. The roll can be pushed and does not count as an action.
                     Particularly frightening events can give you a Bane on the roll. If the WIL check fails, the PC must roll on the Fear Table.

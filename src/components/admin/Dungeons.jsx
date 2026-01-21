@@ -132,7 +132,7 @@ export const Dungeons = () => {
             <summary className={"fw-bold"}>
                 Dungeons
             </summary>
-            <section className={"rounded p-1 bg-light"}>
+            <section className={"rounded p-1 bg-white"}>
                 <div className={"d-flex gap-1 bg-light"}>
                     <div>
                         <button

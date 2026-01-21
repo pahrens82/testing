@@ -4,6 +4,23 @@ import './App.css'
 export const App = () => {
     const CHANGE_LOG = [
         {
+            date: "01/21/2026",
+            changes: [
+                "Corrects the text of the Find Weak Spot combat maneuver.",
+                "Corrects the text of the Raise Spirits ability.",
+                "Adds item availability color coding to most equipment tables.",
+            ]
+        },
+        {
+            date: "01/19/2026",
+            changes: [
+                "Adds Backstabbing to the general ability list.",
+                "Corrects various typos.",
+                "Corrects the Lightning Fast ability to correspond to card-based initiative.",
+                "Changes the Raise Spirits ability to be comparable to Battle Cry.",
+            ]
+        },
+        {
             date: "01/18/2026",
             changes: [
                 "Adds Find Weak Spot to combat maneuvers.",

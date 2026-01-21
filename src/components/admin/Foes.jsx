@@ -11,7 +11,7 @@ export const Foes = () => {
                 FOES.map((creature) => {
                     return (
                         <details
-                            className={"border rounded ps-2 py-1 bg-light"}
+                            className={"border rounded ps-2 py-1 bg-white"}
                             key={creature.name.replace(" ", "-")}
                         >
                             <summary>

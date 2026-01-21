@@ -36,7 +36,7 @@ export const Hunting = (
             {animalsToShow.map((animal, index) => {
                 return (
                     <details
-                        className={"border rounded ps-2 py-1 bg-light"}
+                        className={"border rounded ps-2 py-1 bg-white"}
                         key={animal.name.replace(" ", "-")}
                     >
                         <summary className={"small"}>

@@ -195,7 +195,7 @@ export const Events = (
             <p className={"mb-0 h3"}>
                 Events
             </p>
-            <div className={"d-flex align-items-center w-100 bg-light rounded ps-1"}>
+            <div className={"d-flex align-items-center w-100 bg-white rounded ps-1"}>
                 <button
                     className={"btn btn-sm btn-primary"}
                     id={"random-event-button"}
