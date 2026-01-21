@@ -22,57 +22,57 @@ export const General = ({ equipment, label }) => {
         <section className={"container-fluid"}>
             <h1>{label}</h1>
             <section>
-                <div className="form-check form-check-inline">
+                <div className={"form-check form-check-inline"}>
                     <input
-                        className="form-check-input"
-                        type="checkbox"
-                        id="inlineCheckbox1"
+                        className={"form-check-input"}
+                        type={"checkbox"}
+                        id={"inlineCheckbox1"}
                         value={0}
                         checked={checked.has(0)}
                         onChange={handleChange}
                     />
                     <label
-                        className="form-check-label"
-                        htmlFor="inlineCheckbox1"
+                        className={"form-check-label"}
+                        htmlFor={"inlineCheckbox1"}
                     >
                         Common
                     </label>
                 </div>
-                <div className="form-check form-check-inline">
+                <div className={"form-check form-check-inline"}>
                     <input
-                        className="form-check-input"
-                        type="checkbox"
-                        id="inlineCheckbox2"
+                        className={"form-check-input"}
+                        type={"checkbox"}
+                        id={"inlineCheckbox2"}
                         value={1}
                         checked={checked.has(1)}
                         onChange={handleChange}
                     />
                     <label
-                        className="form-check-label"
-                        htmlFor="inlineCheckbox2"
+                        className={"bg-primary-subtle px-1 form-check-label"}
+                        htmlFor={"inlineCheckbox2"}
                     >
                         Uncommon
                     </label>
                 </div>
-                <div className="form-check form-check-inline">
+                <div className={"form-check form-check-inline"}>
                     <input
-                        className="form-check-input"
-                        type="checkbox"
-                        id="inlineCheckbox3"
+                        className={"form-check-input"}
+                        type={"checkbox"}
+                        id={"inlineCheckbox3"}
                         value={2}
                         checked={checked.has(2)}
                         onChange={handleChange}
                     />
                     <label
-                        className="form-check-label"
-                        htmlFor="inlineCheckbox3"
+                        className={"bg-danger-subtle px-1 form-check-label"}
+                        htmlFor={"inlineCheckbox3"}
                     >
                         Rare
                     </label>
                 </div>
             </section>
             <section>
-                <table className={"table table-striped"}>
+                <table className={"table"}>
                     <thead>
                         <tr>
                             <th>Item</th>
@@ -84,16 +84,19 @@ export const General = ({ equipment, label }) => {
                     <tbody>
                         {equipment.map((item, index) => {
                             if (checked.has(item.availability)) {
+                                let variant = "white";
+                                if (item.availability === 1) variant = "primary-subtle";
+                                if (item.availability === 2) variant = "danger-subtle";
                                 return (
                                     <tr key={item.name}>
-                                        <td>{item.name}</td>
-                                        <td>{makePricingVerbose(item.cost)}</td>
+                                        <td className={`bg-${variant}`}>{item.name}</td>
+                                        <td className={`bg-${variant}`}>{makePricingVerbose(item.cost)}</td>
                                         {item.bulk ?
-                                            <td>{item.bulk}</td>
+                                            <td className={`bg-${variant}`}>{item.bulk}</td>
                                             :
                                             null
                                         }
-                                        <td>{item.effect}</td>
+                                        <td className={`bg-${variant}`}>{item.effect}</td>
                                     </tr>
                                 )
                             }

@@ -196,7 +196,7 @@ export const Abilities = () => {
             name: "Raise Spirits",
             req: "Perform 12",
             cost: 3,
-            desc: "You are adept at raising others' spirits with song and poetry. Activating this ability counts as an action and removes a chosen Condition all PCs within earshot other than yourself.",
+            desc: "You are adept at raising others' spirits with song and poetry. Once per day, while outside combat, you may activate this ability. All other PCs within earshot immediately heal an Attribute Condition of their choice.",
         },
         {
             name: "Robust",
