@@ -130,6 +130,8 @@ const ENCOUNTER_TYPES = [
     "Animal",
     "Animal",
     "Animal",
+    "Animal",
+    "Creature",
     "Creature",
     "Creature",
     "Monster",
