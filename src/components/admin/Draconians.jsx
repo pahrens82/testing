@@ -118,25 +118,31 @@ export const Draconians = () => {
                         <summary className={"fst-italic fw-bold"}>
                             {draconian.name}
                         </summary>
+                        <div className={"d-flex gap-4"}>
+                            <ul className={"list-unstyled small"}>
+                                <li className={"mb-1"}>
+                                    <strong>Quantity:</strong> {draconian.quantity}
+                                </li>
+                                <li className={"mb-1"}>
+                                    <strong>Movement:</strong> {draconian.movement}
+                                </li>
+                                <li className={"mb-1"}>
+                                    <strong>HP:</strong> {draconian.hp}
+                                </li>
+                            </ul>
+                            <ul className={"list-unstyled small"}>
+                                <li className={"mb-1"}>
+                                    <strong>WP:</strong> {draconian.wp}
+                                </li>
+                                <li className={"mb-1"}>
+                                    <strong>Skills:</strong> {draconian.skills}
+                                </li>
+                                <li className={"mb-1"}>
+                                    <strong>Armor:</strong> {draconian.armor}
+                                </li>
+                            </ul>
+                        </div>
                         <ul className={"list-unstyled small"}>
-                            <li className={"mb-1"}>
-                                <strong>Quantity:</strong> {draconian.quantity}
-                            </li>
-                            <li className={"mb-1"}>
-                                <strong>Movement:</strong> {draconian.movement}
-                            </li>
-                            <li className={"mb-1"}>
-                                <strong>HP:</strong> {draconian.hp}
-                            </li>
-                            <li className={"mb-1"}>
-                                <strong>WP:</strong> {draconian.wp}
-                            </li>
-                            <li className={"mb-1"}>
-                                <strong>Skills:</strong> {draconian.skills}
-                            </li>
-                            <li className={"mb-1"}>
-                                <strong>Armor:</strong> {draconian.armor}
-                            </li>                            
                             <li className={"mb-1"}>
                                 <strong>Weapons</strong>
                                 <ul>
