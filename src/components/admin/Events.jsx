@@ -192,7 +192,7 @@ export const Events = (
 
     return (
         <div className={"events-container d-flex gap-2 border rounded p-1 mt-2 bg-dark-subtle"}>
-            <p className={"mb-0 h3"}>
+            <p className={"mb-0 h4"}>
                 Events
             </p>
             <div className={"d-flex align-items-center w-100 bg-white rounded ps-1"}>

@@ -348,7 +348,7 @@ export const Calendar = () => {
 
     return (
         <div className={"calendar-container border rounded p-2 mt-2 bg-dark-subtle"}>
-            <p className={"mb-0 h3"}>
+            <p className={"mb-0 h4"}>
                 Calendar
             </p>
             <div

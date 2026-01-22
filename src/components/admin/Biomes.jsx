@@ -9,7 +9,7 @@ export const Biomes = (
 ) => {
     return (
         <section className={"border rounded p-1 mt-2 d-flex gap-2 bg-dark-subtle"}>
-            <p className={"mb-0 h3"}>
+            <p className={"mb-0 h4"}>
                 Biomes
             </p>
             <select
