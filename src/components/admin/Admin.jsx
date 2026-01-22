@@ -17,6 +17,7 @@ import { InanimateObjectProperties } from "./InanimateObjectProperties";
 import { Hazards } from "./Hazards";
 import { CombatManeuvers } from "./CombatManeuvers";
 import { CriticalHitsAndMisses } from "./CriticalHitsAndMisses";
+import { Draconians } from "./Draconians";
 
 import { STORAGE_KEYS } from "../../constants";
 
@@ -59,6 +60,7 @@ export const Admin = () => {
                     <Dungeons />
                     <Foes />
                     <Monsters />
+                    <Draconians />
                     <NPCs />
                     <Hunting selectedBiome={selectedBiome} />
                     <Fear />
