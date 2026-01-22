@@ -1390,7 +1390,7 @@ const TRAITS = {
     resistance: {
         bludgeoning: "These creatures take half damage from bludgeoning attacks",
         fire: "These creatures take half damage from fire.",
-        mundane: "THese creatures take half damage from non-magical weapons and attacks.",
+        mundane: "These creatures take half damage from non-magical weapons and attacks.",
         piercing: "These creatures take half damage from piercing attacks",
         slashing: "These creatures take half damage from slashing attacks",
     },
