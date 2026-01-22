@@ -16,36 +16,36 @@ export const Monsters = () => {
                         className={"border rounded ps-2 py-1 bg-white"}
                         key={name}
                     >
-                        <summary>
+                        <summary className={"fst-italic fw-bold"}>
                             {monster.name}
                         </summary>
                         <div className={"d-flex small"}>
                             <ul className={"list-unstyled pe-4 mb-0"}>
                                 <li>
-                                    Ferocity: {monster.ferocity}
+                                    <strong>Ferocity:</strong> {monster.ferocity}
                                 </li>
                                 <li>
-                                    Movement: {monster.movement}
+                                    <strong>Movement:</strong> {monster.movement}
                                 </li>
                             </ul>
                             <ul className={"list-unstyled mb-0"}>
                                 <li>
-                                    Size: {monster.size}
+                                    <strong>Size:</strong> {monster.size}
                                 </li>
                                 <li>
-                                    HP: {monster.hp}
+                                    <strong>HP:</strong> {monster.hp}
                                 </li>
                             </ul>
                         </div>
                         <ul className={"list-unstyled small"}>
                             <li>
-                                Armor: {monster.armor}
+                                <strong> Armor:</strong> {monster.armor}
                             </li>
 
                             <li className={`d-${monster.gear.length ? "block" : "none"}`}>
-                                Gear: {monster.gear}
+                                <strong>Gear:</strong> {monster.gear}
                             </li>
-                            <li>Traits:
+                            <li><strong>Traits:</strong>
                                 <ul>
                                     {monster.traits.map((trait) => {
                                         return (
@@ -60,7 +60,7 @@ export const Monsters = () => {
                                 </ul>
                             </li>
                             <li><hr className={"my-2"} /></li>
-                            <li>Attacks:
+                            <li><strong>Attacks:</strong>
                                 <ol>
                                     {monster.attacks.map((attack) => {
                                         return (
@@ -74,7 +74,7 @@ export const Monsters = () => {
                                     })}
                                 </ol>
                             </li>
-                            <li className={"px-3 fst-italic"}>
+                            <li className={"px-3 mt-3 fst-italic"}>
                                 {monster.description}
                             </li>
                         </ul>

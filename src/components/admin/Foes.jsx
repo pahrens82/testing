@@ -14,30 +14,30 @@ export const Foes = () => {
                             className={"border rounded ps-2 py-1 bg-white"}
                             key={creature.name.replace(" ", "-")}
                         >
-                            <summary>
+                            <summary className={"fst-italic fw-bold"}>
                                 {creature.name}
                             </summary>
                             <ul className={"small m-0 list-unstyled"}>
                                 <li>
-                                    Speed: {creature.movement}
+                                    <strong>Speed:</strong> {creature.movement}
                                 </li>
                                 <li>
-                                    Damage Bonus: {creature.damageBonus}
+                                    <strong>Damage Bonus:</strong> {creature.damageBonus}
                                 </li>
                                 <li>
-                                    HP: {creature.hp}
+                                    <strong>HP:</strong> {creature.hp}
                                 </li>
                                 <li>
-                                    WP: {creature.wp}
+                                    <strong>WP:</strong> {creature.wp}
                                 </li>
                                 <li>
-                                    Skills: {creature.skills}
+                                    <strong>Skills:</strong> {creature.skills}
                                 </li>
                                 <li>
-                                    Armor: {creature.armor}
+                                    <strong>Armor:</strong> {creature.armor}
                                 </li>
                                 <li>
-                                    Weapons
+                                    <strong>Weapons</strong>
                                     <ol>
                                         {creature.weapons.map((weapon) => {
                                             return (
@@ -50,7 +50,7 @@ export const Foes = () => {
                                 </li>
                                 {
                                     creature?.abilities?.length ?
-                                        <li>Abilities
+                                        <li><strong>Abilities</strong>
                                             <ol>
                                                 {creature.abilities.map((ability) => {
                                                     return (
