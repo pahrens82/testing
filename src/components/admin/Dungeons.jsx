@@ -50,27 +50,27 @@ const ROOM_TYPES = [
 const HAZARDS = {
     Unsafe: [
         "There is a 10 foot drop to the floor of the room (skill check or 1d6 falling damage)",
-        "The path is blocked by rubble/a locked door.",
-        "The path is blocked by rubble/a locked door.",
-        "The walls and ceiling are unstable. Skill checks or the walls and ceiling collapse.",
         "The room is full of irritating gas/vapors (Potency 9, Sickly Condition)",
-        "",
+        "The path is blocked by rubble/a locked door.",
+        "The path is blocked by rubble/a locked door.",
+        "The walls and ceiling are unstable. Skill checks with a Boon, or the walls and ceiling collapse, dealing 1d6 bludgeoning damage.",
+        "Mold spores causing a Virulence 9 disease.",
     ],
     Risky: [
         "There is a 20 foot drop to the floor of the room (skill check or 2d6 falling damage)",
         "The room is full of harmful gas/vapors (Potency 12, Exhausted and Sickly Conditions)",
         "The path is blocked by rubble/a locked door.",
-        "The room is full of water, requiring Swimming checks to search.",
-        "",
-        "",
+        "The room is full of water, requiring Swimming in addition to Perception checks to search.",
+        "The walls and ceiling are unstable. Skill checks, or the walls and ceiling collapse, dealing 2d6 bludgeoning damage.",
+        "Mold spores causing a Virulence 12 disease.",
     ],
     Deadly: [
         "There is a 30 foot drop to the floor of the room (skill check or 3d6 falling damage)",
         "The room is full of debilitating gas/vapors (Potency 15, Exhausted, Dazed, and Sickly Conditions)",
-        "",
-        "",
-        "",
-        "",
+        "The path is blocked by rubble/a trapped locked door.",
+        "The room is full of water, requiring Swimming in addition to Perception checks to search. The water is filthy, requiring a CON save vs a Disease with Virulence 12.",
+        "The walls and ceiling are unstable. Skill checks with a Bane, or the walls and ceiling collapse, dealing 3d6 bludgeoning damage.",
+        "Mold spores causing a Virulence 15 disease.",
     ],
 };
 
@@ -88,6 +88,7 @@ export const Dungeons = () => {
     let treasureDescriptionRef = useRef(null);
     let foeDescriptionRef = useRef(null);
     let notesRef = useRef(null);
+    let hazardDescriptionRef = useRef(null);
 
     useEffect(
         () => {
@@ -125,6 +126,12 @@ export const Dungeons = () => {
     const handleFoes = () => {
         let foe = FOES[Math.floor(Math.random() * FOES.length)];
         foeDescriptionRef.current.innerText = foe.name;
+    };
+
+    const generateHazard = () => {
+        let dangerLevelName = DANGER_LEVELS[dangerLevel];
+        let hazard = HAZARDS[dangerLevelName][Math.floor(Math.random() * HAZARDS[dangerLevelName].length)];
+        hazardDescriptionRef.current.innerText = hazard;
     };
 
     return (
@@ -199,6 +206,22 @@ export const Dungeons = () => {
                     <small
                         className={"foe-description mb-0"}
                         ref={foeDescriptionRef}
+                    >
+                    </small>
+                </div>
+                <div className={"d-flex gap-2 mt-1"}>
+                    <div>
+                        <button
+                            className={"btn btn-sm btn-primary"}
+                            type={"button"}
+                            onClick={generateHazard}
+                        >
+                            Hazards
+                        </button>
+                    </div>
+                    <small
+                        className={"foe-description mb-0"}
+                        ref={hazardDescriptionRef}
                     >
                     </small>
                 </div>
