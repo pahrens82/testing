@@ -1,6 +1,21 @@
 import { Location } from "./classes/location.jsx";
 import { Link } from "react-router-dom";
 
+export const MONTHS = [
+    "JANUARY",
+    "FEBREUARY",
+    "MARCH",
+    "APRIL",
+    "MAY",
+    "JUNE",
+    "JULY",
+    "AUGUST",
+    "SEPTEMBER",
+    "OCTOBER",
+    "NOVEMBER",
+    "DECEMBER",
+];
+
 export const LINKS = {
     ability: {
         herbalism: <Link to={"/mechanics/abilities#herbalism"}>Herbalism</Link>,
