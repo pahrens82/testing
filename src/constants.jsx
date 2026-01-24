@@ -1663,12 +1663,12 @@ export const MONSTERS = [
         attacks: [
             "The snakes lashes out with its powerful jaws and bites a target for 2d8 piercing damage.",
             "The serpent sweeps its thick tail at its victims. All opponents within 10 feet suffer 2D6 bludgeoning damage and are knocked down.",
-            "The monstrous snake lets out a long, low, hiss. Everyone within 30 feet must make a WIL roll to resist Fear.",
+            "The monstrous snake stares at a foe, hisses, and tests the air with its tongue. The target must make a WIL roll with a Bane to resist Fear.",
             "The snake grabs a foe within 10 feet, and flings them 1d4 hexes away, dealing that amount in damage.",
-            "",
+            "The giant snake wraps its body around two foes that are adjacent to each other, dealing 1d8 damage to each.",
             "The giant snake launches its massive body at an opponent, biting for 2d6 damage. If some damage goes through, the snake coils its body around the target, and begins crushing them. The victim takes 1d6 on each future turn, and can take no actions except to escape. The snake does not take actions during this time.",
         ],
-        description: "Giant spiders are as fast as hawks, as strong as oxen, and as cunning as foxes. Their only weakness may be their dislike for sunlight.",
+        description: "A giant snake.",
     },
     {
         name: "Giant Spider",
