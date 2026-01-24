@@ -1749,7 +1749,7 @@ export const MONSTERS = [
         gear: "",
         attacks: [
             "The hippogriff kicks back at an opponent, inflicting 2D6 bludgeoning damage. The victim is thrown half that number of hexes away and lands prone.",
-            "The hippogriff pecks an opponent with its sharp beak.The attack deals 2D8 slashing damage.",
+            "The hippogriff pecks an opponent with its sharp beak. The attack deals 2D8 slashing damage.",
             "The hippogriff rears up before an opponent and tries to maul them with two swift claw swipes. Each attack inflicts 1D8 slashing damage. The attack can be dodged or parried, but only one at a time.",
             "The monster flaps its wings, hitting all adjacent opponents. The victims take 1D6 bludgeoning damage and are knocked down.",
             "The beast rises on its hind legs and lets out a ferocious shriek. All opponents within 60 feet must make a WIL roll to resist Fear.",
