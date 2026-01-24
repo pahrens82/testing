@@ -1,11 +1,36 @@
-export const Notes = () => {
+import {
+    useEffect,
+    useState,
+} from "react";
 
-    const handleSave = (event) => {
-        let text = event.currentTarget.previousElementSibling.value;
-        text = text.replace(/\n/g, "\r\n");
+import { MONTHS } from "../../constants";
+
+
+
+export const Notes = () => {
+    let today = new Date()
+    let date = today.getDate();
+    let month = MONTHS[today.getMonth()];
+    let year = today.getFullYear();
+    let storageKey = `patlance-notes_${month}-${date}-${year}`;
+    let [text, setText] = useState(localStorage.getItem(storageKey) || "");
+
+    useEffect(
+        () => {
+            localStorage.setItem(storageKey, text);
+        },
+        [text]
+    );
+
+    const handleChange = (event) => {
+        setText(event.currentTarget.value);
+    };
+
+    const handleSave = () => {
+        let correctedText = text.replace(/\n/g, "\r\n");
         let currentInGameDate = document.querySelector(".date-table .border-primary").dataset.dateIndex;
-        text = text + "\r\n" + `Current in game date index: ${currentInGameDate}`;
-        let blob = new Blob([text], { type: "text/plain" });
+        correctedText = correctedText + "\r\n" + `Current in game date index: ${currentInGameDate}`;
+        let blob = new Blob([correctedText], { type: "text/plain" });
         let anchor = document.createElement("a");
         let date = Date();
         let now = Date.now();
@@ -28,7 +53,11 @@ export const Notes = () => {
             <summary className={"fw-bold"}>
                 Notes
             </summary>
-            <textarea className={"form-control notes"}></textarea>
+            <textarea
+                className={"form-control notes"}
+                value={text}
+                onChange={handleChange}
+            />
             <button
                 className={"btn btn-primary btn-sm mt-2"}
                 type={"button"}

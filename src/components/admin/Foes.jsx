@@ -1,4 +1,4 @@
-import { FOES } from "../../constants";
+import { NPCS as FOES } from "../../constants";
 
 
 export const Foes = () => {

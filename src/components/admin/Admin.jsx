@@ -51,19 +51,19 @@ export const Admin = () => {
                     <Biomes selectedBiome={selectedBiome} changeBiome={changeBiome} />
                     <Calendar />
                     <Events selectedBiome={selectedBiome} />
-                    <InanimateObjectProperties />
+                    <Hunting selectedBiome={selectedBiome} />
                     <Hazards />
                     <CombatManeuvers />
                     <CriticalHitsAndMisses />
+                    <Fear />
+                    <InanimateObjectProperties />
                 </section>
                 <section className={"col-4"}>
                     <Dungeons />
                     <Foes />
-                    <Monsters />
                     <Draconians />
-                    <NPCs />
-                    <Hunting selectedBiome={selectedBiome} />
-                    <Fear />
+                    <Monsters />
+                    <NPCs />                    
                 </section>
                 <section className={"col-4"}>
                     <Notes />

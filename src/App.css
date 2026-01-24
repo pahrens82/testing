@@ -58,11 +58,16 @@ dialog {
 
 textarea.notes {
     height: calc(100vh - 12rem);
+    font-size: 0.9rem;
+}
+
+
+body:has(#admin) {
+    background-color: black;
 }
 
 #admin {
-    height: calc(100vh - 73px);
-    background-color: black;
+    padding-bottom: 1rem;
 }
 
 .npc-text-area {
@@ -70,5 +75,6 @@ textarea.notes {
 }
 
 .dungeon-notes {
-    height: 50vh;
+    height: 48vh;
+    font-size: 0.9rem;
 }
