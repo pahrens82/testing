@@ -72,6 +72,13 @@ export const Armor = ({ equipment, label }) => {
                 </div>
             </section>
             <section>
+                <p className={"small fst-italic"}>
+                    Masterwork armor can be purchased if rare items are available.<br/>
+                    The price is 10x the listed price. If the armor has the effect of applying<br/>
+                    a Bane to one or more skills, one of those Banes is ignored.
+                </p>
+            </section>
+            <section>
                 <table className={"table"}>
                     <thead>
                         <tr>

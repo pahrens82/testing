@@ -72,6 +72,13 @@ export const Weapons = ({ equipment, label }) => {
                 </div>
             </section>
             <section>
+                <p className={"small fst-italic"}>
+                    Masterwork weapons can be purchased if rare items are available.<br />
+                    The price is 10x the listed price. The STR requirement of a masterwork<br />
+                    weapons is reduced by 3, and the weapon's durability is increased by 3.
+                </p>
+            </section>
+            <section>
                 <table className={"table"}>
                     <thead>
                         <tr>
