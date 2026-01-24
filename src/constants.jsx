@@ -445,17 +445,24 @@ export const NPCS = [
 export const FOES = [
     NPCS[0],
     NPCS[1],
+    NPCS[2],
     NPCS[3],
     NPCS[4],
     NPCS[5],
     NPCS[6],
     NPCS[7],
     NPCS[8],
+    NPCS[9],
+    NPCS[10],
     NPCS[11],
     NPCS[12],
     NPCS[13],
     NPCS[14],
     NPCS[15],
+    NPCS[16],
+    NPCS[17],
+    NPCS[18],
+    NPCS[19],
 ];
 
 export const BIOMES = {
