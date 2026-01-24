@@ -1582,7 +1582,7 @@ export const MONSTERS = [
         name: "Dragon, Ancient",
         ferocity: 2,
         movement: 8,
-        size: "Huge",
+        size: "Gargantuan",
         armor: 8,
         hp: 108,
         traits: [
