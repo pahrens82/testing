@@ -10,6 +10,7 @@ export const App = () => {
                 "Updates the weapon carrying rules.",
                 "Adds a page where items can be searched.",
                 "Makes spider web count more reasonable.",
+                "Reduces flail STR requirement.",
             ]
         },
         {

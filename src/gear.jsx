@@ -184,7 +184,7 @@ export const MELEE_WEAPONS = [
         name: "Flail",
         skill: "Bludgeons",
         grip: 1,
-        minStr: 13,
+        minStr: 10,
         damage: "2d6",
         durability: 12,
         cost: 15,
