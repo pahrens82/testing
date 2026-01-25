@@ -6,7 +6,7 @@ import logo from "../assets/dragonlance_logo.png";
 
 export const NavigationBar = () => {
     return (
-        <nav className={"navbar navbar-expand-lg bg-body-tertiary"}>
+        <nav className={"navbar navbar-expand-lg bg-body-tertiary px-3"}>
             <a
                 className={"navbar-brand"}
                 href={"#"}
