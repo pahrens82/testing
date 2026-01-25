@@ -1,4 +1,7 @@
+import { Livestock } from "./components/equipment";
+
 export const GEAR_CATEGORIES = [
+    "Everything",
     "Melee Weapons",
     "Ranged Weapons",
     "Ammunition",
@@ -702,7 +705,7 @@ export const MISCELLANEOUS = [
         cost: 17,
         availability: 0,
         bulk: 1,
-        effect: "Required for a comfortable Long Rest in temperate wilderness.A bed roll is a sack that is long enough to hold a human, with special eyehooks down one side for quick entrance and egress. The bedroll is multi-layered, with an outer layer of soft leather for waterproofing, and an inner layer of flannel cotton for warmth and softness.",
+        effect: "Required for a comfortable Long Rest in temperate wilderness. A bed roll is a sack that is long enough to hold a human, with special eyehooks down one side for quick entrance and egress. The bedroll is multi-layered, with an outer layer of soft leather for waterproofing, and an inner layer of flannel cotton for warmth and softness.",
     },
     {
         name: "Bed Roll, Cold Weather",
@@ -1754,4 +1757,26 @@ export const ALCHEMICAL = [
         bulk: 1,
         effect: "A clay pot that contains a liquid blistering agent. Exposure causes blisters to develop immediately, dealing 2d4 damage. Even minimal irritation of the blisters causes them to burst, dealing a further 1d4 damage.",
     },
+];
+
+export const ALL_ITEMS = [
+    ...MELEE_WEAPONS,
+    ...RANGED_WEAPONS,
+    ...AMMUNITION,
+    ...SHIELDS,
+    ...ARMOR,
+    ...CLOTHES,
+    ...MISCELLANEOUS,
+    ...HUNTING_AND_FISHING,
+    ...LIGHT_SOURCES,
+    ...TOOLS,
+    ...LODGING,
+    ...SCHOLARLY_ITEMS,
+    ...INSTRUMENTS,
+    ...TRANSPORTATION,
+    ...CONTAINERS,
+    ...SERVICES,
+    ...MEDICINAL,
+    ...HERBAL,
+    ...ALCHEMICAL,
 ];

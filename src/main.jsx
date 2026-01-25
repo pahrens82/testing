@@ -176,6 +176,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                     element={<Dungeons />}
                 />
                 <Route
+                    path={"/equipment/everything"}
+                    element={<Equipment.Everything />}
+                />
+                <Route
                     path={"/equipment/melee_weapons"}
                     element={<Equipment.Weapons equipment={MELEE_WEAPONS} label={"Melee Weapons"} />}
                 />
