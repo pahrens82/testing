@@ -1483,7 +1483,7 @@ export const SERVICES = [
         effect: "Make a Medicine check with a skill of 15.",
     },
     {
-        name: "Carriage",
+        name: "Carriage Transport",
         cost: 0.1,
         availability: 2,
         effect: "Priced per mile. Provides transportation to a destination.",
