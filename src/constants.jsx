@@ -1693,7 +1693,7 @@ export const MONSTERS = [
         armor: 0,
         hp: 36,
         traits: [
-            "A single strand of giant spider web is as thick as a dwarven thumb. It can only be destroyed with slashing weapons, fire, or magic. Each strand has durability 9. 2d4 strands must be cut in a web to allow passage of a medium-sized creature.",
+            "A single strand of giant spider web is as thick as a dwarven thumb. It can only be destroyed with slashing weapons, fire, or magic. Each strand has durability 9. 1d4 strands must be cut in a web to allow passage of a medium-sized creature.",
         ],
         gear: "",
         attacks: [
