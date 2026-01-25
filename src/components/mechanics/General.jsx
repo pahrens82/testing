@@ -70,7 +70,7 @@ export const General = () => {
                     <li>Some large or voluminous items take up more than 1 space.</li>
                     <li>Characters can carry any number of Tiny items, with the GM's discretion.</li>
                     <li>Carrying more than 5 of any particular type of Tiny item counts instead as 1 item.</li>
-                    <li>Characters can also carry 3 hands worth of weapons. For example, you could carry 3 daggers, or a short spear, long sword, and shield.</li>
+                    <li>Characters can also carry 3 weapons (including shields).</li>
                 </ul>
                 <h3>Carrying Capacity For Weapons</h3>
                 <ul>
