@@ -86,4 +86,4 @@ export const Schedule = () => {
             </section>
         </section>
     );
-}
+};

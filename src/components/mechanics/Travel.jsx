@@ -52,9 +52,10 @@ export const Travel = () => {
                             <li>If a hidden shelter is desired, a Survival check must be made to find a suitable location. </li>
                         </ul>
                     </li>
-                    <li><strong>Stand Guard:</strong> One or more PCs can opt to stand guard.</li>
+                    <li><strong>Stand Guard:</strong> One or more PCs can opt to stand guard. This is usually done in conjuntion with a Long Rest.</li>
                     <li><strong>Long Rest:</strong> A Long Rest consists of two consecutive Shifts spent sleeping.
                         <ul>
+                            <li>As with Travel, in most cases, the party will collectively opt for this task.</li>
                             <li>If interrupted, the Long Rest has no effect.</li>
                             <li>A Long Rest restores all Conditions (unless otherwise noted).</li>
                             <li>HP and WP are recovered. The amount depends on the quality of rest:
