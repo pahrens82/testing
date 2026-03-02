@@ -39,6 +39,8 @@ export const Combat = () => {
                 of free actions. Each free Action may only be taken
                 once per turn, however.
             </p>
+            <p><strong>Waiting:</strong> On your turn, you may choose to Wait. If you do so, you swap your initiative card with one from a creature that has not yet acted this round. They may not refuse. This may be another PC, and NPC, or even one card from a Monster. You cannot swap with someone who has already taken their turn this round, or who also chose to Wait this round.
+            </p>
             <h5>Actions</h5>
             <ul>
                 <li><strong>Dash</strong>: Move up to your speed (essentially doubling your movement).</li>
