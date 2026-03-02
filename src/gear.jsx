@@ -928,8 +928,8 @@ export const MISCELLANEOUS = [
         name: "Trail Ration",
         cost: 1,
         availability: 0,
-        bulk: 1,
-        effect: "Handy when you don't have time to find your food in the wilds. Each ration is wrapped in waxed parchment, then wrapped in sackcloth and tied with string. Each packet includes two pieces of hardtack, a few ounces of hard cheese, some dried fruit, some dried meat, and some sort of tuber or root vegetable.",
+        bulk: "Special",
+        effect: "Handy when you don't have time to find your food in the wilds. Each ration is wrapped in waxed parchment, then wrapped in sackcloth and tied with string. Each packet includes two pieces of hardtack, a few ounces of hard cheese, some dried fruit, some dried meat, and some sort of tuber or root vegetable. Up to 7 trail rations count as 1 bulk.",
     },
     {
         name: "Whistle, Metal",
