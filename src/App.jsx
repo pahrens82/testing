@@ -4,6 +4,12 @@ import './App.css'
 export const App = () => {
     const CHANGE_LOG = [
         {
+            date: "03/02/2026",
+            changes: [
+                "Updates healing potion effects.",
+            ]
+        },
+        {
             date: "03/01/2026",
             changes: [
                 "Updates the schedule.",
