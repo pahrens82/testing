@@ -32,6 +32,14 @@ export const Magic = () => {
                         Divine
                     </Link>
                 </li>
+                <li>
+                    <Link
+                        className={"dropdown-item"}
+                        to={`/magic/alchemy`}
+                    >
+                        Alchemy
+                    </Link>
+                </li>
             </ul>
         </li>
     );

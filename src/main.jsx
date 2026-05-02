@@ -128,6 +128,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                     element={<Mechanic.Magic type={"Divine"} />}
                 />
                 <Route
+                    path={"/magic/alchemy"}
+                    element={<Mechanic.Alchemy />}
+                />
+                <Route
                     path={"/pcs/nate"}
                     element={<PlayerCharacter player={"Nate"} />}
                 />

@@ -1,4 +1,5 @@
 import { Abilities } from "./Abilities.jsx";
+import { Alchemy } from "./Alchemy.jsx";
 import { Attributes } from "./Attributes.jsx";
 import { Combat } from "./Combat.jsx";
 import { Conditions } from "./Conditions.jsx";
@@ -12,6 +13,7 @@ import {Travel} from "./Travel.jsx";
 
 export {
     Abilities,
+    Alchemy,
     Attributes,
     Combat,
     Conditions,
