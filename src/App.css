@@ -1,7 +1,91 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
-.nav-link:hover {
-    background-color: #e5e5e5;
+.cinzel-decorative-regular {
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.cinzel-decorative-bold {
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.cinzel-decorative-black {
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.petit-formal-script-regular {
+    font-family: "Petit Formal Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lavishly-yours-regular {
+    font-family: "Lavishly Yours", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lacquer-regular {
+    font-family: "Lacquer", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.rubik-dirt-regular {
+    font-family: "Rubik Dirt", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.protest-revolution-regular {
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.kings-regular {
+    font-family: "Kings", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1, h2, h3 {
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 700;
+}
+
+.nav-link:hover,
+.nav-link:hover,
+.nav-item:hover,
+.dropdown-item:hover {
+    background-color: rgb(50, 50, 50);
+    border-radius: 0.375rem;
+}
+
+.navbar,
+.dropdown-menu {
+    background-color: rgb(29, 29, 29);
+
+    .nav-link,
+    .nav-item,
+    .dropdown-item {
+        font-family: 'Cinzel Decorative', serif;
+        font-weight: 700;
+        color: rgb(255, 217, 0) !important;
+    }
+}
+
+.dropdown-toggle.show {
+    color: rgb(255, 38, 0) !important;
+}
+
+.navbar-toggler {
+    color: rgb(255, 217, 0) !important;
 }
 
 .contents {
@@ -77,4 +161,172 @@ body:has(#admin) {
 .dungeon-notes {
     height: 48vh;
     font-size: 0.9rem;
+}
+
+#app {
+    position: relative;
+    /* Required for absolute positioning of pseudo-element */
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    background-color: rgb(29, 29, 29);
+}
+
+/* Create a hidden background layer */
+#app::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: black; */
+    background-image: url('./assets/wvm9fMrmUuE_KbOd.png');
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    /* Pushes the image behind your text content */
+    opacity: 0;
+    /* Starts completely invisible */
+
+    /* Trigger the CSS animation */
+    animation: fadeInBackground 2s ease-in-out forwards;
+}
+
+/* Define the fade-in animation */
+@keyframes fadeInBackground {
+    to {
+        opacity: 1;
+        /* Fades in to full visibility */
+    }
+}
+
+#schedule {
+    height: calc(100vh - 110px);
+    overflow-y: hidden;
+
+    .session-card {
+        min-width: 390px;
+        max-width: max-content;
+    }
+
+    .overflow-y-scroll {
+        height: 450px;
+    }
+
+    h1,
+    h3 {
+        color: white;
+        text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+    }
+}
+
+main:has(#schedule) {
+    background-image: url('./assets/dragonlance-chronicles-dragons-of-autumn-twilight-artwork.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+#changelog {
+    .overflow-y-scroll {
+        height: calc(100vh - 110px);
+    }
+}
+main:has(#changelog) {
+    background-image: url('./assets/dragonlance-shadow-of-the-dragon-queen.png');
+    background-size: 100vw, auto;
+    /* background-position: left -250px; */
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+#everything {
+    .overflow-y-scroll {
+        height: calc(100vh - 210px);
+    }
+}
+main:has(#everything) {
+    background-image: url('./assets/how-to-build-a-dragonlance-character-featured.jpg');
+    background-size: 100vw, auto;
+    background-position: left -250px;
+    background-repeat: no-repeat;
+}
+
+#arcane-magic {
+    background-image: url('./assets/wizards_laboratory.jpg');
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    .bg-white:first-of-type {
+        height: calc(100vh - 110px);
+        overflow-y: scroll;
+    }
+}
+
+main:has(#divine-magic) {
+    background-image: url('./assets/paladin.jpg');
+    background-size: contain;
+    background-position: top right;
+    background-repeat: no-repeat;
+
+    .bg-white:first-of-type {
+        height: calc(100vh - 110px);
+        overflow-y: scroll;
+    }
+}
+
+/* Pseudo-element holding the sparkle particles */
+.dropdown-toggle::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    opacity: 0;
+
+    background-image:
+        radial-gradient(circle, #fff 20%, transparent 20%),
+        radial-gradient(circle, #ff00de 20%, transparent 20%),
+        radial-gradient(circle, #fff 20%, transparent 20%),
+        radial-gradient(circle, #00ffff 20%, transparent 20%),
+        radial-gradient(circle, #fff 20%, transparent 20%),
+        radial-gradient(circle, #ffeb3b 20%, transparent 20%);
+}
+
+/* Trigger animation instantly upon hover (cursor touch) */
+.dropdown-toggle:hover::after {
+    /* Runs the explosion animation exactly once when touched */
+    animation: sparkle-burst 0.6s ease-out forwards;
+}
+
+/* Definition of the explosion sequence */
+@keyframes sparkle-burst {
+    0% {
+        opacity: 1;
+        background-position: 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+        background-size: 10% 10%, 15% 15%, 12% 12%, 10% 10%, 18% 18%, 10% 10%;
+    }
+
+    50% {
+        /* Keep particles visible at full size while they expand outward */
+        background-size: 10% 10%, 15% 15%, 12% 12%, 10% 10%, 18% 18%, 10% 10%;
+    }
+
+    100% {
+        opacity: 0;
+        /* Explode particles to outer edges */
+        background-position: 10% 10%, 90% 20%, 85% 85%, 20% 80%, 15% 50%, 80% 40%;
+        /* Fizzle them out to 0% size at the very end */
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
 }

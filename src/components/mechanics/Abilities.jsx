@@ -97,12 +97,6 @@ export const Abilities = () => {
             desc: "You do not hesitate to take a hit to protect your friends. If you and another PC are both adjacent to the same enemy and that enemy tries to attack the other character, you can activate this ability to force the enemy to attack you instead. Using this ability can be done out of turn and does not count as an action.",
         },
         {
-            name: "Herbalist",
-            req: "Herbalism 12",
-            cost: 0,
-            desc: "This ability lets you create herbal items, such as poisons, antidotes, and potions.",
-        },
-        {
             name: "Insight",
             req: "Persuasion 12",
             cost: 2,

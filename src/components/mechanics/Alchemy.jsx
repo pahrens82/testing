@@ -596,16 +596,12 @@ export const Alchemy = () => {
         <section className={"container mb-5"}>
             <h1>Alchemy</h1>
             <section>
-                <h3>Alchemical Substances</h3>
-                <p>Alchemy differs from other schools of magic in that you do
-                    not cast spells directly on your surroundings. Instead
-                    you create magical substances, often in the form of potions.
-                    Unless otherwise stated in the recipe, the substance is consumed
-                    or applied (as an action), whereupon its effect occurs immediately.
+                <h3>Alchemy in Ansalon</h3>
+                <p>Across Ansalon, alchemy has been viewed as a companion discipline to magic. While magic is tightly controlled, and rightly feared, alchemy is not. In fact, many villages have an elder who specializes in the practice of alchemy, and passes their knowledge to others. After the Cataclysm, alchemy took on new importance, as it replaced much of the magical healing that had been previously available.
                 </p>
                 <section>
                     <h5>Preparation</h5>
-                    <p>Preparing an alchemy recipe normally takes one Shift. An Alchemy
+                    <p>Preparing an alchemy recipe normally takes one Shift. Each Alchemy recipe requires specific ingredients; those ingredients are expended when a check is made. The Alchemy
                         check determines whether you succeed. You make the roll and spend
                         your WP at the end of the preparation process. If successful, you
                         produce one dose of the substance and each additional power
@@ -625,12 +621,7 @@ export const Alchemy = () => {
                     <p>Alchemical recipes require specific ingredients, which are listed with each recipe. One dose of each listed ingredient is required per dose of the completed alchemical substance. The ingredients are consumed when the recipe is prepared, even if the roll fails.
                     </p>
                 </section>
-                <section>
-                    <h5>Laboratory</h5>
-                    <p>To prepare an alchemical recipe, you need access to tools such as cauldrons, mortars and pestles, funnels, flasks, and vials to store the finished potion. A small field laboratory containing the most essential tools counts as a Rare item with weight 1 and normally costs 50 gold. Alchemical recipes can be prepared in an ordinary kitchen, but this imposes a Bane on the Alchemy roll. Conversely, a large and well-equipped alchemical laboratory that occupies an entire room grants a Boon on the roll, but costs at least 500 gold.
-                    </p>
-                </section>
-                <section>
+                 <section>
                     <h5>Ingredients</h5>
                     <p>Alchemical recipes require specific ingredients, which are listed
                         with each recipe. These ingredients are consumed when the recipe
@@ -640,6 +631,7 @@ export const Alchemy = () => {
                             <li><strong>General Herbs:</strong> A basic ingredient required for many recipes is <i>general herbs</i>. As an alchemist, it is wise to always keep a small supply of general herbs in your pack.</li>
                             <li><strong>Finding Herbs:</strong> If you spend a Shift foraging plants in the wild and succeed at your Survival check, you may choose to find 1d6 doses of general herbs instead of food. Rarer herbs may also be found if the GM deems it reasonable, but usually only one dose per successful check.</li>
                             <li><strong>Extracting Ingredients:</strong> Some rarer ingredients must be extracted from (usually) dead animals and Monsters. This takes a Stretch of time and requires a Beast Lore check. A successful check yields 1d3 doses of the ingredient, while a critical success yields 1d6 doses. If the check fails, no further attempts can be made on the same creature.</li>
+                            <li><strong>Purchasing Ingredients:</strong> Alchemical ingredients can sometimes be purchased from vendors. Ingredients are listed in the Alchemical Products equipment section</li>
                         </ul>
                     </p>
                 </section>

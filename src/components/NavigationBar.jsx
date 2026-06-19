@@ -6,7 +6,7 @@ import logo from "../assets/dragonlance_logo.png";
 
 export const NavigationBar = () => {
     return (
-        <nav className={"navbar navbar-expand-lg bg-body-tertiary px-3"}>
+        <nav className={"navbar navbar-expand-lg px-3"} data-bs-theme={"dark"}>
             <a
                 className={"navbar-brand"}
                 href={"#"}
@@ -49,6 +49,14 @@ export const NavigationBar = () => {
                     <Dropdowns.Mechanics />
                     <Dropdowns.Equipment />
                     <Dropdowns.Magic />
+                    <li className={"nav-item"}>
+                        <Link
+                            className={"nav-link"}
+                            to={"/changelog"}
+                        >
+                            Change Log
+                        </Link>
+                    </li>
                     <li className={"nav-item"}>
                         <a
                             className={"nav-link"}

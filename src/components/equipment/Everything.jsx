@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import { ALL_ITEMS } from "../../gear";
 
+import { makePricingVerbose } from "../../constants";
+
 
 const AVAILABILITIES = [
     "Common",
@@ -13,7 +15,7 @@ const AVAILABILITIES = [
 export const Everything = () => {
     let [value, setValue] = useState("");
     let [itemList, setItemList] = useState(ALL_ITEMS);
-    let [checked, setChecked] = useState(new Set([0, 1, 2]));
+    let [checked, setChecked] = useState(new Set([0, 1, 2, 3]));
 
     const handleSearch = (event) => {
         let newValue = event.currentTarget.value;
@@ -45,18 +47,24 @@ export const Everything = () => {
     itemList.sort((a, b) => a.rating > b.rating);
 
     return (
-        <section className={"container"}>
+        <section className={"container-fluid"} id={"everything"}>
             <section className={"row"}>
-                <section className={"col-xs-12 col-sm-9 col-md-6 col-lg-4"}>
+                <section className={"col-xs-12 col-sm-9 col-md-6 col-lg-4 col-xl-3 bg-white"}>
                     <h1>Everything</h1>
                     <div className={"mb-2"}>
                         <input
                             className={"form-control"}
+                            list={"everything-list"}
                             placeholder={"Search"}
                             value={value}
                             onChange={handleSearch}
                             onFocus={handleFocus}
                         />
+                        <datalist id={"everything-list"}>
+                            {itemList.map((item) => {
+                                return <option key={item.name.replaceAll(" ", "-")} value={item.name} />
+                            })}
+                        </datalist>
                     </div>
                     <section className={"mb-2"}>
                         <div className={"form-check form-check-inline"}>
@@ -107,12 +115,30 @@ export const Everything = () => {
                                 Rare
                             </label>
                         </div>
+                        <div className={"form-check form-check-inline"}>
+                            <input
+                                className={"form-check-input"}
+                                type={"checkbox"}
+                                id={"inlineCheckbox4"}
+                                value={3}
+                                checked={checked.has(3)}
+                                onChange={handleFiltering}
+                            />
+                            <label
+                                className={"bg-warning-subtle px-1 form-check-label"}
+                                htmlFor={"inlineCheckbox4"}
+                            >
+                                Unique
+                            </label>
+                        </div>
                     </section>
+                    <section className={"overflow-y-scroll"}>
                     {itemList.map((item) => {
                         if (checked.has(item.availability)) {
                             let color = "white";
                             if (item.availability === 1) color = "primary-subtle";
                             if (item.availability === 2) color = "danger-subtle";
+                            if (item.availability === 3) color = "warning-subtle";
                             return (
                                 <details
                                     className={`border px-2 py-1 mb-2 bg-${color}`}
@@ -127,6 +153,12 @@ export const Everything = () => {
                                             if (key === "availability") {
                                                 value = AVAILABILITIES[item[key]];
                                             }
+                                            if (
+                                                key === "cost" &&
+                                                 typeof value === "number"
+                                            ) {
+                                                value = makePricingVerbose(value);
+                                            }
                                             let className = "text-capitalize";
                                             if (key === "effect") className = "";
                                             return (
@@ -140,6 +172,7 @@ export const Everything = () => {
                             )
                         }
                     })}
+                    </section>
                 </section>
             </section>
         </section>

@@ -3,14 +3,9 @@ import React, { useState } from "react";
 import { CHARACTERS } from "./PlayerCharacters";
 
 
-export const PlayerCharacter = ({ player = "" }) => {
+export const PlayerCharacter = ({ player = "", fontClass = "" }) => {
     return (
         <section className={"container-fluid"}>
-            <section className={"row"}>
-                <section className={"col"}>
-                    <h1>{player}</h1>
-                </section>
-            </section>
             <section className={"row"}>
                 <section className={"col-12 col-md-4"}>
                     <section
@@ -18,7 +13,7 @@ export const PlayerCharacter = ({ player = "" }) => {
                         className={`card px-3 mt-3 mt-md-0}`}
                     >
                         <small>{player}</small>
-                        <h3 className={"m-0"}>
+                        <h3 className={`m-0 ${fontClass}`}>
                             {CHARACTERS[player].name}
                         </h3>
                         {CHARACTERS[player].attributesToTable()}

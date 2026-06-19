@@ -70,6 +70,22 @@ export const General = ({ equipment, label }) => {
                         Rare
                     </label>
                 </div>
+                <div className={"form-check form-check-inline"}>
+                    <input
+                        className={"form-check-input"}
+                        type={"checkbox"}
+                        id={"inlineCheckbox4"}
+                        value={3}
+                        checked={checked.has(3)}
+                        onChange={handleChange}
+                    />
+                    <label
+                        className={"bg-warning-subtle px-1 form-check-label"}
+                        htmlFor={"inlineCheckbox4"}
+                    >
+                        Unique
+                    </label>
+                </div>
             </section>
             <section>
                 <table className={"table"}>
@@ -87,6 +103,7 @@ export const General = ({ equipment, label }) => {
                                 let variant = "white";
                                 if (item.availability === 1) variant = "primary-subtle";
                                 if (item.availability === 2) variant = "danger-subtle";
+                                if (item.availability === 3) variant = "warning-subtle";
                                 return (
                                     <tr key={item.name}>
                                         <td className={`bg-${variant}`}>{item.name}</td>

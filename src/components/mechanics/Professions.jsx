@@ -47,9 +47,9 @@ export const Professions = () => {
                 <p><i>Divine Casting</i>: WP -. You have the ability to cast divine spells.</p>
                 <span>Key Skills:</span>
                 <ul>
+                    <li>Alchemy</li>
                     <li>Divine Casting</li>
-                    <li>Dodge</li>
-                    <li>Herbalism</li>
+                    <li>Dodge</li>                    
                     <li>Medicine</li>
                     <li>Persuasion</li>
                     <li>Bludgeons</li>
@@ -156,7 +156,7 @@ export const Professions = () => {
                     <li>Arcane Casting</li>
                     <li>Beast Lore</li>
                     <li>Dodge</li>
-                    <li>Herbalism</li>
+                    <li>Herbalism (Needs to be replaced)</li>
                     <li>Myths and Legends</li>
                     <li>Perception</li>
                     <li>Staves</li>

@@ -17,9 +17,6 @@ export const MONTHS = [
 ];
 
 export const LINKS = {
-    ability: {
-        herbalism: <Link to={"/mechanics/abilities#herbalism"}>Herbalism</Link>,
-    },
     attribute: <Link to={"/mechanics/attributes"}>attribute</Link>,
     attributes: <Link to={"/mechanics/attributes"}>attributes</Link>,
     condition: <Link to={"/mechanics/conditions"}>condition</Link>,
@@ -40,7 +37,6 @@ export const LINKS = {
         crafting: <Link to={"/mechanics/skills#crafting"}>Crafting</Link>,
         divine: <Link to={"/mechanics/skills#divine-casting"}>Divine Casting</Link>,
         dodge: <Link to={"/mechanics/skills#dodge"}>Dodge</Link>,
-        herbalism: <Link to={"/mechanics/skills#herbalism"}>Herbalism</Link>,
         medicine: <Link to={"/mechanics/skills#medicine"}>Medicine</Link>,
         myths: <Link to={"/mechanics/skills#myths-and-legends"}>Myths and Legends</Link>,
         perception: <Link to={"/mechanics/skills#perception"}>Perception</Link>,
@@ -92,7 +88,6 @@ export const SKILLS = {
     crafting: { attr: "str", score: 0, name: "Crafting", description: "As an adventurer, you must often repair your gear when it Breaks. Typically, it takes one Shift to repair a Broken item, assuming you have the necessary tools and supplies." },
     divineCasting: { attr: "wil", score: 0, name: "Divine Casting", description: "Divine Casting is used by clerics to wield their deity's power (that is, cast spells). You must be a cleric to have Divine Casting as a class skill." },
     dodge: { attr: "dex", score: 0, name: "Dodge", description: "Dodge is used when attempting to Dodge an attack or flee combat." },
-    herbalism: { attr: "int", score: 0, name: "Herbalism", description: "This skill lets you identify plants and herbal items. With the Herbalist ability, proper equipment, and ingredients, you can craft herbal items as well." },
     medicine: {
         attr: "int", score: 0, name: "Medicine", description: <span>There is significant risk when adventuring. This skill can be used to: <ul><li>Administer Care (During a short rest, increase the HP regained by another character by 1d6. A Healer's Kit is required.)</li><li>First Aid (Stabilize a character that is 0 HP. This check has a Bane unless you have Bandages.)
         </li><li>Treat Disease (Use your Medicine check in place of another character's Con check vs disease. Requires a Healer's Kit.)</li><li>Treat An Injury (Reduces the healing time of an injury by 1 day per treatment. This requires Surgical Tools and one Shift per treatment.).</li></ul></span>

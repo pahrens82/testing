@@ -58,6 +58,7 @@ import { Creatures } from './components/Creatures.jsx';
 import { Animals } from "./components/Animals.jsx";
 import { Admin } from './components/admin/Admin.jsx';
 import { Dungeons } from './components/admin/Dungeons.jsx';
+import { ChangeLog } from './components/ChangeLog.jsx';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -73,6 +74,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 <Route
                     path={"/schedule"}
                     element={<Schedule />}
+                />
+                <Route
+                    path={"/changelog"}
+                    element={<ChangeLog />}
                 />
                 <Route
                     path={"/mechanics/character_creation"}
@@ -133,27 +138,27 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 />
                 <Route
                     path={"/pcs/nate"}
-                    element={<PlayerCharacter player={"Nate"} />}
+                    element={<PlayerCharacter player={"Nate"} fontClass={"lacquer-regular"} />}
                 />
                 <Route
                     path={"/pcs/patrick"}
-                    element={<PlayerCharacter player={"Patrick"} />}
+                    element={<PlayerCharacter player={"Patrick"} fontClass={"petit-formal-script-regular"} />}
                 />
                 <Route
                     path={"/pcs/mike"}
-                    element={<PlayerCharacter player={"Mike"} />}
+                    element={<PlayerCharacter player={"Mike"} fontClass={"lavishly-yours-regular"} />}
                 />
                 <Route
                     path={"/pcs/chris"}
-                    element={<PlayerCharacter player={"Chris"} />}
+                    element={<PlayerCharacter player={"Chris"} fontClass={"kings-regular"} />}
                 />
                 <Route
                     path={"/pcs/dowell"}
-                    element={<PlayerCharacter player={"Dowell"} />}
+                    element={<PlayerCharacter player={"Dowell"} fontClass={"protest-revolution-regular"} />}
                 />
                 <Route
                     path={"/pcs/mitch"}
-                    element={<PlayerCharacter player={"Mitch"} />}
+                    element={<PlayerCharacter player={"Mitch"} fontClass={"rubik-dirt-regular"} />}
                 />
                 <Route
                     path={"/characters"}
