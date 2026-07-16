@@ -90,7 +90,7 @@ export const SPELLS = [
         castingTime: CASTING_TIMES.action,
         requirements: `${REQUIREMENTS.word}, ${REQUIREMENTS.gesture}`,
         duration: DURATIONS.shift,
-        description: "You create a bright light that shines from a focus of your choice. It illuminates a 30-foot radius around your focus and lasts for one Shift of time. The light goes out if you react zero HP.",
+        description: "You create a bright light that shines from a focus of your choice. It illuminates a 30-foot radius around your focus and lasts for one Shift of time. The light goes out if you reach zero HP.",
     },
     {
         rank: 0,
@@ -203,7 +203,7 @@ export const SPELLS = [
     {
         rank: 0,
         name: "Hairstyle",
-        type: TYPES.arcane,
+        type: TYPES.divine,
         school: SCHOOLS.animism,
         prerequisite: NA,
         range: RANGES.touch,
