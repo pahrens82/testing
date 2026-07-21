@@ -15,7 +15,7 @@ export const Health = () => {
                     </li>
                     <li>You begin play with a number of HP equal to your
                         Constitution score. Additional HP can be gained
-                        upon levelling up and via a certain Ability.
+                        upon levelling up and via the Robust Ability.
                     </li>
                 </ul>
                 <h5>Willpower Points (WP)</h5>
@@ -26,7 +26,7 @@ export const Health = () => {
                     </li>
                     <li>You begin play with a number of WP equal to your
                         Willpower score. Additional WP can be gained
-                        by levelling up and via a certain Ability.
+                        by levelling up and via the Focused Ability.
                     </li>
                 </ul>
             </section>

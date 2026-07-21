@@ -9,6 +9,7 @@ const SCHOOLS = {
     transmutation: "Transmutation",
     illusion: "Illusion",
     witchcraft: "Witchcraft",
+    enchanting: "Enchanting",
 };
 
 const TYPES = {
@@ -647,7 +648,7 @@ export const SPELLS = [
     {
         rank: 1,
         name: "Helper",
-        type: TYPES.divine,
+        type: TYPES.arcane,
         school: SCHOOLS.witchcraft,
         prerequisite: NA,
         castingTime: CASTING_TIMES.action,

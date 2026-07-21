@@ -1,12 +1,6 @@
 export const Abilities = () => {
     const ABILITIES = [
         {
-            name: "Alchemist",
-            req: "Alchemy 12",
-            cost: 0,
-            desc: "This ability lets you use the Alchemy skill to craft alchemical items.",
-        },
-        {
             name: "Assassin",
             req: "Knives 12",
             cost: 3,
@@ -266,5 +260,5 @@ export const Abilities = () => {
                 )
             })}
         </section>
-    )
+    );
 };

@@ -621,7 +621,7 @@ export const Alchemy = () => {
                     <p>Alchemical recipes require specific ingredients, which are listed with each recipe. One dose of each listed ingredient is required per dose of the completed alchemical substance. The ingredients are consumed when the recipe is prepared, even if the roll fails.
                     </p>
                 </section>
-                 <section>
+                <section>
                     <h5>Ingredients</h5>
                     <p>Alchemical recipes require specific ingredients, which are listed
                         with each recipe. These ingredients are consumed when the recipe

@@ -1,6 +1,16 @@
 export const ChangeLog = () => {
     const CHANGE_LOG = [
         {
+            date: "07/21/2026",
+            changes: [
+                "Updates the schedule.",
+                "More work on the magic pages.",
+                "Corrects the Health page to show the correct Abilities for gaining additional HP and WP.",
+                "Removes the Alchemist ability.",
+                "Updates the description of the Alchemist skill.",
+            ]
+        },
+        {
             date: "05/01/2026",
             changes: [
                 "Updates the schedule.",

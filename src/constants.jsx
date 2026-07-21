@@ -79,7 +79,7 @@ export const LOCATIONS = [
 
 export const SKILLS = {
     acrobatics: { attr: "dex", score: 0, name: "Acrobatics", description: "Used for jumping, balancing, and similar physical actions." },
-    alchemy: { attr: "int", score: 0, name: "Alchemy", description: "This skill lets you identify alchemical items. With the Alchemist ability and proper equipment and ingredients, you can craft alchemical items as well." },
+    alchemy: { attr: "int", score: 0, name: "Alchemy", description: "This skill lets you craft and identify alchemical items." },
     arcaneCasting: { attr: "int", score: 0, name: "Arcane Casting", description: "You must be a Mage to use this skill. This skill is used for casting Arcane spells, as well as identifying Arcane spells cast by others. You must be a Mage to have Arcane Casting as a class skill." },
     beastLore: { attr: "int", score: 0, name: "Beast Lore", description: "The world is full of common and rare animals and beasts. Beast Lore is rolled when trying to identify an animal or Monster, or to discern the behaviors, abilities, or weaknesses of an animal you have identified.", },
     bluff: { attr: "cha", score: 0, name: "Bluff", description: "To quickly come up with a convincing lie can be an invaluable skill as an adventurer; that is where this skill comes into play. If your bluff is unconvincing, you gain a Bane on your roll. If your bluff is completely unbelievable, the roll fails automatically, no matter how well you deliver it." },
