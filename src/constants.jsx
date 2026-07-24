@@ -1662,6 +1662,25 @@ export const MONSTERS = [
         description: "Ghouls are suspected to be created by a curse placed on those who practice cannibalism. They are half-blind, with loose, spongy grayish-white skin. They reek of death and decay."
     },
     {
+        name: "Giant Centipede",
+        ferocity: 3,
+        movement: 16,
+        size: "Normal",
+        armor: 0,
+        hp: 18,
+        traits: [],
+        gear: "",
+        attacks: [
+            "The centipede's serrated mandibles swish through the air like scimitars. The attack inflicts 1D8 slashing damage on an opponent. A victim who sustains at least 1 point of damage is also injected with a paralyzing poison with potency 9.",
+            "The famished centipede lunges at its victims, frantically attacking with its multitude of hairy, barbed legs. All adjacent opponents suffer 1D6 piercing damage.",
+            "The monstrous arthropod scurries across the bodies of those in a straight path. Everyone within a 30 foot line must make a WIL roll to resist Fear.",
+            "The many-legged horror rears up before striking someone with its poisoned mandibles. The attack inflicts 1D8 piercing damage, and a victim who sustains at least 1 point of damage is also injected with a paralyzing poison with potency 9. The attack can be parried.",
+            "The centipede fixes its eyes on the opponent with the highest STR. The next moment it, it wraps itself around the target, who must make an Dodge roll (not an action). On failure, the victim is grappled in the centipede's legs and unable to move or perform actions that require movement. It takes a successful STR roll with a Bane (action) to break free. Others can help.",
+            "The giant centipede thrashes its body around, striking all adjacent targets. The attack inflicts 2D6 bludgeoning damage and knocks the victims down.",
+        ],
+        description: "Giant centipedes are as fast as hawks, as strong as oxen, and as cunning as foxes. Their only weakness may be their dislike for sunlight.",
+    },
+    {
         name: "Giant Snake",
         ferocity: 1,
         movement: 8,
