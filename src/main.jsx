@@ -49,7 +49,6 @@ import * as Equipment from "./components/equipment";
 import { Error } from "./components/Error.jsx";
 import { Location } from "./components/locations/Location.jsx";
 import { NavigationBar } from './components/NavigationBar.jsx';
-import { Species } from './components/Species.jsx';
 import { CharacterCreation } from './components/CharacterCreation.jsx';
 import { Characters } from './components/dropdowns/Characters.jsx';
 import { PlayerCharacters } from './components/PlayerCharacters.jsx';
@@ -106,6 +105,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 <Route
                     path={"/mechanics/skills"}
                     element={<Mechanic.Skills />}
+                />
+                <Route
+                    path={"/mechanics/species"}
+                    element={<Mechanic.Species />}
                 />
                 <Route
                     path={"/mechanics/abilities"}
@@ -268,15 +271,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                     path={"/equipment/livestock"}
                     element={<Equipment.Livestock />}
                 />
-                {SPECIES.map((specie, index) => {
-                    return (
-                        <Route
-                            key={specie}
-                            path={`/species/${specie.toLowerCase()}`}
-                            element={<Species type={specie} />}
-                        />
-                    )
-                })}
                 {LOCATIONS.map((location, index) => {
                     return (
                         <Route

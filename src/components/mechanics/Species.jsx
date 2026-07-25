@@ -1,316 +1,476 @@
 export const Species = () => {
     return (
-        <section className={"contents mb-5 lh-lg"}>
-            <section>
-                <h1>Species</h1>
-                <p>The races of Ansalon are generally isolated during the Age
-                    of Despair and rarely interact. Suspicion and prejudice
-                    run rampant through each race and culture. Old alliances
-                    and friendships are only a memory. Elves have withdrawn
-                    into their respective lands and severed contact with the
-                    outside world. The mountain dwarves of Thorbardin
-                    sealed the underground kingdom, abandoning their hill
-                    dwarf cousins. Human countries, cities, and towns are
-                    insular and distrust outsiders. Minotaur keep to the newly
-                    formed islands of Mithas and Kothas, establishing their
-                    own kingdom. Ogres celebrate the chaos and lawlessness
-                    brought on by the Cataclysm by raiding and conquering
-                    their neighbors. The gnomes continue their single-minded
-                    pursuit of technological perfection in Mount Nevermind.
-                    Kender now enjoy a world full of new places to explore.
-                    The Age of Despair is a dark age for Ansalon, a time
-                    of fear and suffering. But these hard times will forge the
-                    strength the people will need to survive the War of the
-                    Lance and beyond.
-                </p>
-            </section>
-            <hr />
-            <section id={"human"}>
-                <h3>Humans</h3>
-                <p>Early in the Age of Despair the humans of Ansalon
-                    abandoned all faith. The majority of humans felt betrayed
-                    by the disappearance of the gods, and many denounced
-                    the gods.
-                </p>
-                <p>With their relatively short life spans, the humans
-                    soon forgot about the true gods, regarding them, as the
-                    centuries passed, as little more than myth and legend.
-                    The tales of the ancient deities are still passed down from
-                    one generation to the next, but, after nearly three and
-                    a half centuries they are considered kender tales. Gods
-                    are believed to be as real as dragons, fairy folk, and other
-                    childhood fantasies.
-                </p>
-                <p>Generations without faith have led to a longing for
-                    some type of belief, and many humans turned to cult
-                    worship. False religions and the worship of idols has
-                    grown increasingly prevalent. Sometimes these religious
-                    movements last for decades before they are finally exposed
-                    as frauds. Although most humans no longer believe in the
-                    ancient gods, many still hunger for guidance in their lives
-                    and seek the solace of a higher being.
-                </p>
-                <p>True healing has always been considered one of the
-                    gods' great powers. When the gods left the world, famine
-                    and plague spread throughout the continent. Thousands
-                    died in the wake of the gods' departure and, without
-                    the aid of the gods' healing powers, the suffering was
-                    catastrophic. Many people look for magical healing as a
-                    sign of a new, true faith. Many humans try to replicate
-                    healing with medicinal herbs and - in some cases - sleight-
-                    of-hand. These attempts at healing have never
-                    achieved miraculaous results, though local medicine men
-                    and shamans use them to assist the people in a world
-                    bereft of healing.
-                </p>
-                <p>The loss of the gods also marked a significant decline in
-                    civilized society. Many human communities disappeared,
-                    swallowed up by stronger nations. Lawlessness becomes
-                    the norm. The Knights of Solamnia, longtime champions
-                    of law and righteousness, are a common target of ridicule
-                    and scorn because of their inability to prevent the
-                    spreading chaos. Their lord cities fall into disrepair and
-                    anarchy. It takes decades for such communities to recover
-                    from the disaster of the Cataclysm and to begin to forge
-                    limited trading routes across an unmapped land. Other than
-                    the haphazard wanderings of kender, humans are the
-                    primary explorers of post-Cataclysm Ansalon. Yet even the
-                    bravest humans rarely range far from home. Many of the
-                    routes are dangerous to travel due as much to changes in
-                    the landscape, as bandits and other creatures even more
-                    evil.
-                </p>
+        <section className={"container mb-5 lh-lg"}>
+            <details id={"human"}>
+                <summary className={"h3 px-2 py-1 border rounded"}>Humans</summary>
+                <section>
+                    <h5>Introduction</h5>
+                    <p>Humans are the most diverse of all the races of Ansalon.
+                        They are often incapable of seeing the other races as
+                        more than humans with additional traits or extremes
+                        of personality, perhaps because of their own incredibly
+                        varied physical appearance, cultural diversity, and sheer
+                        numbers. Humans are tall or short, dark-skinned or lightskinned,
+                        slender or stocky. Those physical characteristics
+                        they do have in common with one another are, as a result,
+                        characteristics they share with all other humanoid races.
+                    </p>
+                    <p>As a general rule, humans are Medium-sized, usually
+                        between five and six feet in height, although there are
+                        significant examples of taller or shorter individuals. Their
+                        average weight falls between 115 and 225 pounds. Women
+                        are usually shorter and lighter than men, but in some
+                        cultures, this may be reversed. Humans have no inherent
+                        extraordinary or supernatural abilities, such as enhanced
+                        vision; however, their ability to learn, grow, and acquire
+                        extraordinary talents is well known. Indeed, some of
+                        Krynn’s greatest mages, priests, warriors, and artisans have
+                        been human.
+                    </p>
+                    <section>
+                        <h5>Townsfolk</h5>
+                        <p>Villagers, townsfolk, and city-dwelling humans make up the
+                            largest racial group on Ansalon. They can be found almost
+                            everywhere, whether they truly belong there or not. This
+                            widespread population also makes for great diversity in
+                            culture and attitude. Settled humans cannot truly be
+                            defined as a unified group because each country, city, or
+                            town has it's own appearance and personality. Rude
+                            innkeepers, benevolent priests, pitiful beggars, hardened
+                            mercenaries, and cunning pickpockets can be found in most
+                            every village, town, or city on Ansalon.
+                        </p>
+                        <p>
+                            Being so prolific and successful, nations of
+                            humans often come into conflict with each other and other
+                            races. However, despite these conflicts, many humans have
+                            worked hard to live peacefully with the other races—even
+                            as other humans have worked to subjugate or war with
+                            them.
+                        </p>
+                        <p>City life during the Age of Despair is chaotic. The
+                            Cataclysm flooded entire nations and landlocked others,
+                            destroying the trade routes for nearly every major city of
+                            Ansalon. Changes in the climate ravaged crops. What little
+                            food could be salvaged or grown - if it wasn't stolen - was
+                            hoarded. The meager amount of food that could be
+                            delivered to the cities was bought up by wealthy clientele
+                            for outrageous prices, leaving the poor to beg or filch
+                            whatever they could find.
+                        </p>
+                        <p>Without healers, disease ran rampant and plague
+                            spread like wildfire. Most citizens lived in squalor,
+                            cowering amidst the ruins of buildings or hunkered
+                            down in wooden shacks. Over the course of centuries, the
+                            situation has gradually improved, but while some cities
+                            have prospered, others remain locked in despair, filth, and
+                            poverty.
+                        </p>
+                        <section className={"card p-3"}>
+                            <h5>Townsfolk</h5>
+                            <ul>
+                                <li>Speed: 6</li>
+                                <li>Can be a mage</li>
+                                <li>Ability: <i>Adaptive</i>: WP 3. When rolling for
+                                    a skill, you can choose to make the roll using
+                                    another skill of your choice. However, you must be
+                                    able to justify how you use the selected skill
+                                    instead of the normal one. The GM has the final
+                                    say.
+                                </li>
+                            </ul>
+                        </section>
+                    </section>
+                    <section className={"mt-3"}>
+                        <h5>Nomads</h5>
+                        <p>For hundreds of years before the first permanent dwellings
+                            were erected and their ancestors decided to stay in one
+                            place, humans roamed the length and breadth of Ansalon.
+                            These nomads lived off the land, existing in harmony with
+                            nature. Today these people are thought of as primitive,
+                            barbarian, and savage. However, regardless of how others
+                            think of them, nomads take fierce pride in the ability of
+                            their people to exist, and even thrive, in lands others shun
+                            as inhospitable. Mountains, forests, plains, tundra, and
+                            deserts are places nomads have conquered and still call
+                            home today.
+                        </p>
+                        <p>The nomadic people of Ansalon have always felt a deep
+                            connection with nature. The destruction wrought by the
+                            Cataclysm confused and frightened them. To the wandering
+                            peoples of Ansalon, who live daily by following the
+                            changes of season and the migration of beasts, the physical
+                            changes in the world proved devastating. Many urban
+                            communities saw their nomadic neighbors as easy prey and
+                            attacked them. Such actions served to heighten the
+                            suspicion and distrust between nomads and city dwellers.
+                        </p>
+                        <p>Over the generations, the nomads were able to
+                            establish fresh hunting grounds and track the new
+                            migrations of animals, their lives improved. Lacking the
+                            uniting force of the gods, however, many tribes splintered,
+                            while others waited patiently and chose to accept the gods'
+                            silence as the supreme test of their devotion.
+                            Of the tribes that remained intact, most worshipped
+                            deities of their own invention modeled after familiar
+                            aspects of the true gods. The gods of these nomads had
+                            their own names and identities. Worship of the gods of
+                            townsfolk was expressly forbidden. The nomad tribes
+                            highly venerated the spirits of their ancestors who had
+                            gone before them, and eventually, the worship of ancestors
+                            became a dominant form of religion. The absence of the
+                            true gods was not nearly as difficult for some nomads
+                            to accept, as many tribes had always maintained religious
+                            rituals and ceremonies that honored all the spirits.
+                        </p>
+                        <p>Though every tribe differs, most nomads harbor a
+                            deeply ingrained distrust of other races, including city-
+                            dwelling humans and other nomads. Even in the best of
+                            times, relations between nomadic tribes and outsiders are
+                            strained. However, despite their generalizations of other
+                            races, nomads tend to give individual members a chance to
+                            prove themselves worthy of respect. Once respect is won,
+                            outsiders usually discover that no one is a more steadfast
+                            ally than a nomad.
+                        </p>
+                        <section className={"card p-3"}>
+                            <h5>Plainsfolk</h5>
+                            <ul>
+                                <li>Speed: 6</li>
+                                <li>Can be a mage</li>
+                                <li>Ability: <i>Nomad</i>: WP -. You are used to sleeping
+                                    under any circumstance; you can take a Long Rest anywhere.
+                                </li>
+                            </ul>
+                        </section>
+                    </section>
+                </section>
+            </details>
+            <details id={"dwarf"}>
+                <summary className={"h3 px-2 py-1 border rounded"}>Hill Dwarves</summary>
+                <section>
+                    <h5>Introduction</h5>
+                    <p>To the other races of Ansalon, when referring to a dwarf,
+                        the dwarf in question is mostly likely of the Neidar clan.
+                        The term Neidar was first coined in Thorbardin to describe
+                        a clan of dwarves who dwelt above ground. Since that time,
+                        the term has been used to refer to nearly all dwarves who
+                        prefer to live on the surface of Krynn rather than beneath
+                        it. They are the most well known of all dwarves, because
+                        they interact with the outside world more than their
+                        mountain dwelling brethren. Known to most races simply
+                        as hill dwarves, the Neidar are sturdy fighters, shrewd
+                        merchants, and master craftsmen.
+                    </p>
+                    <p>More curious about the world around them than their
+                        mountain-dwelling cousins, hill dwarves have traveled far
+                        and wide, spreading their culture and plying their trade
+                        in every nation of Ansalon. Nearly every mountain in
+                        Ansalon has a settlement of hill dwarves somewhere along
+                        its base. Dwarven adventurers will most often be Neidar,
+                        as they are usually the only dwarves willing to leave their
+                        homes in search of greater fortune. In their dealings,
+                        Neidar tend to be fair and honest, but will haggle for
+                        every last copper. Hill dwarves are loyal friends if one can
+                        penetrate their grumbling manners and gruff
+                        exterior.
+                    </p>
+                    <p>The dwarves of Krynn, in general, are among the
+                        most industrious and resilient races of Ansalon. Unwilling
+                        to give up in the face of adversity and raised in a culture
+                        steeped in tradition, the dwarves of Ansalon appear to the
+                        outside world to have remained as tough and solid as their
+                        mountain homes. Most ancient buildings still standing
+                        thousands of years after their construction are products
+                        of skilled dwarven craftsmanship. The dwarves' patience,
+                        hard work, and passion for their craft are evident in their
+                        monumental accomplishments.
+                    </p>
+                    <p>From the outside, it often appears the dwarven race
+                        is one of solidarity; it is evident to every dwarf that life
+                        among the separate clans is quite the opposite. When
+                        confronted with a common enemy, the dwarven clans can
+                        pull together and create a formidable front. Yet, when left
+                        to their own devices, they often find themselves at odds
+                        with one another. Past transgressions are not forgotten
+                        or easily forgiven, and this stubborn refusal to let go of
+                        the past can cause fissures in the solid veneer of dwarven
+                        society. While dwarves have faced the threats of war
+                        against other races, it has always been the threat of civil
+                        unrest that has been the most dangerous.
+                    </p>
+                    <p>There are several different dwarven clans scattered across
+                        Ansalon; however, all dwarves share a set of common
+                        traits, which place them apart from other races. Most folk
+                        would agree that, in general, dwarves seem to be dour
+                        and grumpy. They can be amiable enough when making a
+                        deal and coins are exchanging hands, or when they have
+                        drunk enough dwarven spirits, but on the whole, they
+                        usually appear agitated with the world. Close friends and
+                        family know this is an act. The complaining and boisterous
+                        bluster is a dwarf's natural defense against unwanted
+                        contact. It's often difficult to gain a close friendship with
+                        a dwarf, but those who have discover that the bond of
+                        friendship is stronger than steel.
+                    </p>
+                    <p>Dwarves are a passionate people. Every dwarf and clan
+                        expresses this in a different way, but it is an underlying
+                        current in the nature of all dwarves. Whether it is a passion
+                        for life, a passion for their profession, or a passion for
+                        power, every dwarf has something or someone to which
+                        they are devoted. They invest their entire life and being
+                        into this enterprise, which makes the wrath incurred from
+                        a personal loss truly frightening.
+                    </p>
+                </section>
+                <section>
+                    <h5>Physical Appearance</h5>
+                    <p>Hill dwarves tend to be short and stocky. They stand
+                        between 4 and 4 ½ feet tall. While not tall, their girth
+                        still makes them physically imposing. Male hill dwarves
+                        tend to weigh anywhere between 150 and 200 pounds;
+                        females usually weigh slightly less. They have a dense bone
+                        structure that lends to this added weight and makes them
+                        less buoyant than other creatures. As such, dwarves sink,
+                        rather than float, in deep waters. Of course, this only adds
+                        to their natural aversion of large bodies of water.
+                    </p>
+                    <p>The Neidar often have darkly tanned skin from
+                        years spent outdoors working fields, harvesting lumber,
+                        and traveling to and from nearby settlements for trade.
+                        Wrinkles are common, beginning around the early age of
+                        forty, making hill dwarves appear older than they truly are.
+                    </p>
+                    <p>Neidar eye colors are predominantly dark brown with the
+                        occassional exception of green or hazel. Many hill
+                        dwarves tend to be nearsighted. Their heavy eyebrows
+                        hang over their eyes, giving them a natural scowl when
+                        tired or preoccupied. This is a large reason why non-dwarves
+                        believe they are always cross.
+                    </p>
+                    <p>A dwarf's hair is a source of pride and occasionally a sign
+                        of their social status. Dwarven males love their facial hair.
+                        “You can tell a lot about a dwarf by the way he keeps his beard,”
+                        is a common dwarven saying. It is common practice for
+                        a dwarf to keep his beard tucked into his belt, provided
+                        it's long enough; this way, the beard stays out of the
+                        way while he are working. Beards are occassionally
+                        braided and tied. While this is functional, additional
+                        ornamentation is considered gaudy for males. Keeping a
+                        beard clean and healthy is the general accepted practice.
+                    </p>
+                    <p>Hair color ranges from family to family. As a rule, hill
+                        dwarves have the widest spectrum of hair color, ranging
+                        from blonde to black and everything in between. Their
+                        hair will begin to turn a silver-grey as they reach
+                        adulthood and white as they reach old age. Many male
+                        hill dwarves tend to go bald while they are still
+                        young. Females, however, often enjoy thick heads of hair
+                        their whole life. They take as much pride in their hair
+                        as their men. While they do not have beards, they do
+                        have long hair, often tied up in a bun to keep it out
+                        of the way when performing the day-to-day tasks; they
+                        let down it at night and for special occasions.
+                        Ornamental hairnets, jeweled pins, and fashionable hair
+                        clips are brought out during festivals or community
+                        get-togethers.
+                    </p>
+                </section>
+                <section>
+                    <h5>Psychology</h5>
+                    <p>Hill Dwarves believe in hard work and commitment. A good
+                        life is comprised of a day of hard labor followed by a
+                        mug of spirits and the satisfaction that you have done
+                        something worthwhile for your family and community.
+                        Creature comforts are important once work is complete.
+                        “A good chair can outlast a good friend!” is an old
+                        dwarven saying. Though many more hill dwarves than
+                        mountain dwarves are adventurers, the majority prefer
+                        to remain dedicated to their family and community.
+                        Dwellings are often adorned with trappings to make the
+                        house more comfortable. While all dwarves covet gems and
+                        precious metals, hill dwarves do not usually feel a need
+                        to flaunt their wealth.
+                    </p>
+                    <p>Like all dwarves, if an individual can establish a bond
+                        with a hill dwarf, that person can always depend on them.
+                        Rock solid and never wavering, a Neidar will defend his
+                        friends and family to the death. Their stubborn nature,
+                        which keeps them from returning to the mountains or
+                        forgetting any slight against them, can be a powerful force
+                        when it is used to protect a loved one.
+                    </p>
+                </section>
                 <section className={"card p-3"}>
-                    <h5>Nomads</h5>
-                    <p>The nomadic people of Ansalon have always felt a deep
-                        connection with nature. The destruction wrought by the
-                        Cataclysm confused and frightened them. To the wandering
-                        peoples of Ansalon, who live daily by following the
-                        changes of season and the migration of beasts, the physical
-                        changes in the world proved devastating. Many urban
-                        communities saw their nomadic neighbors as easy prey and
-                        attacked them. Such actions served to heighten the
-                        suspicion and distrust between nomads and city dwellers.
-                    </p>
-                    <p>Over the generations, the nomads were able to
-                        establish fresh hunting grounds and track the new
-                        migrations of animals, their lives improved. Lacking the
-                        uniting force of the gods, however, many tribes splintered,
-                        while others waited patiently and chose to accept the gods'
-                        silence as the supreme test of their devotion.
-                        Of the tribes that remained intact, most worshipped
-                        deities of their own invention modeled after familiar
-                        aspects of the true gods. The gods of these nomads had
-                        their own names and identities. Worship of the gods of
-                        townsfolk was expressly forbidden. The nomad tribes
-                        highly venerated the spirits of their ancestors who had
-                        gone before them, and eventually, the worship of ancestors
-                        became a dominant form of religion. The absence of the
-                        true gods was not nearly as difficult for some nomads
-                        to accept, as many tribes had always maintained religious
-                        rituals and ceremonies that honored all the spirits.
-                    </p>
-                    <div>
-                        <strong>Plainsfolk</strong>
-                        <ul>
-                            <li>Speed: 6</li>
-                            <li>Can be a mage</li>
-                            <li>Ability: <i>Nomad</i>: WP -. You are used to sleeping
-                                under any circumstance. You are always Comfortable when
-                                taking a Long Rest in the wilderness, and Uncomfortable
-                                when taking a Long Rest in a settlement.
-                            </li>
-                        </ul>
-                    </div>
+                    <h5>Hill Dwarf</h5>
+                    <ul>
+                        <li>Speed: 4</li>
+                        <li>Cannot be a mage</li>
+                        <li>Ability: <i>Resilient</i>: WP 3. Natural resilience
+                            helps dwarves overcome many hardships. Activating this
+                            ability grants a Boon to your CON roll vs poison or
+                            disease, or to make yourself Comfortable when resting.
+                        </li>
+                    </ul>
                 </section>
-                <section className={"card mt-3 p-3"}>
-                    <h5>Townsfolk</h5>
-                    <p>City life during the Age of Despair was chaotic. The
-                        Cataclysm flooded entire nations and landlocked others,
-                        destroying the trade routes for nearly every major city of
-                        Ansalon. Changes in the climate ravaged crops. What little
-                        food could be salvaged or grown - if it wasn't stolen - was
-                        hoarded. The meager amount of food that could be
-                        delivered to the cities was bought up by wealthy clientele
-                        for outrageous prices, leaving the poor to beg or filch
-                        whatever they could find.
+            </details>
+            <details id={"kender"}>
+                <summary className={"h3 px-2 py-1 border rounded"}>Kender</summary>
+                <section>
+                    <h5>Introduction</h5>
+                    <p>Kender are the children of the Krynn. They are an
+                        adventure-loving, curious, spontaneous race that embodies
+                        the youthfulness and lust for life many adventurers share.
+                        Their closest relation on other worlds would be halflings,
+                        but even halflings cannot compare to a kender's curiosity,
+                        fearlessness, or knack for finding trouble.
                     </p>
-                    <p>Without healers, disease ran rampant and plague
-                        spread like wildfire. Most citizens lived in squalor,
-                        cowering amidst the ruins of buildings or hunkered
-                        down in wooden shacks. Over the course of centuries, the
-                        situation has gradually improved, but while some cities
-                        have prospered, others remain locked in despair, filth, and
-                        poverty.
+                    <p>Almost every kender encountered is in the thrall of
+                        wanderlust, an affliction striking kender hard during their
+                        late teen and early adult years. Wanderlust causes kender
+                        to pick-up and travel the world far and wide in search of
+                        one exciting adventure after another. They roam aimlessly
+                        and are not known for following orders, unless they believe
+                        they came up with the idea themselves or are interested
+                        enough in what might happen if they followed that order.
                     </p>
-                    <div>
-                        <strong>Townsfolk</strong>
-                        <ul>
-                            <li>Speed: 6</li>
-                            <li>Can be a mage</li>
-                            <li>Ability: <i>Adaptive</i>: WP 3. When rolling for
-                                a skill, you can choose to make the roll using
-                                another skill of your choice. However, you must be
-                                able to justify how you use the selected skill
-                                instead of the normal one. The GM has the final
-                                say.
-                            </li>
-                        </ul>
-                    </div>
+                    <p>Every race on Krynn has encountered the kender. A
+                        kender's curiosity and fearlessness take them to places
+                        no sane being would think to go. This includes pockets,
+                        private homes, and locked chests. However, the majority
+                        of kender are appalled at the thought of stealing. Most true
+                        kender do not steal; they handle. Handling is simply the
+                        act of picking up an item and examining it out of curiosity.
+                        They are often so involved with examining the item that
+                        they wander away and forget to return it. To a kender, this
+                        makes perfect sense, but to other races, it's just another
+                        word for stealing.
+                    </p>
                 </section>
-            </section>
-            <hr />
-            <section id={"dwarf"}>
-                <h3>Dwarves</h3>
-                <p>While the human nations of Ansalon suffered terribly,
-                    perhaps no other race was affected by the Cataclysm as
-                    much as the dwarves. The Fall of Istar separated one
-                    dwarven realm from another and ignited a civil war that
-                    killed thousands. In Kayolin, the creation of the New Sea
-                    separated the northern clans of the Hylar and Daewar
-                    from their brethren in the south, leaving the dwarves
-                    there to rebuild without assistance from the kingdom of
-                    Thorbardin. They eventually renamed the mountains the
-                    Garnet Mountain range, and severed ties to their kindred
-                    of the south.
-                </p>
-                <p>In the Kharolis Mountains, the dwarves fell into a
-                    bloody feud when fear of invasion and starvation forced
-                    the mountain dwarves to close their doors to the outside
-                    world-which also meant shutting out the hill dwarves
-                    who wanted entry for access to the valuable food stores
-                    located deep beneath the mountains. The escalating
-                    dispute turned dwarf against dwarf, and hundreds of
-                    dwarves died on both sides of the conflict.
-                </p>
-                <p>The most damage was inflicted on the kingdom of
-                    Thoradin. Thousands of dwarves were crushed to death
-                    when the continent was violently reshaped into new forms.
-                    Earthquakes, eruptions, and other disasters swept the
-                    underground nation, leaving only one city intact. The city
-                    of the Theiwar survived, but a horrible mold plague took
-                    root in their city, altering every Theiwar citizen until the
-                    dwarves looked unlike any known to Ansalon. Insatiably
-                    evil, this race survived and crawled from the ashes.
-                </p>
+                <section>
+                    <h5>Physical Appearance</h5>
+                    <p>Kender typically stand no more than 3 to 4 feet tall, with
+                        the males usually being taller than the females. They
+                        weigh between 80 and 100 pounds. Adult kender are well
+                        muscled, despite being thin and light of build. Kender
+                        are sometimes mistaken for young humans, but closer
+                        inspection reveals the pointed ears, face wrinkles, and
+                        many pouches indicative of kender. Kender find their
+                        face wrinkles, also called crow's feet or laugh-lines, highly
+                        attractive.
+                    </p>
+                    <p>Kender hair color ranges from light blond to deep
+                        brown to black with a few sporting red-orange hues. Most
+                        kender wear their hair long. The most common hairstyle
+                        is the topknot. It's also common among kender nobility to
+                        braid their sideburns as a sign of their status.
+                    </p>
+                    <p>Kender typically favor bright colors and gaudy apparel
+                        that is at the same time rugged and rustic. Most kender
+                        add accents to their clothing and weapons by tagging
+                        them with ribbons, feathers, beads, or colorful scarves. All
+                        kender-made clothing, regardless of what it is, has pockets
+                        and lots of them. The staple of all kender outfits, however,
+                        is the many pouches. It is rare to see a kender with less
+                        than two pouches, though they usually have many more
+                        than that.
+                    </p>
+                </section>
+                <section>
+                    <h5>Psychology</h5>
+                    <p>An old kender proverb goes: “If you find an open door, go
+                        inside, and if you find a locked door, open it.” Kender are
+                        born with the heart of an explorer and an intense curiosity
+                        that cannot be denied. This leads them to explore every
+                        nook and cranny, check behind every door, and snoop in
+                        every pocket. Over time, a kender can learn to understand
+                        the need for caution in some situations, such as when their
+                        friends may be hurt as a direct result of their actions.
+                    </p>
+                    <p>Kender are attracted to magic and gadgets like dwarves
+                        to ale. Kender are in awe of anything magical; items, spells,
+                        and creatures pique a kender's interest, and they can often
+                        be found wandering around places rumored to be magical.
+                    </p>
+                    <p>Due to their intense curiosity, kender are highly resistant
+                        to fear, magical or otherwise. In the face of the most
+                        intense fear, most kender have stated that they have felt
+                        an odd fluttering in their stomach, similar to getting a
+                        bad case of indigestion. This is usually enough to let
+                        the kender know they are in a perilous situation. This
+                        does not mean that kender are entirely reckless and without
+                        a sense of self-preservation, however. The only thing
+                        a kender usually fears is the loss of a close friend.
+                    </p>
+                    <p>Kender are fiercely independent. This independence,
+                        coupled with their fearlessness and irrepressibility, often
+                        gets the kender and his companions into trouble. “I know
+                        you told me not to open the door with the magical writing
+                        on it, but it had such an interesting lock, much like the
+                        one my Uncle Lefty had the accident with, and it was
+                        much closer than that other ordinary looking door. Sorry
+                        about the whole banshee thing, but I think it'll be morning
+                        soon and we'll be able to crawl out any time now.” The
+                        most feared statement any fellow traveler can hear from a
+                        kender companion is “Oops!”
+                    </p>
+                    <p>Kender have a unique concept of personal property. If
+                        they see something not being used, they will pick it up and
+                        take it with every intention of giving it back to the owner
+                        when they are done using it or looking at it. It's really not
+                        their fault they forget to give it back. Naturally, most others
+                        term this as thieving, but kender see it as simple handling
+                        and are simply curious about the world around them.
+                        This absentminded approach to others' personal
+                        property can make the owner view a kender as a liar when
+                        he is caught in the act. In most situations, the kender will
+                        automatically have an excuse ready:
+                    </p>
+                    <ul>
+                        <li>"You left it, so I didn't think you wanted it anymore."</li>
+                        <li>"I was just holding it for you."</li>
+                        <li>"I was gonna give it back, but you wandered off somewhere."</li>
+                        <li>"It must be magical, because it just appeared in my pouch!"</li>
+                        <li>"Someone was going to steal it, so I'm holding it for safekeeping."</li>
+                        <li>"Just because I have it, and you didn't know that I took it, doesn't mean I stole it."</li>
+                    </ul>
+                    <p>
+                        Even more frustrating for the owner, the kender is
+                        totally sincere and truly believes what they have just said.
+                        Kender do not always realize what they are doing might be
+                        wrong.
+                    </p>
+                </section>
+                <section>
+                    <h5>Names</h5>
+                    <p>Tradition dictates kender parents select a name for their
+                        child around the moment of birth. The child's first name
+                        can be based off any combination of factors. The most
+                        common method is to name the child after an existing
+                        relative; Kipper, Kronin, Tavin, Rufus, or Meridon are a
+                        few. Occasionally, parents name the kender after an event
+                        in a recent adventure, such as Triplever, Mudskipper,
+                        or Thistleprick, or after common kender objects like
+                        Lockpick, Toolkit, and Topknot. There are countless other
+                        variations of kender first names.
+                    </p>
+                    <p>Each kender takes their parent's last name. There
+                        are specific family names, which have survived the ages;
+                        Metwinger, Thistleknott, Thistleswitch, and Burrfoot are
+                        some examples, but it is common practice for kender to
+                        adopt a more descriptive name later on in life after their
+                        adventures, such as Springheel, Lightfingers, Pakslinger,
+                        or Lampwick. Usually during their wanderlust, they leave
+                        home to make a name for themselves, literally. Some
+                        also decide that they want to be like famous kender who
+                        came before them, and take on that kender's name. This
+                        happened in the decades following the War of the Lance
+                        when a large number of kender took the name Tasslehoff
+                        Burrfoot.
+                    </p>
+                </section>
                 <section className={"card p-3"}>
-                    <h5>Hill Dwarves (The Neidar)</h5>
-                    <p>The Neidar lost much more than the mountain dwarves
-                        in the aftermath of the Cataclysm. Their population went
-                        into decline following years of famine. Thousands more
-                        died during "the Betrayal" (the hill dwarves' term for the
-                        Dwarfgate War). After the war, the dwarves picked up the
-                        pieces of their lives and forged a new existence. With most
-                        of their warriors dead, many women and children of the
-                        hill dwarf villages had to take up arms against bandits,
-                        rampaging ogres, hordes of goblins and mercenaries who
-                        swept through the lowlands looking for easy pickings.
-                        What the invaders discovered, however, was that, unlike
-                        humans, all dwarves are raised with martial training. With
-                        each encounter, the dwarves prevailed and over a century
-                        the attacks slowed.
-                    </p>
-                    <p>By the second century following the Cataclysm, a
-                        number of settlements for trade were reestablished across
-                        the mountains. The hill dwarves patrolled the new trade
-                        routes and prospered. Although their numbers were small,
-                        they grew as many of the sturdy dwarven women had
-                        multiple children. Large families of hill dwarves lived in
-                        each settlement. Each child was given training in how to
-                        wield a sword or axe, and daily they were reminded of
-                        the treachery of their kin under the mountain. It was the
-                        mountain dwarves' fault their father or grandfather had
-                        perished. It was a terrible act of treachery that would never
-                        be forgotten.
-                    </p>
-                    <p>The silence of the gods was yet another hardship the
-                        Neidar had to endure, along with the rest of the world.
-                        Too busy dealing with their troubles, the worship of many
-                        of the gods was abandoned. The stories and teachings of
-                        the gods were handed down from one dwarf to the next,
-                        but only as lessons or parables. A handful of churches
-                        were built to honor the ancient gods, but these were often
-                        manned by only one or two dwarves. Gatherings at the
-                        churches were often only performed during dwarven holidays
-                        - both religious and secular. Currently, traditions are
-                        upheld, but the heart of the hill dwarf religion is hollow.
-                    </p>
-                    <div>
-                        <strong>Hill Dwarf</strong>
-                        <ul>
-                            <li>Speed: 4</li>
-                            <li>Cannot be a mage</li>
-                            <li>Ability: <i>Resilient</i>: WP 3. Natural resilience
-                                helps dwarves overcome many hardships. Activating this
-                                ability grants a Boon to your CON roll vs poison or
-                                disease, or to make yourself Comfortable when resting.
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-            </section>
-            <hr />
-            <section id={"kender"}>
-                <h3>Kender</h3>
-                <p>Of all the races on Ansalon, none were as hurt by the
-                    disappearance of the gods and the destruction of the
-                    continent as the kender race. Prior to the Cataclysm, the
-                    kender of Ansalon had their fair share of problems with
-                    Istar. In 118 PC the Proclamation of Manifest Virtue was
-                    issued, stating that kender were inherently evil. By 115
-                    PC an army of Solamnia was arrayed along the borders of
-                    Kenderhome, though the army never invaded. Many songs
-                    and stories tell of these times and how the knights and
-                    kender would gather along the borders during holidays
-                    and get drunk and laugh about the official nonsense being
-                    issued from Istar. Repeated commands from Istar were
-                    ignored, as no high-ranking member of Solamnia felt that
-                    kender were inherently evil. The largest border conflict
-                    occurred in 83 PC when an Istarian priest convinced
-                    a division commander to strike directly at Hylo. It was
-                    a bloody battle, but the kender ended up winning and
-                    captured the Istarian priest. He was locked away in a
-                    tower until 70 PC when the Solamnic High Justice managed
-                    to negotiate his release. From that time forward kender
-                    were forbidden to set foot in Istar.
-                </p>
-                <p>The laws regarding kender only made it that much
-                    harder for the kender of Balifor to resist seeing what all
-                    the fuss was about in Istar. Before too long, Istar had
-                    sanctioned the extermination of evil races and kender
-                    were among those listed. At 30 gold a topknot, the kender
-                    were a popular bounty. But most bounty hunters found
-                    kender difficult to handle and preferred to take them dead,
-                    rather than alive, back to Istar. These new laws solidified
-                    relationships between previously hostile races. Goblins of
-                    the northern wastes and the kender of Bailfor formed a
-                    truce to protect each other when bounty hunters or patrols
-                    of Istarian soldiers traveled through their region. As brute
-                    squads intensified, the kender retreated farther into their
-                    forests and the goblins disappeared into the wastelands.
-                    When the day of reckoning came, except for the human nations
-                    of Ergoth and Istar, Hylo and Balifor suffered
-                    the worst of the destruction. Hundreds of miles of forest
-                    dropped below sea level and were flooded. The horror of
-                    the devastation marked many kender, causing them to take
-                    a more serious view of life, though none ever completely
-                    lost their cheerful optimism.
-                </p>
-                <p>The city of Hylo became overcrowded and disease ran
-                    rampant. It took many years for them to overcome their
-                    desolate situation. In Goodlund the displaced kender
-                    became barbaric and traveled across the desert regions of
-                    the north.
-                </p>
-                <p>After three to four generations, the kender settled new
-                    villages and cities in Hylo and the peninsula of Goodlund
-                    and continued their lives of exploring the world around
-                    them. With the coming of the dragonarmies, many kender
-                    have taken to the road to investigate rumors and see if
-                    there is anything interesting to be found.
-                </p>
-                <div className={"card p-3"}>
-                    <strong>Kender</strong>
+                    <h5>Kender</h5>
                     <ul>
                         <li>Speed: 4</li>
                         <li>Cannot be a mage</li>
@@ -318,38 +478,76 @@ export const Species = () => {
                             ability to automatically succeed at a roll to resist Fear.
                         </li>
                     </ul>
-                </div>
-            </section>
-            <hr />
-            <section id={"half-elf"} className={"card p-3"}>
-                <h3>Half-Elf</h3>
-                <p>Half-elves have always been regarded with prejudice and
-                    distrust by both parent races. The Age of Despair has only
-                    amplified these problems, leading to abandoned, neglected,
-                    or abused half-elf children. The racial prejudice in the
-                    early Age of Despair forced many half-elves to attempt to
-                    hide their heritage from the world. Many lost their lives
-                    because they couldn't disguise their elven looks. Others
-                    learned to move about inconspicuously, and avoid places
-                    where humans congregate.
-                </p>
-                <p>In the elven lands, half-elves found no sanctuary.
-                    Scorned for their human parentage, any half-Silvanesti
-                    was cast out as a mongrel. In Qualinesti half-elves were
-                    tolerated at best, but never fully accepted by polite society.
-                    Seen in public, they were often singled out for snide or
-                    condescending comment, and pointedly reminded of the
-                    perceived failing they were unable to remedy.
-                    Many half-elves joined cults or religious groups seeking
-                    fellowship. Others formed bandit gangs, honing their
-                    skills with blades or bows in various shady enterprises.
-                    Their natural cunning and grace made them exceptional
-                    leaders, and they gained the respect of not only their
-                    followers but the humans and elves who had previously
-                    misjudged them.
-                </p>
-                <div>
-                    <strong>Half-Elf</strong>
+                </section>
+            </details>
+            <details id={"half-elf"}>
+                <summary className={"h3 px-2 py-1 border rounded"}>Half-Elves</summary>
+                <section>
+                    <h5>Introduction</h5>
+                    <p>Interactions between elves and humans have rarely been
+                        happy. From the earliest days after humans and elves
+                        awoke on Ansalon, long before the time of Silvanos,
+                        humans and elves have clashed. Tragically, these conflicts
+                        have sometimes involved the horrific crime of rape;
+                        it is used as a weapon to demoralize and demean the
+                        enemy populace, other times soldiers having their way
+                        with the locals is simply seen as part of the spoils of
+                        victory. In either case, in some occasions, a child is born
+                        some months later. In these violent cases, the mother is
+                        most often, but not always, the elven half of the child's
+                        parentage.
+                    </p>
+                    <p>Rarer, but not unprecedented, is the union of elf and
+                        human based on love rather than force. The elves have
+                        strong taboos against mixing bloodlines, and most human
+                        communities aren't much more tolerant; thus, many such
+                        relationships are kept secret even if the relationship is a
+                        committed marriage rather than a brief affair.
+                    </p>
+                </section>
+                <section>
+                    <h5>Physical Appearance</h5>
+                    <p>Half-elves may inherit some of the best and worst
+                        features of each of their parents. Somewhat taller and
+                        more muscular than their elven parent, they lack much
+                        of grace and beauty of pure elves. Half-elves are usually
+                        distinguishable from humans by their pointed ears and
+                        somewhat almond-shaped eyes, but these are not enough
+                        to allow a half-elf to easily blend with elven society. Any
+                        differences existing between half-elves of Silvanesti or
+                        Qualinesti heritage is debatable and extend only to cultural
+                        trappings acquired while growing up. On the other hand,
+                        half-elves of sea elf descent are often very distinct, and
+                        while they do not have the aquatic traits of their sea elf
+                        parent, they retain much of the skin tone and broad upper
+                        body that characterizes the Dargonesti and Dimernesti.
+                    </p>
+                </section>
+                <section>
+                    <h5>Psychology</h5>
+                    <p>Although the stereotype for half-elves is to be conflicted
+                        and deal with a lifetime of inner turmoil, this is very
+                        often truly the case. It is more common among half-elves
+                        raised as elves; they see the world as if it were in slow
+                        motion, with the elves in their family taking their time to
+                        do anything. Half-elves in human settlements find that
+                        humanity lives life for the now, makes important decisions
+                        on the spur of the moment, and is otherwise a race of
+                        reckless spontaneity. This may or may not be true, but it
+                        is difficult for a half-elf to reconcile this with their
+                        internal clock.
+                    </p>
+                    <p>Half-elves often take the role of the diplomat in
+                        any group of which they may be a part. A half-elf is
+                        continuously attempting to reconcile their human and
+                        elven halves, and as such, he can often see a situation from
+                        multiple points of view. However, this dichotomy can
+                        also cause a half-elf to be indecisive and hesitant in any
+                        dealings with more than one race.
+                    </p>
+                </section>
+                <section className={"card p-3"}>
+                    <h5>Half-Elf</h5>
                     <ul>
                         <li>Speed: 6</li>
                         <li>Can be a mage</li>
@@ -361,11 +559,10 @@ export const Species = () => {
                             say.
                         </li>
                     </ul>
-                </div>
-            </section>
-            <hr />
-            <section id={"elf"}>
-                <h3>Elves</h3>
+                </section>
+            </details>
+            <details id={"elf"}>
+                <summary className={"h3 px-2 py-1 border rounded"}>Elves</summary>
                 <p>The elves of Ansalon, with lifetimes measured in centuries,
                     have long witnessed the destruction and rebirth of the
                     lands around them. Even they were appalled by the
@@ -387,7 +584,7 @@ export const Species = () => {
                     good would abandon their chosen people.
                 </p>
                 <section className={"card p-3"}>
-                    <h5>Qualinesti</h5>
+                    <h5>Qualinesti Elves</h5>
                     <p>The elves of Qualinesti struggled to survive during the
                         tumultuous first years after the Cataclysm, battling hordes
                         of rampaging goblin tribes that penetrated Abanasinia
@@ -410,19 +607,19 @@ export const Species = () => {
                         own lands.
                     </p>
                     <div>
-                        <strong>Elf</strong>
+                        <strong>Qualinesti Elf</strong>
                         <ul>
                             <li>Speed: 6</li>
                             <li>Can be a mage</li>
-                            <li>Ability: <i>Inner Peace</i>: WP -. Elves meditate
-                                deeply when they rest. You gain the benefits of a Long
-                                Rest in one Shift instead of two. However, you cannot
-                                be woken during your meditation.
+                            <li>Ability: <i>Inner Peace</i>: WP -. Elves meditate deeply
+                                when they rest. You gain the benefits of a Long Rest in one
+                                Shift instead of two. However, you cannot be woken during your
+                                meditation.
                             </li>
                         </ul>
                     </div>
                 </section>
-            </section>
+            </details>
         </section>
-    )
-}
+    );
+};
